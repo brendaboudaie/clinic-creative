@@ -1,0 +1,40 @@
+{% comment %}
+  _includes/footer.html
+  Site footer. Content (tagline, link columns, social links) comes from
+  _data/footer.yml — edit that file rather than this one for copy changes.
+{% endcomment %}
+<footer class="site-footer">
+  <div class="container site-footer__inner">
+    <div class="site-footer__about">
+      <p class="site-footer__logo">{{ site.title }}</p>
+      {% if site.data.footer.tagline %}
+      <p class="site-footer__tagline">{{ site.data.footer.tagline }}</p>
+      {% endif %}
+      {% if site.email %}
+      <p><a href="mailto:{{ site.email }}">{{ site.email }}</a></p>
+      {% endif %}
+    </div>
+
+    {% for column in site.data.footer.columns %}
+    <div class="site-footer__column">
+      <p class="site-footer__column-title">{{ column.title }}</p>
+      <ul class="site-footer__links">
+        {% for link in column.links %}
+        <li><a href="{{ link.url | relative_url }}">{{ link.title }}</a></li>
+        {% endfor %}
+      </ul>
+    </div>
+    {% endfor %}
+  </div>
+
+  <div class="container site-footer__bottom">
+    <p>&copy; {{ site.time | date: '%Y' }} {{ site.title }}. All rights reserved.</p>
+    {% if site.data.footer.social %}
+    <ul class="site-footer__social">
+      {% for link in site.data.footer.social %}
+      <li><a href="{{ link.url }}">{{ link.title }}</a></li>
+      {% endfor %}
+    </ul>
+    {% endif %}
+  </div>
+</footer>

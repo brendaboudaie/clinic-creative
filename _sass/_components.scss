@@ -1,0 +1,142 @@
+// _sass/_components.scss
+// Visual styling for the hero and card includes, plus the CTA band and
+// testimonial block used by the home/service/audience layouts.
+
+// Hero -----------------------------------------------------------------
+
+.hero {
+  padding-block: var(--space-xxl) var(--space-xl);
+  background-color: var(--color-background-alt);
+  text-align: left;
+}
+
+.hero--align-center {
+  text-align: center;
+}
+
+.hero--image {
+  background-size: cover;
+  background-position: center;
+  color: var(--color-white);
+}
+
+.hero--image .hero__subtitle {
+  color: var(--color-white);
+}
+
+.hero__inner {
+  max-width: 720px;
+}
+
+.hero--align-center .hero__inner {
+  margin-inline: auto;
+}
+
+.hero__title {
+  font-size: clamp(2rem, 4vw, 3rem);
+  margin-bottom: var(--space-sm);
+}
+
+.hero__subtitle {
+  font-size: 1.125rem;
+  color: var(--color-text-muted);
+  margin-bottom: var(--space-md);
+}
+
+.hero__cta {
+  display: flex;
+  gap: var(--space-sm);
+  justify-content: flex-start;
+}
+
+.hero--align-center .hero__cta {
+  justify-content: center;
+}
+
+// Cards ------------------------------------------------------------------
+
+.card {
+  display: block;
+  background-color: var(--color-background);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  padding: var(--space-md);
+  text-decoration: none;
+  color: inherit;
+  transition: box-shadow 0.15s ease, transform 0.15s ease;
+}
+
+a.card:hover,
+a.card:focus-visible {
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+  transform: translateY(-2px);
+}
+
+.card__icon {
+  display: inline-block;
+  font-size: 1.75rem;
+  margin-bottom: var(--space-xs);
+}
+
+.card__image {
+  width: 100%;
+  border-radius: var(--radius-sm);
+  margin-bottom: var(--space-xs);
+}
+
+.card__title {
+  font-size: 1.125rem;
+  margin-bottom: var(--space-xs);
+}
+
+.card__text {
+  color: var(--color-text-muted);
+  margin-bottom: 0;
+}
+
+.card__link {
+  display: inline-block;
+  margin-top: var(--space-xs);
+  color: var(--color-primary);
+  font-weight: 600;
+}
+
+// CTA band ---------------------------------------------------------------
+
+.section--cta {
+  background-color: var(--color-primary);
+  color: var(--color-white);
+  text-align: center;
+}
+
+.section--cta h2 {
+  color: var(--color-white);
+}
+
+.section--cta__inner {
+  max-width: 640px;
+  margin-inline: auto;
+}
+
+.section--cta p {
+  margin-bottom: var(--space-md);
+}
+
+// Testimonial --------------------------------------------------------------
+
+.testimonial {
+  max-width: 720px;
+  margin: 0 auto;
+  text-align: center;
+  font-size: 1.25rem;
+  font-style: italic;
+}
+
+.testimonial cite {
+  display: block;
+  margin-top: var(--space-sm);
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 600;
+  color: var(--color-text-muted);
+}

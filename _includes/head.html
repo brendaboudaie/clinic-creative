@@ -1,0 +1,18 @@
+{% comment %}
+  _includes/head.html
+  The <head> contents for every page. Pulls the page title and description
+  from front matter when set, falling back to the site-wide values in
+  _config.yml. You generally won't need to edit this file — set
+  `title:` and `description:` in a page's front matter instead.
+{% endcomment %}
+<meta charset="utf-8">
+<meta http-equiv="x-ua-compatible" content="ie=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<title>{% if page.title %}{{ page.title }} | {{ site.title }}{% else %}{{ site.title }}{% endif %}</title>
+<meta name="description" content="{{ page.description | default: site.description }}">
+
+<link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}">
+
+{% feed_meta %}
+{% seo %}

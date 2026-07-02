@@ -1,0 +1,33 @@
+{% comment %}
+  _includes/hero.html
+  Reusable hero/banner section used at the top of the homepage, service
+  pages, and audience pages. Layouts pass it values from a page's `hero:`
+  front matter — you edit copy in the page's front matter, not here.
+
+  Parameters:
+    title      - headline (required)
+    subtitle   - supporting line under the headline
+    image      - optional background image path (e.g. /assets/images/hero.jpg)
+    cta_text   - CTA button label
+    cta_url    - CTA button destination
+    cta_style  - button style, see _includes/button.html (default "primary")
+    align      - "left" (default) or "center"
+    style      - extra CSS class for context-specific styling, e.g.
+                 "hero--home", "hero--service", "hero--audience"
+{% endcomment %}
+{%- assign hero_align = include.align | default: "left" -%}
+{%- assign hero_cta_style = include.cta_style | default: "primary" -%}
+<section
+  class="hero {% if include.style %}{{ include.style }}{% endif %} hero--align-{{ hero_align }}{% if include.image %} hero--image{% endif %}"
+  {% if include.image %}style="background-image: linear-gradient(var(--color-overlay), var(--color-overlay)), url('{{ include.image | relative_url }}');"{% endif %}
+>
+  <div class="container hero__inner">
+    {% if include.title %}<h1 class="hero__title">{{ include.title }}</h1>{% endif %}
+    {% if include.subtitle %}<p class="hero__subtitle">{{ include.subtitle }}</p>{% endif %}
+    {% if include.cta_text and include.cta_url %}
+    <div class="hero__cta">
+      {% include button.html text=include.cta_text url=include.cta_url style=hero_cta_style %}
+    </div>
+    {% endif %}
+  </div>
+</section>

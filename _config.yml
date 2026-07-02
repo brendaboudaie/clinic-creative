@@ -1,0 +1,79 @@
+# _config.yml
+#
+# Site-wide settings. Jekyll only reads this file on server START, not on
+# save — restart `bundle exec jekyll serve` after editing it.
+#
+# Anything defined here is available in templates as `site.whatever`,
+# e.g. `title:` below becomes `{{ site.title }}`.
+
+title: "Your Practice Name"
+description: "A modern, responsive Jekyll site built for GitHub Pages."
+url: "" # e.g. "https://yourusername.github.io" — used for SEO tags & sitemap
+baseurl: "" # e.g. "/repo-name" if NOT using a custom domain or a username.github.io repo
+
+# Shown in the footer and used as a fallback contact link. Edit freely.
+email: "hello@example.com"
+phone: ""
+
+# ---------------------------------------------------------------------------
+# Build settings
+# ---------------------------------------------------------------------------
+markdown: kramdown
+sass:
+  style: compressed
+
+# Plugins must come from GitHub Pages' supported list:
+# https://pages.github.com/versions/
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+  - jekyll-sitemap
+
+# ---------------------------------------------------------------------------
+# Collections
+# ---------------------------------------------------------------------------
+# Service pages (e.g. /services/teeth-whitening/) and audience pages
+# (e.g. /for/dental/) live in _services/ and _audiences/. Add a new file to
+# either folder and it becomes a page automatically — no config changes
+# needed. See README.md for a starter front-matter template for each.
+collections:
+  services:
+    output: true
+    permalink: /services/:path/
+  audiences:
+    output: true
+    permalink: /for/:path/
+
+# ---------------------------------------------------------------------------
+# Front-matter defaults
+# ---------------------------------------------------------------------------
+# These set a default `layout` per content type, so you don't have to type
+# `layout: service` in every file inside _services/, etc. Any file can still
+# override this by setting its own `layout:` in its front matter.
+defaults:
+  - scope:
+      path: ""
+      type: "services"
+    values:
+      layout: "service"
+  - scope:
+      path: ""
+      type: "audiences"
+    values:
+      layout: "audience"
+  - scope:
+      path: ""
+      type: "pages"
+    values:
+      layout: "page"
+
+# ---------------------------------------------------------------------------
+# Files/folders Jekyll should not copy into the built site
+# ---------------------------------------------------------------------------
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - README.md
+  - node_modules
+  - vendor
+  - "*.gemspec"

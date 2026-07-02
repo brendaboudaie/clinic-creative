@@ -1,0 +1,52 @@
+---
+layout: default
+---
+{% comment %}
+  _layouts/home.html
+  Use with `layout: home` — one page should use this (index.md). It
+  builds a hero, the page's Markdown content, an optional card grid, and
+  an optional closing CTA band, all driven entirely by front matter so you
+  can edit copy without touching this file. Front-matter fields it reads:
+
+    hero:              { title, subtitle, image, cta_text, cta_url, cta_style, align }
+    cards_title:       heading above the card grid (optional)
+    cards:             array of cards, see _includes/card-grid.html (optional)
+    cards_columns:     2, 3, or 4 (optional, default 3)
+    cta:               { title, text, button_text, button_url, button_style } (optional)
+
+  Any section is skipped automatically if its front matter isn't set.
+{% endcomment %}
+{% if page.hero %}
+  {% include hero.html
+     title=page.hero.title
+     subtitle=page.hero.subtitle
+     image=page.hero.image
+     cta_text=page.hero.cta_text
+     cta_url=page.hero.cta_url
+     cta_style=page.hero.cta_style
+     align=page.hero.align
+     style="hero--home" %}
+{% endif %}
+
+<div class="container section">
+  {{ content }}
+</div>
+
+{% if page.cards %}
+<section class="section section--alt">
+  <div class="container">
+    {% if page.cards_title %}<h2 class="section__title">{{ page.cards_title }}</h2>{% endif %}
+    {% include card-grid.html cards=page.cards columns=page.cards_columns %}
+  </div>
+</section>
+{% endif %}
+
+{% if page.cta %}
+<section class="section section--cta">
+  <div class="container section--cta__inner">
+    {% if page.cta.title %}<h2>{{ page.cta.title }}</h2>{% endif %}
+    {% if page.cta.text %}<p>{{ page.cta.text }}</p>{% endif %}
+    {% include button.html text=page.cta.button_text url=page.cta.button_url style=page.cta.button_style %}
+  </div>
+</section>
+{% endif %}

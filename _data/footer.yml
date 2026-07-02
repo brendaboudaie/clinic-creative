@@ -1,0 +1,26 @@
+# _data/footer.yml
+#
+# Content for the site footer (_includes/footer.html). Edit the tagline,
+# link columns, and social/contact links here — no HTML editing needed.
+
+tagline: "Modern, trustworthy websites for growing healthcare practices."
+
+columns:
+  - title: Company
+    links:
+      - title: About
+        url: /about/
+      - title: Contact
+        url: /contact/
+  - title: Services
+    links:
+      - title: All Services
+        url: /services/
+      - title: For Medical
+        url: /for/medical/
+      - title: For Dental
+        url: /for/dental/
+
+social:
+  - title: Email
+    url: "mailto:hello@example.com"

@@ -1,0 +1,195 @@
+// _sass/_layout.scss
+// Structural layout: header/nav, footer, and the responsive card grid.
+// Breakpoint values below are compile-time Sass variables (not theme
+// tokens) since they only ever get used here during the Sass build.
+
+$breakpoint-sm: 600px;
+$breakpoint-md: 768px;
+$breakpoint-lg: 1024px;
+
+// Header / navigation ----------------------------------------------------
+
+.site-header {
+  border-bottom: 1px solid var(--color-border);
+  background-color: var(--color-background);
+}
+
+.site-header__inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-block: var(--space-sm);
+}
+
+.site-header__logo {
+  font-family: var(--font-heading);
+  font-weight: 700;
+  font-size: 1.25rem;
+  color: var(--color-text);
+  text-decoration: none;
+}
+
+.nav-toggle {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  background: none;
+  border: 0;
+  padding: var(--space-xs);
+  cursor: pointer;
+
+  @media (min-width: $breakpoint-md) {
+    display: none;
+  }
+}
+
+.nav-toggle__bar {
+  width: 22px;
+  height: 2px;
+  background-color: var(--color-text);
+}
+
+.site-nav {
+  display: none;
+  width: 100%;
+
+  &.is-open {
+    display: block;
+  }
+
+  @media (min-width: $breakpoint-md) {
+    display: flex;
+    align-items: center;
+    gap: var(--space-md);
+    width: auto;
+  }
+}
+
+.site-nav__list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-xs);
+
+  @media (min-width: $breakpoint-md) {
+    flex-direction: row;
+    align-items: center;
+    gap: var(--space-md);
+  }
+}
+
+.site-nav__link {
+  text-decoration: none;
+  color: var(--color-text);
+  font-weight: 500;
+
+  &:hover,
+  &.is-active {
+    color: var(--color-primary);
+  }
+}
+
+.site-nav__cta {
+  margin-top: var(--space-sm);
+
+  @media (min-width: $breakpoint-md) {
+    margin-top: 0;
+  }
+}
+
+// Footer -------------------------------------------------------------------
+
+.site-footer {
+  background-color: var(--color-text);
+  color: var(--color-background);
+  padding-block: var(--space-xl) var(--space-md);
+}
+
+.site-footer a {
+  color: var(--color-background);
+}
+
+.site-footer__inner {
+  display: grid;
+  gap: var(--space-lg);
+  grid-template-columns: 1fr;
+
+  @media (min-width: $breakpoint-sm) {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.site-footer__logo {
+  font-family: var(--font-heading);
+  font-weight: 700;
+  font-size: 1.1rem;
+  margin-bottom: var(--space-xs);
+}
+
+.site-footer__column-title {
+  font-weight: 700;
+  margin-bottom: var(--space-xs);
+}
+
+.site-footer__links {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-xs);
+}
+
+.site-footer__bottom {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-xs);
+  margin-top: var(--space-lg);
+  padding-top: var(--space-md);
+  border-top: 1px solid rgba(255, 255, 255, 0.15);
+  font-size: 0.875rem;
+
+  @media (min-width: $breakpoint-sm) {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+
+.site-footer__social {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  gap: var(--space-sm);
+}
+
+// Card grid ------------------------------------------------------------
+
+.card-grid {
+  display: grid;
+  gap: var(--space-md);
+  grid-template-columns: 1fr;
+
+  @media (min-width: $breakpoint-sm) {
+    &.card-grid--2 {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    &.card-grid--3,
+    &.card-grid--4 {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  @media (min-width: $breakpoint-lg) {
+    &.card-grid--3 {
+      grid-template-columns: repeat(3, 1fr);
+    }
+
+    &.card-grid--4 {
+      grid-template-columns: repeat(4, 1fr);
+    }
+  }
+}

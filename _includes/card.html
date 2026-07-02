@@ -1,0 +1,28 @@
+{% comment %}
+  _includes/card.html
+  A single content block/card. Used standalone or looped by card-grid.html.
+
+    {% include card.html title="Fast" text="Sites ship in days, not months." icon="⚡" %}
+
+  Parameters:
+    title     - card heading (required)
+    text      - card body copy
+    icon      - optional short text/emoji shown above the title
+    image     - optional image path shown above the title (used instead of icon)
+    url       - optional link; if set, the whole card becomes clickable
+    cta_text  - optional link label shown at the bottom instead of a full-card link
+{% endcomment %}
+{%- assign card_tag = "div" -%}
+{%- if include.url and include.cta_text == nil -%}{%- assign card_tag = "a" -%}{%- endif -%}
+<{{ card_tag }} class="card"{% if card_tag == "a" %} href="{{ include.url | relative_url }}"{% endif %}>
+  {% if include.image %}
+  <img class="card__image" src="{{ include.image | relative_url }}" alt="">
+  {% elsif include.icon %}
+  <span class="card__icon" aria-hidden="true">{{ include.icon }}</span>
+  {% endif %}
+  {% if include.title %}<h3 class="card__title">{{ include.title }}</h3>{% endif %}
+  {% if include.text %}<p class="card__text">{{ include.text }}</p>{% endif %}
+  {% if include.url and include.cta_text %}
+  <span class="card__link">{{ include.cta_text }} &rarr;</span>
+  {% endif %}
+</{{ card_tag }}>

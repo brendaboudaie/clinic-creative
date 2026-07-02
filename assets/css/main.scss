@@ -1,0 +1,46 @@
+---
+# Front matter (even empty) is required so Jekyll runs this file through
+# Liquid before handing it to the Sass compiler. Do not remove.
+---
+/*
+  assets/css/main.scss
+  Compiles to /assets/css/main.css. Two jobs happen here:
+
+  1. Generate CSS custom properties (--color-primary, --space-md, etc.)
+     directly from _data/theme.yml, via the Liquid loops below. This is
+     the ONE place theme.yml gets turned into real CSS — you should not
+     need to edit this loop, just edit the values in theme.yml.
+
+  2. Import the actual style partials from _sass/. Add new partials there
+     and list them below in the order they should apply.
+*/
+
+:root {
+  {% for color in site.data.theme.colors %}
+  --color-{{ color[0] }}: {{ color[1] }};
+  {% endfor %}
+
+  {% for font in site.data.theme.fonts %}
+  --font-{{ font[0] }}: {{ font[1] }};
+  {% endfor %}
+
+  {% for space in site.data.theme.spacing %}
+  --space-{{ space[0] }}: {{ space[1] }};
+  {% endfor %}
+
+  {% for radius in site.data.theme.radius %}
+  --radius-{{ radius[0] }}: {{ radius[1] }};
+  {% endfor %}
+
+  {% for button in site.data.theme.buttons %}
+  --button-{{ button[0] }}-bg: {{ button[1]["bg"] }};
+  --button-{{ button[0] }}-text: {{ button[1]["text"] }};
+  --button-{{ button[0] }}-hover-bg: {{ button[1]["hover-bg"] }};
+  --button-{{ button[0] }}-border: {{ button[1]["border"] | default: "transparent" }};
+  {% endfor %}
+}
+
+@import "base";
+@import "buttons";
+@import "layout";
+@import "components";

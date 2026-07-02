@@ -1,0 +1,41 @@
+{% comment %}
+  _includes/navigation.html
+  Site header + main nav. Menu items come from _data/navigation.yml — edit
+  that file to add/remove/reorder links. The "Book a Consult" button below
+  is a good example of using the button include from within another include;
+  change its text/url/style here if you want a different header CTA.
+{% endcomment %}
+<header class="site-header">
+  <div class="container site-header__inner">
+    <a class="site-header__logo" href="{{ '/' | relative_url }}">{{ site.title }}</a>
+
+    <button
+      class="nav-toggle"
+      type="button"
+      aria-expanded="false"
+      aria-controls="site-nav"
+      data-nav-toggle
+    >
+      <span class="nav-toggle__bar"></span>
+      <span class="nav-toggle__bar"></span>
+      <span class="nav-toggle__bar"></span>
+      <span class="visually-hidden">Menu</span>
+    </button>
+
+    <nav class="site-nav" id="site-nav" data-nav>
+      <ul class="site-nav__list">
+        {% for item in site.data.navigation %}
+        <li class="site-nav__item">
+          <a
+            class="site-nav__link{% if page.url == item.url %} is-active{% endif %}"
+            href="{{ item.url | relative_url }}"
+          >{{ item.title }}</a>
+        </li>
+        {% endfor %}
+      </ul>
+      <div class="site-nav__cta">
+        {% include button.html text="Book a Consult" url="/contact/" style="primary" %}
+      </div>
+    </nav>
+  </div>
+</header>

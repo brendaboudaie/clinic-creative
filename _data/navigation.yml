@@ -1,0 +1,22 @@
+# _data/navigation.yml
+#
+# Main nav links, in order. Edit/add/remove entries here — the navigation
+# include (_includes/navigation.html) just loops over this list, so you
+# never need to touch the HTML to change menu items.
+#
+# Note: the URLs below point to pages that don't exist yet (this starter
+# only ships the homepage). Create matching files before linking to them,
+# or the links will 404.
+
+- title: Home
+  url: /
+- title: Services
+  url: /services/
+- title: For Medical
+  url: /for/medical/
+- title: For Dental
+  url: /for/dental/
+- title: About
+  url: /about/
+- title: Contact
+  url: /contact/
