@@ -3,7 +3,6 @@ title: Medical Website Design and Branding in Los Angeles
 description: "Medical website design, branding, and SEO for physicians and healthcare organizations in Los Angeles — primary care, concierge medicine, specialists, and private practices."
 headline: "Digital Marketing, Websites, and Branding Built Exclusively for Medical Practices"
 subheadline: "Whether you're opening a new practice, refreshing your brand, or looking to attract more patients, we help physicians create modern digital experiences that build trust and grow their practice."
-intro: "We partner with independent physicians and healthcare organizations throughout every stage of growth."
 data_source: medical_specialties
 grid_title: "Who We Work With"
 benefits:
@@ -80,7 +79,3 @@ cta:
   secondary_text: "View All Services"
   secondary_url: /services/
 ---
-
-We also work with cardiology, gastroenterology, orthopedics, OB/GYN,
-psychiatry, urgent care, and multi-specialty groups throughout Los
-Angeles — if you don't see your specialty listed above, get in touch.

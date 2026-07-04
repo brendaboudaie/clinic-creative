@@ -10,9 +10,6 @@
 # Phase 2 specialty gets its own file, add it here and it appears in the
 # dropdown automatically.
 
-- title: Home
-  url: /
-
 - title: What We Do
   url: /services/
   children:

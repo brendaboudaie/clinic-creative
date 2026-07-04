@@ -1,8 +1,7 @@
 # _data/footer.yml
 #
-# Content for the site footer (_includes/footer.html). Edit the tagline,
-# link columns, and social/contact links here — no HTML editing needed.
-# Social URLs are placeholders (PLACEHOLDER) until real handles exist.
+# Content for the site footer (_includes/footer.html). Edit the tagline
+# and link columns here — no HTML editing needed.
 
 tagline: "A boutique studio building websites and branding exclusively for medical and dental practices in Los Angeles."
 
@@ -13,6 +12,8 @@ columns:
         url: /about/
       - title: Contact
         url: /contact/
+      - title: Free Consultation
+        url: /contact/
   - title: What We Do
     links:
       - title: All Services
@@ -21,11 +22,3 @@ columns:
         url: /dental/
       - title: For Medical
         url: /medical/
-
-social:
-  - title: Instagram
-    url: "https://instagram.com/thecliniccreative" # PLACEHOLDER
-  - title: LinkedIn
-    url: "https://linkedin.com/company/thecliniccreative" # PLACEHOLDER
-  - title: Facebook
-    url: "https://facebook.com/thecliniccreative" # PLACEHOLDER

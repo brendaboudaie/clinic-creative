@@ -61,9 +61,8 @@ ol {
   padding-inline: var(--space-sm);
 }
 
-// Narrower measure for long-form copy (bio text, service descriptions).
 .content-width {
-  max-width: 760px;
+  max-width: 97vw;
 }
 
 .section {

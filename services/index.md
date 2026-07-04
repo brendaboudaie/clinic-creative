@@ -61,7 +61,3 @@ cta:
   secondary_text: "Meet The Team"
   secondary_url: /about/
 ---
-
-Clinic Creative is a boutique studio dedicated exclusively to healthcare
-practices — website design, logo and branding, SEO, and ongoing
-maintenance, all under one roof.

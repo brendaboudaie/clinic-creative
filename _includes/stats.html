@@ -9,15 +9,22 @@
     stats:
       - number: "Since 2019"
         label: "In the industry"
+        icon: "▤"
       - number: "45+"
         label: "Websites launched"
+        icon: "➤"
 
   Parameters:
-    stats - array of { number, label }, required
+    stats - array of { number, label, icon }, required (icon optional)
 {% endcomment %}
 <div class="stats fade-in-up">
   {% for stat in include.stats %}
   <div class="stat">
+    {% if stat.icon %}
+    <span class="stat__icon-wrap" aria-hidden="true">
+      <span class="stat__icon">{{ stat.icon }}</span>
+    </span>
+    {% endif %}
     <p class="stat__number">{{ stat.number }}</p>
     <p class="stat__label">{{ stat.label }}</p>
   </div>

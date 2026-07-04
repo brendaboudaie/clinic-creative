@@ -11,11 +11,14 @@ hero:
   secondary_cta_url: /services/
 stats:
   - number: "Since 2019"
-    label: "Serving healthcare practices"
+    label: "Years in Industry"
+    icon: "▤"
   - number: "45+"
-    label: "Websites launched"
+    label: "Websites Launched"
+    icon: "➤"
   - number: "30+"
-    label: "Clients supported"
+    label: "Clients Supported"
+    icon: "◈"
 who_we_help:
   title: "Who We Help"
   subtitle: "We partner with healthcare professionals who are passionate about patient care and want a digital presence that reflects their expertise."

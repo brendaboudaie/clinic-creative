@@ -1,6 +1,6 @@
 {% comment %}
   _includes/footer.html
-  Site footer. Content (tagline, link columns, social links) comes from
+  Site footer. Content (tagline, link columns) comes from
   _data/footer.yml — edit that file rather than this one for copy changes.
 {% endcomment %}
 <footer class="site-footer">
@@ -12,9 +12,6 @@
       {% endif %}
       {% if site.email %}
       <p><a href="mailto:{{ site.email }}">{{ site.email }}</a></p>
-      {% endif %}
-      {% if site.phone %}
-      <p><a href="tel:{{ site.phone | remove: ' ' | remove: '(' | remove: ')' | remove: '-' }}">{{ site.phone }}</a></p>
       {% endif %}
       {% if site.address %}
       <p>{{ site.address }}</p>
@@ -35,12 +32,5 @@
 
   <div class="container site-footer__bottom">
     <p>&copy; {{ site.time | date: '%Y' }} {{ site.title }}. All rights reserved.</p>
-    {% if site.data.footer.social %}
-    <ul class="site-footer__social">
-      {% for link in site.data.footer.social %}
-      <li><a href="{{ link.url }}">{{ link.title }}</a></li>
-      {% endfor %}
-    </ul>
-    {% endif %}
   </div>
 </footer>

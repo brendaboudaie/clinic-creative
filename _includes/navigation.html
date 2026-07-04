@@ -7,8 +7,9 @@
   (desktop, also openable via hover) of sub-page links — collapsed by
   default so only the top-level items show at first. On mobile the whole
   menu opens as a full-screen panel below the logo/toggle bar, and the
-  hamburger animates into an "X" (see main.js + _sass/_layout.scss). The
-  "Book a Consult" button below is a good example of using the button
+  hamburger animates into an "X" (see main.js + _sass/_layout.scss). There
+  is no "Home" nav item — the logo itself links back to "/". The
+  "Free Consultation" button below is a good example of using the button
   include from within another include; change its text/url/style here if
   you want a different header CTA.
 {% endcomment %}
@@ -64,7 +65,7 @@
         {% endfor %}
       </ul>
       <div class="site-nav__cta">
-        {% include button.html text="Book a Consult" url="/contact/" style="primary" %}
+        {% include button.html text="Free Consultation" url="/contact/" style="primary" %}
       </div>
     </nav>
   </div>

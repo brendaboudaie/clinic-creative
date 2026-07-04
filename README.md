@@ -138,7 +138,7 @@ data directly.
 - `_data/navigation.yml` — the mega-menu. Each top-level item has its own
   `url` (it's always a real landing page, never just a dropdown trigger)
   and an optional `children` list for the hover/tap dropdown.
-- `_data/footer.yml` — footer tagline, link columns, and social links.
+- `_data/footer.yml` — footer tagline and link columns.
 - `_data/services.yml` — the 4 services shown on the homepage, the
   `/services/` hub, and each specialty page's "services in context" grid.
 - `_data/dental_specialties.yml` / `_data/medical_specialties.yml` — every
@@ -153,8 +153,8 @@ None of these require touching HTML.
 
 ## Placeholder content still to replace
 
-- **Contact info** (`_config.yml`: `email`, `phone`, `address`; social
-  links in `_data/footer.yml`) — currently marked `PLACEHOLDER`.
+- **Contact info** (`_config.yml`: `email`, `phone`, `address`) —
+  currently marked `PLACEHOLDER`.
 - **About page bio** (`about.md`) — currently a draft; replace with
   Brenda's real bio and headshot.
 - **Contact form** (`contact.md` / `_layouts/contact.html`) — the form

@@ -11,12 +11,11 @@ layout: default
   the dental/medical hubs (specialty grid + benefit outcomes + services +
   why-us + process + FAQ). Section order:
 
-  hero -> intro/content -> grid (data_source) -> benefits -> services_title
-  -> who_we_help -> why_us -> process -> faq -> trust_text -> cta
+  hero -> grid (data_source) -> benefits -> services_title -> who_we_help
+  -> why_us -> process -> faq -> trust_text -> cta
 
     title / description:  SEO fields
     headline / subheadline: hero copy
-    intro:                  paragraph under the hero, before the grid
     data_source:            "services", "dental_specialties", or
                              "medical_specialties" — which _data/*.yml
                              file powers the grid below
@@ -49,11 +48,6 @@ layout: default
    title=page.headline
    subtitle=page.subheadline
    style="hero--audience" %}
-
-<div class="container section content-width fade-in-up">
-  {% if page.intro %}<p>{{ page.intro }}</p>{% endif %}
-  {{ content }}
-</div>
 
 <section class="section section--alt fade-in-up">
   <div class="container">
