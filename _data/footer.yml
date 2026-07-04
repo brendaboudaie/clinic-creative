@@ -2,8 +2,9 @@
 #
 # Content for the site footer (_includes/footer.html). Edit the tagline,
 # link columns, and social/contact links here — no HTML editing needed.
+# Social URLs are placeholders (PLACEHOLDER) until real handles exist.
 
-tagline: "Modern, trustworthy websites for growing healthcare practices."
+tagline: "A boutique studio building websites and branding exclusively for medical and dental practices in Los Angeles."
 
 columns:
   - title: Company
@@ -12,15 +13,19 @@ columns:
         url: /about/
       - title: Contact
         url: /contact/
-  - title: Services
+  - title: What We Do
     links:
       - title: All Services
         url: /services/
-      - title: For Medical
-        url: /for/medical/
       - title: For Dental
-        url: /for/dental/
+        url: /dental/
+      - title: For Medical
+        url: /medical/
 
 social:
-  - title: Email
-    url: "mailto:hello@example.com"
+  - title: Instagram
+    url: "https://instagram.com/thecliniccreative" # PLACEHOLDER
+  - title: LinkedIn
+    url: "https://linkedin.com/company/thecliniccreative" # PLACEHOLDER
+  - title: Facebook
+    url: "https://facebook.com/thecliniccreative" # PLACEHOLDER

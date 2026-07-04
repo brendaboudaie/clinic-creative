@@ -1,0 +1,46 @@
+# _data/medical_specialties.yml
+#
+# Every medical specialty in the brief's IA. `page: true` entries have a
+# real page and are linked from the /medical/ hub grid and the mega-menu
+# dropdown; the rest render as "coming soon" (Phase 2) — add the file,
+# flip this to true, and add it to _data/navigation.yml to go live.
+
+- title: Family Medicine
+  url: /medical/family-medicine/
+  page: true
+  text: "Websites for family medicine and primary care practices in Los Angeles."
+
+- title: Pediatric Medicine
+  url: /medical/pediatric-medicine/
+  page: false
+  text: "Websites for pediatric medical practices in Los Angeles."
+
+- title: Dermatology
+  url: /medical/dermatology/
+  page: true
+  text: "Websites for dermatology practices that build patient trust at first glance."
+
+- title: Plastic Surgery
+  url: /medical/plastic-surgery/
+  page: false
+  text: "Websites for plastic surgery practices in Los Angeles."
+
+- title: Chiropractic
+  url: /medical/chiropractic/
+  page: false
+  text: "Websites for chiropractic practices in Los Angeles."
+
+- title: Physical Therapy
+  url: /medical/physical-therapy/
+  page: false
+  text: "Websites for physical therapy practices in Los Angeles."
+
+- title: Optometry
+  url: /medical/optometry/
+  page: false
+  text: "Websites for optometry practices in Los Angeles."
+
+- title: Med Spa
+  url: /medical/med-spa/
+  page: true
+  text: "Websites for med spas that reflect a premium, patient-first experience."

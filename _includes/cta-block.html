@@ -1,0 +1,34 @@
+{% comment %}
+  _includes/cta-block.html
+  Reusable closing call-to-action band. Used at the bottom of the home,
+  service, specialty-vertical, and vertical-landing layouts, driven by a
+  page's `cta:` front matter — you edit copy there, not here.
+
+  Parameters:
+    title           - heading (optional)
+    text            - supporting copy (optional)
+    primary_text    - primary button label (optional)
+    primary_url     - primary button destination
+    primary_style   - button style for the primary CTA (default "primary")
+    secondary_text  - secondary button label (optional)
+    secondary_url   - secondary button destination
+    secondary_style - button style for the secondary CTA (default "secondary")
+{% endcomment %}
+{%- assign cta_primary_style = include.primary_style | default: "primary" -%}
+{%- assign cta_secondary_style = include.secondary_style | default: "secondary" -%}
+<section class="section section--cta fade-in-up">
+  <div class="container section--cta__inner">
+    {% if include.title %}<h2>{{ include.title }}</h2>{% endif %}
+    {% if include.text %}<p>{{ include.text }}</p>{% endif %}
+    {% if include.primary_text or include.secondary_text %}
+    <div class="section--cta__buttons">
+      {% if include.primary_text and include.primary_url %}
+      {% include button.html text=include.primary_text url=include.primary_url style=cta_primary_style %}
+      {% endif %}
+      {% if include.secondary_text and include.secondary_url %}
+      {% include button.html text=include.secondary_text url=include.secondary_url style=cta_secondary_style %}
+      {% endif %}
+    </div>
+    {% endif %}
+  </div>
+</section>

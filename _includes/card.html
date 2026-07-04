@@ -5,24 +5,36 @@
     {% include card.html title="Fast" text="Sites ship in days, not months." icon="⚡" %}
 
   Parameters:
-    title     - card heading (required)
-    text      - card body copy
-    icon      - optional short text/emoji shown above the title
-    image     - optional image path shown above the title (used instead of icon)
-    url       - optional link; if set, the whole card becomes clickable
-    cta_text  - optional link label shown at the bottom instead of a full-card link
+    title             - card heading (required)
+    text              - card body copy
+    icon              - optional short text/emoji shown above the title
+    image             - optional image path; renders full-bleed across the
+                        top of the card (photo-card style), used instead of icon
+    image_placeholder - optional placeholder text shown in a full-bleed
+                        image-shaped box instead of a real `image` — use
+                        until a real photo exists at assets/images/
+    url               - optional link; if set, the whole card becomes clickable
+    cta_text          - optional link label rendered inside the card (with
+                        the arrow); shown alongside a full-card link when
+                        url is set
 {% endcomment %}
 {%- assign card_tag = "div" -%}
-{%- if include.url and include.cta_text == nil -%}{%- assign card_tag = "a" -%}{%- endif -%}
-<{{ card_tag }} class="card"{% if card_tag == "a" %} href="{{ include.url | relative_url }}"{% endif %}>
+{%- if include.url -%}{%- assign card_tag = "a" -%}{%- endif -%}
+{%- assign has_media = include.image | default: include.image_placeholder -%}
+<{{ card_tag }} class="card{% if has_media %} card--media{% endif %}"{% if card_tag == "a" %} href="{{ include.url | relative_url }}"{% endif %}>
   {% if include.image %}
   <img class="card__image" src="{{ include.image | relative_url }}" alt="">
-  {% elsif include.icon %}
-  <span class="card__icon" aria-hidden="true">{{ include.icon }}</span>
+  {% elsif include.image_placeholder %}
+  <div class="card__image card__image--placeholder" aria-hidden="true">{{ include.image_placeholder }}</div>
   {% endif %}
-  {% if include.title %}<h3 class="card__title">{{ include.title }}</h3>{% endif %}
-  {% if include.text %}<p class="card__text">{{ include.text }}</p>{% endif %}
-  {% if include.url and include.cta_text %}
-  <span class="card__link">{{ include.cta_text }} &rarr;</span>
-  {% endif %}
+  <div class="card__body">
+    {% if include.icon and has_media == nil %}
+    <span class="card__icon" aria-hidden="true">{{ include.icon }}</span>
+    {% endif %}
+    {% if include.title %}<h3 class="card__title">{{ include.title }}</h3>{% endif %}
+    {% if include.text %}<p class="card__text">{{ include.text }}</p>{% endif %}
+    {% if include.cta_text %}
+    <span class="card__link">{{ include.cta_text }} &rarr;</span>
+    {% endif %}
+  </div>
 </{{ card_tag }}>

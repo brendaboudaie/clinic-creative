@@ -1,0 +1,30 @@
+# _data/services.yml
+#
+# The 4 core services, shared by the homepage services section, the
+# /services/ hub grid, and each specialty page's "services in context"
+# list. `icon` values are plain Unicode glyphs (not emoji) to match the
+# brand's thin-line, monochrome icon style.
+
+- title: Website Design
+  slug: website-design
+  url: /services/website-design/
+  icon: "▣"
+  text: "Beautiful, fast websites designed to convert visitors into patients."
+
+- title: Logo & Branding
+  slug: logo-branding
+  url: /services/logo-branding/
+  icon: "✒"
+  text: "Create a professional identity that reflects your practice and builds patient confidence."
+
+- title: SEO
+  slug: seo
+  url: /services/seo/
+  icon: "⌕"
+  text: "Improve your visibility in search results, including local SEO and Google Business Profile management, so patients find your practice first."
+
+- title: Website Maintenance
+  slug: website-maintenance
+  url: /services/website-maintenance/
+  icon: "⟳"
+  text: "Keep your website secure, updated, and performing at its best."

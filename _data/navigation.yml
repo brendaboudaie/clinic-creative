@@ -1,22 +1,52 @@
 # _data/navigation.yml
 #
-# Main nav links, in order. Edit/add/remove entries here — the navigation
-# include (_includes/navigation.html) just loops over this list, so you
-# never need to touch the HTML to change menu items.
+# Mega-menu structure. Each top-level item is ALWAYS its own destination —
+# clicking the label navigates to `url` — and, if it has a `children` list,
+# hovering (desktop) or tapping (mobile, expands inline) also reveals a
+# dropdown of direct links to sub-pages. _includes/navigation.html loops
+# over this, so add/remove/reorder entries here without touching HTML.
 #
-# Note: the URLs below point to pages that don't exist yet (this starter
-# only ships the homepage). Create matching files before linking to them,
-# or the links will 404.
+# Only specialties with a real page are listed here (Phase 1). Once a
+# Phase 2 specialty gets its own file, add it here and it appears in the
+# dropdown automatically.
 
 - title: Home
   url: /
-- title: Services
+
+- title: What We Do
   url: /services/
-- title: For Medical
-  url: /for/medical/
+  children:
+    - title: Website Design
+      url: /services/website-design/
+    - title: Logo & Branding
+      url: /services/logo-branding/
+    - title: SEO
+      url: /services/seo/
+    - title: Website Maintenance
+      url: /services/website-maintenance/
+
 - title: For Dental
-  url: /for/dental/
+  url: /dental/
+  children:
+    - title: General Dentistry
+      url: /dental/general-dentistry/
+    - title: Orthodontic
+      url: /dental/orthodontic/
+    - title: Cosmetic Dentistry
+      url: /dental/cosmetic-dentistry/
+
+- title: For Medical
+  url: /medical/
+  children:
+    - title: Family Medicine
+      url: /medical/family-medicine/
+    - title: Dermatology
+      url: /medical/dermatology/
+    - title: Med Spa
+      url: /medical/med-spa/
+
 - title: About
   url: /about/
+
 - title: Contact
   url: /contact/

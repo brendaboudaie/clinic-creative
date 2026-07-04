@@ -1,19 +1,29 @@
 {% comment %}
   _includes/navigation.html
-  Site header + main nav. Menu items come from _data/navigation.yml — edit
-  that file to add/remove/reorder links. The "Book a Consult" button below
-  is a good example of using the button include from within another include;
-  change its text/url/style here if you want a different header CTA.
+  Site header + mega-menu nav. Menu items come from _data/navigation.yml —
+  edit that file to add/remove/reorder links or dropdown children. Every
+  top-level item is a real link (clicking it navigates); items with
+  `children` also have an arrow that opens an accordion (mobile) / dropdown
+  (desktop, also openable via hover) of sub-page links — collapsed by
+  default so only the top-level items show at first. On mobile the whole
+  menu opens as a full-screen panel below the logo/toggle bar, and the
+  hamburger animates into an "X" (see main.js + _sass/_layout.scss). The
+  "Book a Consult" button below is a good example of using the button
+  include from within another include; change its text/url/style here if
+  you want a different header CTA.
 {% endcomment %}
 <header class="site-header">
   <div class="container site-header__inner">
-    <a class="site-header__logo" href="{{ '/' | relative_url }}">{{ site.title }}</a>
+    <a class="site-header__logo" href="{{ '/' | relative_url }}">
+      <img src="{{ '/assets/images/logo.png' | relative_url }}" alt="{{ site.title }}">
+    </a>
 
     <button
       class="nav-toggle"
       type="button"
       aria-expanded="false"
       aria-controls="site-nav"
+      aria-label="Open menu"
       data-nav-toggle
     >
       <span class="nav-toggle__bar"></span>
@@ -25,11 +35,31 @@
     <nav class="site-nav" id="site-nav" data-nav>
       <ul class="site-nav__list">
         {% for item in site.data.navigation %}
-        <li class="site-nav__item">
-          <a
-            class="site-nav__link{% if page.url == item.url %} is-active{% endif %}"
-            href="{{ item.url | relative_url }}"
-          >{{ item.title }}</a>
+        <li class="site-nav__item{% if item.children %} has-dropdown{% endif %}">
+          <div class="site-nav__item-row">
+            <a
+              class="site-nav__link{% if page.url == item.url %} is-active{% endif %}"
+              href="{{ item.url | relative_url }}"
+            >{{ item.title }}</a>
+            {% if item.children %}
+            <button
+              class="site-nav__dropdown-toggle"
+              type="button"
+              aria-expanded="false"
+              aria-label="Show {{ item.title }} submenu"
+              data-dropdown-toggle
+            >&#9662;</button>
+            {% endif %}
+          </div>
+          {% if item.children %}
+          <ul class="site-nav__dropdown">
+            {% for child in item.children %}
+            <li>
+              <a href="{{ child.url | relative_url }}">{{ child.title }}</a>
+            </li>
+            {% endfor %}
+          </ul>
+          {% endif %}
         </li>
         {% endfor %}
       </ul>

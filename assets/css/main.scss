@@ -8,7 +8,7 @@
 
   1. Generate CSS custom properties (--color-primary, --space-md, etc.)
      directly from _data/theme.yml, via the Liquid loops below. This is
-     the ONE place theme.yml gets turned into real CSS — you should not
+     the ONE place theme.yml gets turned into real CSS  -  you should not
      need to edit this loop, just edit the values in theme.yml.
 
   2. Import the actual style partials from _sass/. Add new partials there

@@ -1,0 +1,25 @@
+{% comment %}
+  _includes/stats.html
+  "By the Numbers" stat strip. Usage from a layout:
+
+    {% include stats.html stats=page.stats %}
+
+  Where a page's front matter has:
+
+    stats:
+      - number: "Since 2019"
+        label: "In the industry"
+      - number: "45+"
+        label: "Websites launched"
+
+  Parameters:
+    stats - array of { number, label }, required
+{% endcomment %}
+<div class="stats fade-in-up">
+  {% for stat in include.stats %}
+  <div class="stat">
+    <p class="stat__number">{{ stat.number }}</p>
+    <p class="stat__label">{{ stat.label }}</p>
+  </div>
+  {% endfor %}
+</div>

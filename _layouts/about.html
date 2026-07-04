@@ -1,0 +1,41 @@
+---
+layout: default
+---
+{% comment %}
+  _layouts/about.html
+  The About page (about.md). Front matter it reads:
+
+    title / description: SEO fields
+    headline / subheadline: hero copy
+    badge_text:              trust-signal badge text (e.g. Squarespace Circle
+                              Gold Partner) — rendered as a text badge since
+                              no badge image asset exists yet
+    cta:                    { title, text, primary_text, primary_url,
+                              secondary_text, secondary_url }
+
+  Bio copy itself is the page's Markdown body ({{ content }}).
+{% endcomment %}
+{% include hero.html
+   title=page.headline
+   subtitle=page.subheadline
+   style="hero--audience" %}
+
+<section class="section fade-in-up">
+  <div class="container about-grid">
+    <div class="placeholder-box placeholder-box--avatar" aria-hidden="true">Photo</div>
+    <div class="content-width">
+      {{ content }}
+      {% if page.badge_text %}<p><span class="badge">{{ page.badge_text }}</span></p>{% endif %}
+    </div>
+  </div>
+</section>
+
+{% if page.cta %}
+{% include cta-block.html
+   title=page.cta.title
+   text=page.cta.text
+   primary_text=page.cta.primary_text
+   primary_url=page.cta.primary_url
+   secondary_text=page.cta.secondary_text
+   secondary_url=page.cta.secondary_url %}
+{% endif %}

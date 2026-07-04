@@ -1,0 +1,17 @@
+{% comment %}
+  _includes/testimonial.html
+  A single client-quote block. Used in a loop over
+  site.data.testimonials — that data file is empty until quotes are
+  collected, so the section calling this include should check
+  `site.data.testimonials.size > 0` before rendering.
+
+    {% include testimonial.html quote=item.quote author=item.author %}
+
+  Parameters:
+    quote  - the testimonial text, required
+    author - attribution line (name, specialty), optional
+{% endcomment %}
+<blockquote class="testimonial">
+  <p>&ldquo;{{ include.quote }}&rdquo;</p>
+  {% if include.author %}<cite>{{ include.author }}</cite>{% endif %}
+</blockquote>

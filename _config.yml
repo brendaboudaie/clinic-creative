@@ -6,21 +6,30 @@
 # Anything defined here is available in templates as `site.whatever`,
 # e.g. `title:` below becomes `{{ site.title }}`.
 
-title: "Your Practice Name"
-description: "A modern, responsive Jekyll site built for GitHub Pages."
-url: "" # e.g. "https://yourusername.github.io" — used for SEO tags & sitemap
-baseurl: "" # e.g. "/repo-name" if NOT using a custom domain or a username.github.io repo
+title: "Clinic Creative"
+tagline: "Websites and Branding for Medical and Dental Offices in Los Angeles" # TBD per brief — refine once finalized
+description: "Clinic Creative builds websites, branding, and SEO exclusively for medical and dental practices in Los Angeles."
+url: "https://thecliniccreative.com" # custom domain — see CNAME file. Update if the domain changes.
+baseurl: "" # not needed for a custom-domain site
 
-# Shown in the footer and used as a fallback contact link. Edit freely.
-email: "hello@example.com"
-phone: ""
+# Shown in the footer/header and used as contact fallbacks. Placeholders —
+# replace with real business details before launch.
+email: "hello@thecliniccreative.com" # PLACEHOLDER
+phone: "(310) 000-0000" # PLACEHOLDER
+address: "Los Angeles, CA" # PLACEHOLDER — add a full address if one should be public
 
 # ---------------------------------------------------------------------------
 # Build settings
 # ---------------------------------------------------------------------------
 markdown: kramdown
+permalink: pretty
 sass:
   style: compressed
+
+# The github-pages gem defaults every site to "jekyll-theme-primer" unless
+# explicitly overridden — this site has its own complete design system
+# (_layouts/, _includes/, _sass/), so disable that default explicitly.
+theme: null
 
 # Plugins must come from GitHub Pages' supported list:
 # https://pages.github.com/versions/
@@ -30,42 +39,46 @@ plugins:
   - jekyll-sitemap
 
 # ---------------------------------------------------------------------------
-# Collections
-# ---------------------------------------------------------------------------
-# Service pages (e.g. /services/teeth-whitening/) and audience pages
-# (e.g. /for/dental/) live in _services/ and _audiences/. Add a new file to
-# either folder and it becomes a page automatically — no config changes
-# needed. See README.md for a starter front-matter template for each.
-collections:
-  services:
-    output: true
-    permalink: /services/:path/
-  audiences:
-    output: true
-    permalink: /for/:path/
-
-# ---------------------------------------------------------------------------
 # Front-matter defaults
 # ---------------------------------------------------------------------------
-# These set a default `layout` per content type, so you don't have to type
-# `layout: service` in every file inside _services/, etc. Any file can still
-# override this by setting its own `layout:` in its front matter.
+# These set a default `layout` (and, for the specialty verticals, a default
+# `vertical` value) per folder, so individual pages don't repeat it. Any
+# page can still override by setting its own front matter.
 defaults:
-  - scope:
-      path: ""
-      type: "services"
-    values:
-      layout: "service"
-  - scope:
-      path: ""
-      type: "audiences"
-    values:
-      layout: "audience"
   - scope:
       path: ""
       type: "pages"
     values:
       layout: "page"
+  - scope:
+      path: "services"
+    values:
+      layout: "service"
+  - scope:
+      path: "services/index.md"
+    values:
+      layout: "vertical-landing"
+      section: "services"
+  - scope:
+      path: "dental"
+    values:
+      layout: "specialty-vertical"
+      vertical: "dental"
+  - scope:
+      path: "dental/index.md"
+    values:
+      layout: "vertical-landing"
+      section: "dental"
+  - scope:
+      path: "medical"
+    values:
+      layout: "specialty-vertical"
+      vertical: "medical"
+  - scope:
+      path: "medical/index.md"
+    values:
+      layout: "vertical-landing"
+      section: "medical"
 
 # ---------------------------------------------------------------------------
 # Files/folders Jekyll should not copy into the built site
