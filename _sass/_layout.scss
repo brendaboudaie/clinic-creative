@@ -325,6 +325,31 @@ body.nav-open {
   }
 }
 
+// About page's closing section: bio text (left) + stacked value cards
+// (right), split by a faded vertical rule on desktop.
+.values-grid {
+  display: grid;
+  gap: var(--space-lg);
+
+  @media (min-width: $breakpoint-md) {
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    gap: var(--space-xl);
+  }
+}
+
+.values-intro {
+  @media (min-width: $breakpoint-md) {
+    padding-right: var(--space-xl);
+    border-right: 1px solid var(--color-border);
+  }
+}
+
+.values-list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-md);
+}
+
 // Card grid ------------------------------------------------------------
 
 .card-grid {

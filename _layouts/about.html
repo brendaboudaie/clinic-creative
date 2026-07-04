@@ -3,32 +3,94 @@ layout: default
 ---
 {% comment %}
   _layouts/about.html
-  The About page (about.md). Front matter it reads:
+  The About page (about.md), in four sections:
 
-    title / description: SEO fields
-    headline / subheadline: hero copy
-    badge_text:              trust-signal badge text (e.g. Squarespace Circle
-                              Gold Partner) — rendered as a text badge since
-                              no badge image asset exists yet
-    cta:                    { title, text, primary_text, primary_url,
-                              secondary_text, secondary_url }
+    1. Split hero  - title/subtitle left, headshot right (same
+       hero--split pattern as the homepage)
+    2. A centered mission-statement quote
+    3. The same "By the Numbers" stats strip used on the homepage
+    4. A two-column close: the page's Markdown bio on the left (with a
+       faded vertical divider), three stacked value cards on the right
 
-  Bio copy itself is the page's Markdown body ({{ content }}).
+  Front matter it reads:
+    title / description:  SEO fields
+    hero:                 { title, subtitle, image, image_alt, image_note }
+                          - image is a real photo path (e.g.
+                          /assets/images/brenda-headshot.jpg); if unset,
+                          falls back to a placeholder box showing
+                          image_note
+    quote / quote_author:  centered quote section (quote_author optional)
+    stats:                array of { number, label, icon } - same shape as
+                          home.html's "By the Numbers"
+    values:               { title, cards: [{ icon, title, text }] } - cards
+                          render in the right-hand column; the left column
+                          is the page's Markdown body
+    badge_text:            trust-signal badge (e.g. Squarespace Circle Gold
+                          Partner), shown under the bio
+    cta:                  { title, text, primary_text, primary_url,
+                            secondary_text, secondary_url }
 {% endcomment %}
-{% include hero.html
-   title=page.headline
-   subtitle=page.subheadline
-   style="hero--audience" %}
 
+{% if page.hero %}
+<section class="hero hero--split">
+  <div class="container hero__grid">
+    <div class="hero__inner">
+      {% if page.hero.title %}<h1 class="hero__title">{{ page.hero.title }}</h1>{% endif %}
+      {% if page.hero.subtitle %}<p class="hero__subtitle">{{ page.hero.subtitle }}</p>{% endif %}
+    </div>
+    {% if page.hero.image %}
+    {%- assign hero_image_alt = page.hero.image_alt | default: "Headshot" -%}
+    <img class="hero-photo" src="{{ page.hero.image | relative_url }}" alt="{{ hero_image_alt }}">
+    {% else %}
+    <div class="placeholder-box placeholder-box--tall" aria-hidden="true">
+      {{ page.hero.image_note | default: "Headshot placeholder — add a real photo at assets/images/ when available" }}
+    </div>
+    {% endif %}
+  </div>
+</section>
+{% endif %}
+
+{% if page.quote %}
 <section class="section fade-in-up">
-  <div class="container about-grid">
-    <div class="placeholder-box placeholder-box--avatar" aria-hidden="true">Photo</div>
-    <div class="content-width">
+  <div class="container">
+    <blockquote class="testimonial">
+      <p>&ldquo;{{ page.quote }}&rdquo;</p>
+      {% if page.quote_author %}<cite>{{ page.quote_author }}</cite>{% endif %}
+    </blockquote>
+  </div>
+</section>
+{% endif %}
+
+{% if page.stats %}
+<section class="section section--alt fade-in-up">
+  <div class="container">
+    {% include stats.html stats=page.stats %}
+  </div>
+</section>
+{% endif %}
+
+{% if page.values %}
+<section class="section fade-in-up">
+  <div class="container values-grid">
+    <div class="values-intro">
+      {% if page.values.title %}<h2 class="section__title">{{ page.values.title }}</h2>{% endif %}
       {{ content }}
       {% if page.badge_text %}<p><span class="badge">{{ page.badge_text }}</span></p>{% endif %}
     </div>
+    <div class="values-list">
+      {% for item in page.values.cards %}
+      <div class="value-card">
+        <span class="value-card__icon" aria-hidden="true">{{ item.icon | escape }}</span>
+        <div>
+          <p class="value-card__title">{{ item.title }}</p>
+          <p class="value-card__text">{{ item.text }}</p>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
   </div>
 </section>
+{% endif %}
 
 {% if page.cta %}
 {% include cta-block.html

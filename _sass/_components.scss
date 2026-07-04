@@ -72,6 +72,16 @@
   }
 }
 
+// A real photo used in place of the placeholder box in a split hero
+// (e.g. the About page headshot).
+.hero-photo {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  object-position: center top;
+  border-radius: var(--radius-md);
+}
+
 // Placeholder boxes ------------------------------------------------------
 // Used anywhere a real photo/mockup/headshot isn't available yet. Dashed
 // border keeps it visibly a placeholder rather than looking like a bug.
@@ -220,6 +230,35 @@ a.card:focus-visible {
 }
 
 .checklist__text {
+  color: var(--color-text-muted);
+  margin-bottom: 0;
+}
+
+// Value cards (About page) ------------------------------------------------
+
+.value-card {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-sm);
+  padding: var(--space-md);
+  border-radius: var(--radius-md);
+  background-color: var(--color-background-alt);
+}
+
+.value-card__icon {
+  flex-shrink: 0;
+  margin-top: 0.1em;
+  font-size: 1.5rem;
+  line-height: 1;
+  color: var(--color-primary);
+}
+
+.value-card__title {
+  font-weight: 700;
+  margin-bottom: 0.2em;
+}
+
+.value-card__text {
   color: var(--color-text-muted);
   margin-bottom: 0;
 }
