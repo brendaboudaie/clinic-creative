@@ -13,6 +13,12 @@
       {% if site.email %}
       <p><a href="mailto:{{ site.email }}">{{ site.email }}</a></p>
       {% endif %}
+      {% if site.phone %}
+      <p><a href="tel:{{ site.phone | remove: ' ' | remove: '(' | remove: ')' | remove: '-' }}">{{ site.phone }}</a></p>
+      {% endif %}
+      {% if site.address %}
+      <p>{{ site.address }}</p>
+      {% endif %}
     </div>
 
     {% for column in site.data.footer.columns %}

@@ -1,0 +1,185 @@
+---
+layout: default
+---
+{% comment %}
+  _layouts/vertical-landing.html
+  Hub page layout for the three top-level destinations that are also
+  mega-menu triggers: /services/, /dental/, /medical/. Each is a real
+  landing page (not just a dropdown). Sections are optional and driven by
+  front matter — skipped automatically if not set — so this one layout
+  covers the services hub (grid + who-we-work-with + why-us + process) and
+  the dental/medical hubs (specialty grid + benefit outcomes + services +
+  why-us + process + FAQ). Section order:
+
+  hero -> intro/content -> grid (data_source) -> benefits -> services_title
+  -> who_we_help -> why_us -> process -> faq -> trust_text -> cta
+
+    title / description:  SEO fields
+    headline / subheadline: hero copy
+    intro:                  paragraph under the hero, before the grid
+    data_source:            "services", "dental_specialties", or
+                             "medical_specialties" — which _data/*.yml
+                             file powers the grid below
+    grid_title:              heading above the grid
+    benefits:               { title, cards: [{ title, text, icon }] } —
+                             outcome-focused cards (e.g. "How We Help...")
+    services_title:          heading for a services-overview grid pulled
+                             from _data/services.yml (used on the
+                             dental/medical hubs, which link to services in
+                             their own vertical context)
+    who_we_help:            { title, subtitle, cards: [{ title, text, url,
+                             cta_text, image_placeholder }] } - cards render
+                             as photo cards (full-bleed image on top) when
+                             image_placeholder (or a real image) is set
+    why_us:                 { title, image_note, cards: [{ title, text }] } —
+                             renders as a checkmark list beside a photo
+                             placeholder
+    process:                { title, subtitle, steps: [{ title, text, icon }] }
+    faq:                    { title, items: [{ question, answer }] }
+    trust_text:              short trust-signal line (badge + years/stats)
+    cta:                    { title, text, primary_text, primary_url,
+                              secondary_text, secondary_url }
+{% endcomment %}
+{%- assign grid_data = site.data[page.data_source] -%}
+{%- assign live_items = grid_data | where: "page", true -%}
+{%- assign upcoming_items = grid_data | where: "page", false -%}
+{%- if page.data_source == "services" -%}{%- assign live_items = grid_data -%}{%- endif -%}
+
+{% include hero.html
+   title=page.headline
+   subtitle=page.subheadline
+   style="hero--audience" %}
+
+<div class="container section content-width fade-in-up">
+  {% if page.intro %}<p>{{ page.intro }}</p>{% endif %}
+  {{ content }}
+</div>
+
+<section class="section section--alt fade-in-up">
+  <div class="container">
+    {% if page.grid_title %}<h2 class="section__title">{{ page.grid_title }}</h2>{% endif %}
+    {% include card-grid.html cards=live_items columns=4 %}
+
+    {% if upcoming_items.size > 0 %}
+    <div class="card-grid card-grid--4" style="margin-top: var(--space-md);">
+      {% for item in upcoming_items %}
+      <div class="card card--muted">
+        <div class="card__body">
+          <h3 class="card__title">{{ item.title }}</h3>
+          <p class="card__text">Coming soon</p>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+    {% endif %}
+  </div>
+</section>
+
+{% if page.benefits %}
+<section class="section fade-in-up">
+  <div class="container">
+    {% if page.benefits.title %}<h2 class="section__title">{{ page.benefits.title }}</h2>{% endif %}
+    {% include card-grid.html cards=page.benefits.cards columns=3 %}
+  </div>
+</section>
+{% endif %}
+
+{% if page.services_title %}
+<section class="section section--alt fade-in-up">
+  <div class="container">
+    <h2 class="section__title">{{ page.services_title }}</h2>
+    {% include card-grid.html cards=site.data.services columns=4 %}
+  </div>
+</section>
+{% endif %}
+
+{% if page.who_we_help %}
+<section class="section fade-in-up">
+  <div class="container">
+    {% if page.who_we_help.title %}<h2 class="section__title">{{ page.who_we_help.title }}</h2>{% endif %}
+    {% if page.who_we_help.subtitle %}<p class="content-width">{{ page.who_we_help.subtitle }}</p>{% endif %}
+    {% include card-grid.html cards=page.who_we_help.cards columns=2 %}
+  </div>
+</section>
+{% endif %}
+
+{% if page.why_us %}
+<section class="section {% unless page.services_title %}section--alt{% endunless %} fade-in-up">
+  <div class="container why-us-grid">
+    <div>
+      {% if page.why_us.title %}<h2 class="section__title">{{ page.why_us.title }}</h2>{% endif %}
+      <ul class="checklist">
+        {% for item in page.why_us.cards %}
+        <li class="checklist__item">
+          <span class="checklist__icon" aria-hidden="true">&#10003;</span>
+          <div>
+            <p class="checklist__title">{{ item.title }}</p>
+            <p class="checklist__text">{{ item.text }}</p>
+          </div>
+        </li>
+        {% endfor %}
+      </ul>
+    </div>
+    <div class="placeholder-box placeholder-box--tall" aria-hidden="true">
+      {{ page.why_us.image_note | default: "Photo placeholder — add a real image at assets/images/ when available" }}
+    </div>
+  </div>
+</section>
+{% endif %}
+
+{% if page.process %}
+<section class="section fade-in-up">
+  <div class="container">
+    <div class="process-header">
+      {% if page.process.title %}<h2 class="section__title section__title--center">{{ page.process.title }}</h2>{% endif %}
+      {% if page.process.subtitle %}<p class="process-subtitle">{{ page.process.subtitle }}</p>{% endif %}
+    </div>
+    <div class="process">
+      {% for step in page.process.steps %}
+      <div class="process__step">
+        <div class="process__icon-wrap">
+          <span class="process__icon" aria-hidden="true">{{ step.icon | escape }}</span>
+          <span class="process__number">{{ forloop.index }}</span>
+        </div>
+        <p class="process__step-title">{{ step.title }}</p>
+        {% if step.text %}<p class="process__step-text">{{ step.text }}</p>{% endif %}
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+{% endif %}
+
+{% if page.faq %}
+<section class="section section--alt fade-in-up">
+  <div class="container content-width">
+    {% if page.faq.title %}<h2 class="section__title">{{ page.faq.title }}</h2>{% endif %}
+    <div class="faq">
+      {% for item in page.faq.items %}
+      <details class="faq__item">
+        <summary>{{ item.question }}</summary>
+        <p class="faq__answer">{{ item.answer }}</p>
+      </details>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+{% endif %}
+
+{% if page.trust_text %}
+<section class="section fade-in-up">
+  <div class="container">
+    <span class="badge">{{ page.trust_text }}</span>
+  </div>
+</section>
+{% endif %}
+
+{% if page.cta %}
+{% include cta-block.html
+   title=page.cta.title
+   text=page.cta.text
+   primary_text=page.cta.primary_text
+   primary_url=page.cta.primary_url
+   secondary_text=page.cta.secondary_text
+   secondary_url=page.cta.secondary_url %}
+{% endif %}

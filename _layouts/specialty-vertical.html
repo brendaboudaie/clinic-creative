@@ -1,0 +1,70 @@
+---
+layout: default
+---
+{% comment %}
+  _layouts/specialty-vertical.html
+  Shared layout for every individual dental/medical specialty page (e.g.
+  dental/orthodontic.md, medical/dermatology.md) — which vertical it's in
+  comes from the `vertical` front-matter default set per-folder in
+  _config.yml, and only affects breadcrumb/active-nav styling. Front
+  matter it reads:
+
+    title:               SEO title, e.g. "Orthodontic Website Design in Los Angeles"
+    description:          meta description
+    specialty:             e.g. "Orthodontics" (used for breadcrumb text)
+    vertical:              "dental" or "medical" (set via _config.yml defaults)
+    headline:              hero headline, e.g. "Website Design for Orthodontists in Los Angeles"
+    subheadline:            hero subtitle
+    pain_point:             a short paragraph naming the specialty's specific problem
+    services_intro_title:  heading above the services-in-context grid
+    services_intro:         paragraph under that heading
+    cta:                   { title, text, primary_text, primary_url,
+                             secondary_text, secondary_url }
+{% endcomment %}
+{% include hero.html
+   title=page.headline
+   subtitle=page.subheadline
+   style="hero--audience" %}
+
+<p class="container fade-in-up">
+  <a href="{{ '/' | append: page.vertical | append: '/' | relative_url }}" class="breadcrumb-link">&larr; For {{ page.vertical | capitalize }}</a>
+</p>
+
+<div class="container section content-width fade-in-up">
+  {{ content }}
+</div>
+
+{% if page.pain_point %}
+<section class="section section--alt fade-in-up">
+  <div class="container content-width">
+    <p>{{ page.pain_point }}</p>
+  </div>
+</section>
+{% endif %}
+
+<section class="section fade-in-up">
+  <div class="container">
+    <h2 class="section__title">{{ page.services_intro_title | default: "What We Build For Your Practice" }}</h2>
+    {% if page.services_intro %}<p class="content-width">{{ page.services_intro }}</p>{% endif %}
+    {% include card-grid.html cards=site.data.services columns=4 %}
+  </div>
+</section>
+
+<section class="section section--alt fade-in-up">
+  <div class="container">
+    <h2 class="section__title">Our Work</h2>
+    <div class="placeholder-box" aria-hidden="true">
+      Portfolio piece placeholder — add a real project image once available
+    </div>
+  </div>
+</section>
+
+{% if page.cta %}
+{% include cta-block.html
+   title=page.cta.title
+   text=page.cta.text
+   primary_text=page.cta.primary_text
+   primary_url=page.cta.primary_url
+   secondary_text=page.cta.secondary_text
+   secondary_url=page.cta.secondary_url %}
+{% endif %}

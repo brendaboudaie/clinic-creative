@@ -1,6 +1,6 @@
 // _sass/_base.scss
 // Global resets, typography, and small utility classes used everywhere.
-// Colors/fonts/spacing here are all var(--...) tokens from theme.yml —
+// Colors/fonts/spacing here are all var(--...) tokens from theme.yml  -
 // edit _data/theme.yml rather than the values in this file.
 
 *,
@@ -56,9 +56,14 @@ ol {
 
 .container {
   width: 100%;
-  max-width: 1140px;
+  max-width: 97vw;
   margin-inline: auto;
   padding-inline: var(--space-sm);
+}
+
+// Narrower measure for long-form copy (bio text, service descriptions).
+.content-width {
+  max-width: 760px;
 }
 
 .section {
@@ -70,8 +75,49 @@ ol {
 }
 
 .section__title {
-  text-align: center;
+  text-align: left;
   margin-bottom: var(--space-lg);
+}
+
+.section__title--center {
+  text-align: center;
+}
+
+// Subtle scroll-in animation ---------------------------------------------
+// assets/js/main.js adds .is-visible via IntersectionObserver. Kept very
+// small per the brand's "subtle only" animation rule  -  a short fade + a
+// few pixels of upward motion, nothing flashy.
+
+.fade-in-up {
+  opacity: 0;
+  transform: translateY(12px);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.fade-in-up.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .fade-in-up {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+}
+
+.breadcrumb-link {
+  display: inline-block;
+  color: var(--color-text-muted);
+  text-decoration: none;
+  font-size: 0.9rem;
+  font-weight: 500;
+
+  &:hover,
+  &:focus-visible {
+    color: var(--color-primary);
+  }
 }
 
 .visually-hidden {

@@ -1,0 +1,68 @@
+---
+layout: default
+---
+{% comment %}
+  _layouts/contact.html
+  The Contact page (contact.md). Front matter it reads:
+
+    title / description: SEO fields
+    headline / subheadline: hero copy
+    response_note:           e.g. "I respond within 24 hours."
+
+  The form has no backend wired up yet — see the comment above the <form>
+  tag for where to plug in a service like Formspree or Getform. The
+  Calendly embed is a placeholder div until a real booking link exists.
+{% endcomment %}
+{% include hero.html
+   title=page.headline
+   subtitle=page.subheadline
+   style="hero--audience" %}
+
+<section class="section fade-in-up">
+  <div class="container contact-grid">
+    <div>
+      {{ content }}
+
+      {%- comment -%}
+        Form backend not wired up yet. Replace action="#" with a
+        Formspree/Getform/etc. endpoint (or a Jekyll-compatible serverless
+        function) before launch.
+      {%- endcomment -%}
+      <form class="contact-form" action="#" method="POST">
+        <div class="form-field">
+          <label for="name">Name</label>
+          <input type="text" id="name" name="name" required>
+        </div>
+        <div class="form-field">
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" required>
+        </div>
+        <div class="form-field">
+          <label for="practice">Practice Name</label>
+          <input type="text" id="practice" name="practice">
+        </div>
+        <div class="form-field">
+          <label for="message">How can we help?</label>
+          <textarea id="message" name="message" rows="5" required></textarea>
+        </div>
+        <button type="submit" class="btn btn--primary">Send Message</button>
+      </form>
+      {% if page.response_note %}<p class="form-note">{{ page.response_note }}</p>{% endif %}
+    </div>
+
+    <div>
+      {%- comment -%}
+        Calendly placeholder — replace with the real embed snippet
+        (<div class="calendly-inline-widget" data-url="...">) once a
+        booking link exists.
+      {%- endcomment -%}
+      <div class="placeholder-box placeholder-box--tall" aria-hidden="true">
+        Calendly booking embed — add once a scheduling link is set up
+      </div>
+      <p>
+        {% if site.email %}<a href="mailto:{{ site.email }}">{{ site.email }}</a><br>{% endif %}
+        {% if site.phone %}<a href="tel:{{ site.phone | remove: ' ' | remove: '(' | remove: ')' | remove: '-' }}">{{ site.phone }}</a>{% endif %}
+      </p>
+    </div>
+  </div>
+</section>

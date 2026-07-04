@@ -3,49 +3,73 @@ layout: default
 ---
 {% comment %}
   _layouts/service.html
-  For pages in the _services/ collection (e.g. _services/teeth-whitening.md).
-  Renders a hero, the Markdown body, an optional "benefits" card grid, and
-  an optional closing CTA band. Front matter it reads:
+  For individual service pages in services/ (e.g. services/seo.md). Renders
+  a hero, the Markdown body, an optional "what's included" grid, an
+  optional process/pricing row, and a closing CTA band. Front matter it
+  reads:
 
-    title:              service name, used as hero title fallback (required)
-    subtitle:           short description, used as hero subtitle fallback
-    hero:               { title, subtitle, image, cta_text, cta_url, cta_style }
-                         (optional — overrides title/subtitle above)
-    benefits_title:     heading above the benefits grid (optional)
-    benefits:           array of cards, see _includes/card-grid.html (optional)
-    benefits_columns:   2, 3, or 4 (optional, default 3)
-    cta:                { title, text, button_text, button_url, button_style } (optional)
+    title:            service name, used as hero title fallback (required)
+    description:       meta description (also used as hero subtitle fallback)
+    headline:           hero headline override
+    subheadline:         hero subtitle override
+    whats_included:      { title, items: [{ title, text, icon }] }
+    process_title:       heading for the process/timeline card (e.g. "Our Process")
+    process_text:         body text for that card
+    starting_price:       e.g. "$1,999" — shown in a "Starting At" card
+    cta:                  { title, text, primary_text, primary_url,
+                            secondary_text, secondary_url }
 {% endcomment %}
-{%- assign hero_title = page.hero.title | default: page.title -%}
-{%- assign hero_subtitle = page.hero.subtitle | default: page.subtitle -%}
+{%- assign hero_title = page.headline | default: page.title -%}
+{%- assign hero_subtitle = page.subheadline | default: page.description -%}
 {% include hero.html
    title=hero_title
    subtitle=hero_subtitle
-   image=page.hero.image
-   cta_text=page.hero.cta_text
-   cta_url=page.hero.cta_url
-   cta_style=page.hero.cta_style
    style="hero--service" %}
 
-<div class="container section">
+<div class="container section content-width fade-in-up">
   {{ content }}
 </div>
 
-{% if page.benefits %}
-<section class="section section--alt">
+{% if page.whats_included %}
+<section class="section section--alt fade-in-up">
   <div class="container">
-    {% if page.benefits_title %}<h2 class="section__title">{{ page.benefits_title }}</h2>{% endif %}
-    {% include card-grid.html cards=page.benefits columns=page.benefits_columns %}
+    <h2 class="section__title">{{ page.whats_included.title | default: "What's Included" }}</h2>
+    {% include card-grid.html cards=page.whats_included.items columns=3 %}
+  </div>
+</section>
+{% endif %}
+
+{% if page.process_title or page.starting_price %}
+<section class="section fade-in-up">
+  <div class="container">
+    <div class="card-grid card-grid--2">
+      {% if page.process_title %}
+      <div class="card">
+        <div class="card__body">
+          <h3 class="card__title">{{ page.process_title }}</h3>
+          {% if page.process_text %}<p class="card__text">{{ page.process_text }}</p>{% endif %}
+        </div>
+      </div>
+      {% endif %}
+      {% if page.starting_price %}
+      <div class="card">
+        <div class="card__body">
+          <h3 class="card__title">Starting At</h3>
+          <p class="card__text">{{ page.starting_price }}</p>
+        </div>
+      </div>
+      {% endif %}
+    </div>
   </div>
 </section>
 {% endif %}
 
 {% if page.cta %}
-<section class="section section--cta">
-  <div class="container section--cta__inner">
-    {% if page.cta.title %}<h2>{{ page.cta.title }}</h2>{% endif %}
-    {% if page.cta.text %}<p>{{ page.cta.text }}</p>{% endif %}
-    {% include button.html text=page.cta.button_text url=page.cta.button_url style=page.cta.button_style %}
-  </div>
-</section>
+{% include cta-block.html
+   title=page.cta.title
+   text=page.cta.text
+   primary_text=page.cta.primary_text
+   primary_url=page.cta.primary_url
+   secondary_text=page.cta.secondary_text
+   secondary_url=page.cta.secondary_url %}
 {% endif %}

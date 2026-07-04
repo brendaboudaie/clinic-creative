@@ -1,18 +1,18 @@
 // _sass/_buttons.scss
 // Button styles. Each `.btn--<name>` class corresponds to an entry under
-// `buttons:` in _data/theme.yml — add a new variant there (bg/text/hover-bg/
+// `buttons:` in _data/theme.yml  -  add a new variant there (bg/text/hover-bg/
 // border) and it's ready to use here automatically via the loop below.
 
 .btn {
   display: inline-block;
-  font-family: var(--font-heading);
-  font-weight: 600;
+  font-family: var(--font-body);
+  font-weight: 500;
   text-decoration: none;
   text-align: center;
   cursor: pointer;
-  padding: var(--space-xs) var(--space-md);
-  border-radius: var(--radius-pill);
-  border: 2px solid transparent;
+  padding: 0.55em 1.75em;
+  border-radius: var(--radius-sm);
+  border: 1.5px solid transparent;
   transition: background-color 0.15s ease, color 0.15s ease, border-color 0.15s ease;
 }
 

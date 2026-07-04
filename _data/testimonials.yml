@@ -1,0 +1,8 @@
+# _data/testimonials.yml
+#
+# Client quotes. Empty for now — the homepage testimonials section only
+# renders if this list has entries, so nothing needs to change elsewhere
+# when you add the first one. Shape:
+#
+# - quote: "Working with Clinic Creative made our new website launch effortless."
+#   author: "Dr. Jane Doe, Family Medicine"
