@@ -17,8 +17,8 @@
     {% include card-grid.html cards=page.benefits columns=3 %}
 
   Parameters:
-    cards    - array of card data (title/text/icon/image/image_placeholder/
-               url/cta_text), required
+    cards    - array of card data (title/text/icon/image/image_alt/
+               image_placeholder/url/cta_text), required
     columns  - 2, 3, or 4 (default 3)
 {% endcomment %}
 {%- assign grid_columns = include.columns | default: 3 -%}
@@ -29,6 +29,7 @@
      text=card.text
      icon=card.icon
      image=card.image
+     image_alt=card.image_alt
      image_placeholder=card.image_placeholder
      url=card.url
      cta_text=card.cta_text %}

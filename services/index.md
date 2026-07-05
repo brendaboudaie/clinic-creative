@@ -45,12 +45,14 @@ who_we_help:
   cards:
     - title: Medical Practices
       text: "Designed for primary care, concierge medicine, specialists, and private practices."
-      image_placeholder: "Photo placeholder — a medical practice photo (e.g. a stethoscope) goes here. Add a real image at assets/images/ when available."
+      image: /assets/images/medical-office-sample.jpg
+      image_alt: "A bright, modern medical office reception area"
       url: /medical/
       cta_text: "Learn More"
     - title: Dental Practices
       text: "Designed for general dentists, pediatric dentists, orthodontists, cosmetic dentists, and specialists."
-      image_placeholder: "Photo placeholder — a dental practice photo (e.g. dental tools) goes here. Add a real image at assets/images/ when available."
+      image: /assets/images/dental-office-sample.jpg
+      image_alt: "A clean, modern dental treatment room"
       url: /dental/
       cta_text: "Learn More"
 cta:

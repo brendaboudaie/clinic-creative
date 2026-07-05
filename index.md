@@ -3,11 +3,13 @@ layout: home
 title: Medical and Dental Website Design in Los Angeles
 description: "Clinic Creative designs websites, branding, and SEO exclusively for medical and dental practices in Los Angeles — a boutique studio that understands healthcare."
 hero:
-  title: "We Build Exceptional Digital Experiences for Medical and Dental Practices"
-  subtitle: "Websites, branding, and SEO built exclusively for healthcare practices in Los Angeles — designed to earn patient trust and grow your practice."
-  primary_cta_text: "Get a Free Consultation"
+  title: "Growing Your Practice With Exceptional Digital Experiences"
+  subtitle: "Custom websites, branding, and local SEO for medical and dental practices—helping you build credibility, attract more patients, and stand out online."
+  image: /assets/images/hero-mockup.jpg
+  image_alt: "Clinic Creative website and branding mockup shown on a desktop monitor and phone"
+  primary_cta_text: "Free Consultation"
   primary_cta_url: /contact/
-  secondary_cta_text: "View Our Services"
+  secondary_cta_text: "Our Services"
   secondary_cta_url: /services/
 stats:
   - number: "Since 2019"
@@ -25,12 +27,14 @@ who_we_help:
   cards:
     - title: Medical Practices
       text: "Tailored websites and marketing solutions for doctors and specialties."
-      image_placeholder: "Photo placeholder — a medical practice photo (e.g. a stethoscope) goes here. Add a real image at assets/images/ when available."
+      image: /assets/images/medical-office-sample.jpg
+      image_alt: "A bright, modern medical office reception area"
       url: /medical/
       cta_text: "Learn More"
     - title: Dental Practices
       text: "Modern websites and growth strategies for dental offices."
-      image_placeholder: "Photo placeholder — a dental practice photo (e.g. dental tools) goes here. Add a real image at assets/images/ when available."
+      image: /assets/images/dental-office-sample.jpg
+      image_alt: "A clean, modern dental treatment room"
       url: /dental/
       cta_text: "Learn More"
 services_title: "Services"

@@ -82,6 +82,14 @@
   border-radius: var(--radius-md);
 }
 
+// A device/branding mockup (e.g. the homepage hero) - these are usually
+// transparent PNGs, so show the whole image rather than cropping it.
+.hero-mockup {
+  width: 75%;
+  height: auto;
+  margin-inline: auto;
+}
+
 // Placeholder boxes ------------------------------------------------------
 // Used anywhere a real photo/mockup/headshot isn't available yet. Dashed
 // border keeps it visibly a placeholder rather than looking like a bug.
@@ -169,7 +177,7 @@ a.card:focus-visible {
 }
 
 .card__title {
-  font-size: 1.125rem;
+  font-size: 24px;
   margin-bottom: var(--space-xs);
 }
 
@@ -328,10 +336,6 @@ a.card:focus-visible {
 .process-header {
   text-align: center;
   margin-bottom: var(--space-lg);
-}
-
-.process-header .section__title {
-  margin-bottom: var(--space-xs);
 }
 
 .process-subtitle {

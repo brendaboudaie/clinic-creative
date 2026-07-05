@@ -10,6 +10,9 @@
     icon              - optional short text/emoji shown above the title
     image             - optional image path; renders full-bleed across the
                         top of the card (photo-card style), used instead of icon
+    image_alt         - alt text for `image` (defaults to "", i.e.
+                        decorative — set this whenever the image conveys
+                        information the title/text don't already cover)
     image_placeholder - optional placeholder text shown in a full-bleed
                         image-shaped box instead of a real `image` — use
                         until a real photo exists at assets/images/
@@ -23,7 +26,7 @@
 {%- assign has_media = include.image | default: include.image_placeholder -%}
 <{{ card_tag }} class="card{% if has_media %} card--media{% endif %}"{% if card_tag == "a" %} href="{{ include.url | relative_url }}"{% endif %}>
   {% if include.image %}
-  <img class="card__image" src="{{ include.image | relative_url }}" alt="">
+  <img class="card__image" src="{{ include.image | relative_url }}" alt="{{ include.image_alt | default: '' }}">
   {% elsif include.image_placeholder %}
   <div class="card__image card__image--placeholder" aria-hidden="true">{{ include.image_placeholder }}</div>
   {% endif %}

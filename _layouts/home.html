@@ -10,8 +10,11 @@ layout: default
   automatically if their front matter isn't set.
 
   Front-matter fields it reads:
-    hero:          { title, subtitle, primary_cta_text, primary_cta_url,
-                     secondary_cta_text, secondary_cta_url }
+    hero:          { title, subtitle, image, image_alt, primary_cta_text,
+                     primary_cta_url, secondary_cta_text, secondary_cta_url }
+                   - image is a real mockup path (e.g.
+                     /assets/images/hero-mockup.png); if unset, falls back
+                     to a placeholder box
     stats:         array of { number, label, icon } — "By the Numbers"
     who_we_help:   { title, subtitle, cards: [{ title, text, url, cta_text,
                      image_placeholder }] } — cards render as photo cards
@@ -44,9 +47,14 @@ layout: default
       </div>
       {% endif %}
     </div>
+    {% if page.hero.image %}
+    {%- assign hero_image_alt = page.hero.image_alt | default: "Website and branding mockup" -%}
+    <img class="hero-mockup" src="{{ page.hero.image | relative_url }}" alt="{{ hero_image_alt }}">
+    {% else %}
     <div class="placeholder-box placeholder-box--tall" aria-hidden="true">
       Website &amp; branding mockup — add a real image at assets/images/ when available
     </div>
+    {% endif %}
   </div>
 </section>
 {% endif %}
