@@ -148,6 +148,11 @@ a.card:focus-visible {
   margin-bottom: var(--space-xs);
 }
 
+.card__icon svg {
+  width: 28px;
+  height: 28px;
+}
+
 // Photo-card variant (image/image_placeholder set)  -  the image runs
 // full-bleed across the top, clipped to the card's own rounded corners,
 // with the rest of the content padded below it in .card__body.
@@ -313,8 +318,14 @@ a.card:focus-visible {
 }
 
 .stat__icon {
+  display: inline-flex;
   font-size: 1.25rem;
   color: var(--color-text);
+}
+
+.stat__icon svg {
+  width: 22px;
+  height: 22px;
 }
 
 .stat__number {

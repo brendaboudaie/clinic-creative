@@ -12,13 +12,13 @@ quote_author: "Brenda Boudaie Zarrinkhoo, Founder"
 stats:
   - number: "Since 2019"
     label: "Years in Industry"
-    icon: "▤"
+    icon: calendar
   - number: "45+"
     label: "Websites Launched"
-    icon: "➤"
+    icon: rocket
   - number: "30+"
     label: "Clients Supported"
-    icon: "◈"
+    icon: people
 values:
   title: "My Values"
   cards:

@@ -14,25 +14,25 @@ hero:
 stats:
   - number: "Since 2019"
     label: "Years in Industry"
-    icon: "▤"
+    icon: calendar
   - number: "45+"
     label: "Websites Launched"
-    icon: "➤"
+    icon: rocket
   - number: "30+"
     label: "Clients Supported"
-    icon: "◈"
+    icon: people
 who_we_help:
-  title: "Who We Help"
-  subtitle: "We partner with healthcare professionals who are passionate about patient care and want a digital presence that reflects their expertise."
+  title: "Built for Healthcare Practices"
+  subtitle: "Your patients' first impression often happens online. Explore solutions tailored to your specialty, designed to showcase your expertise, strengthen patient trust, and help your practice continue to grow."
   cards:
     - title: Medical Practices
-      text: "Tailored websites and marketing solutions for doctors and specialties."
+      text: "Purpose-built digital experiences for physicians and medical practices—from branding and websites to SEO and long-term digital support."
       image: /assets/images/medical-office-sample.jpg
       image_alt: "A bright, modern medical office reception area"
       url: /medical/
       cta_text: "Learn More"
     - title: Dental Practices
-      text: "Modern websites and growth strategies for dental offices."
+      text: "Custom websites, branding, and local SEO for dental practices focused on attracting new patients, showcasing their expertise, and creating exceptional first impressions."
       image: /assets/images/dental-office-sample.jpg
       image_alt: "A clean, modern dental treatment room"
       url: /dental/

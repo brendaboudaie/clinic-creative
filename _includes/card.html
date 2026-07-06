@@ -7,7 +7,9 @@
   Parameters:
     title             - card heading (required)
     text              - card body copy
-    icon              - optional short text/emoji shown above the title
+    icon              - optional icon shown above the title; either a name
+                        from _includes/icon.html (e.g. "monitor") or, for
+                        backward compatibility, a raw text/emoji glyph
     image             - optional image path; renders full-bleed across the
                         top of the card (photo-card style), used instead of icon
     image_alt         - alt text for `image` (defaults to "", i.e.
@@ -32,7 +34,7 @@
   {% endif %}
   <div class="card__body">
     {% if include.icon and has_media == nil %}
-    <span class="card__icon" aria-hidden="true">{{ include.icon }}</span>
+    <span class="card__icon" aria-hidden="true">{% include icon.html name=include.icon %}</span>
     {% endif %}
     {% if include.title %}<h3 class="card__title">{{ include.title }}</h3>{% endif %}
     {% if include.text %}<p class="card__text">{{ include.text }}</p>{% endif %}

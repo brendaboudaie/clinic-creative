@@ -9,20 +9,22 @@
     stats:
       - number: "Since 2019"
         label: "In the industry"
-        icon: "▤"
+        icon: calendar
       - number: "45+"
         label: "Websites launched"
-        icon: "➤"
+        icon: rocket
 
   Parameters:
-    stats - array of { number, label, icon }, required (icon optional)
+    stats - array of { number, label, icon }, required (icon optional).
+            icon is one of _includes/icon.html's names (calendar, rocket,
+            people) or, for backward compatibility, a raw text/emoji glyph
 {% endcomment %}
 <div class="stats fade-in-up">
   {% for stat in include.stats %}
   <div class="stat">
     {% if stat.icon %}
     <span class="stat__icon-wrap" aria-hidden="true">
-      <span class="stat__icon">{{ stat.icon }}</span>
+      <span class="stat__icon">{% include icon.html name=stat.icon %}</span>
     </span>
     {% endif %}
     <p class="stat__number">{{ stat.number }}</p>
