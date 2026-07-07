@@ -31,7 +31,7 @@ layout: default
 {% endcomment %}
 
 {% if page.hero %}
-<section class="hero hero--split">
+<section class="hero hero--split hero--full">
   <div class="container hero__grid">
     <div class="hero__inner">
       {% if page.hero.title %}<h1 class="hero__title">{{ page.hero.title }}</h1>{% endif %}
@@ -59,14 +59,10 @@ layout: default
 </section>
 {% endif %}
 
-<div class="container section">
-  {{ content }}
-</div>
-
 {% if page.stats %}
 <section class="section section--alt fade-in-up">
   <div class="container">
-    {% include stats.html stats=page.stats %}
+    {% include stats.html stats=page.stats describe=true %}
   </div>
 </section>
 {% endif %}
@@ -75,7 +71,7 @@ layout: default
 <section class="section fade-in-up">
   <div class="container">
     {% if page.who_we_help.title %}<h2 class="section__title">{{ page.who_we_help.title }}</h2>{% endif %}
-    {% if page.who_we_help.subtitle %}<p class="content-width">{{ page.who_we_help.subtitle }}</p>{% endif %}
+    {% if page.who_we_help.subtitle %}<p class="who-we-help__subtitle">{{ page.who_we_help.subtitle }}</p>{% endif %}
     {% include card-grid.html cards=page.who_we_help.cards columns=2 %}
   </div>
 </section>
@@ -105,9 +101,13 @@ layout: default
         {% endfor %}
       </ul>
     </div>
+    {% if page.why_us.image %}
+    <img class="why-us-image" src="{{ page.why_us.image | relative_url }}" alt="{{ page.why_us.image_alt | default: '' }}">
+    {% else %}
     <div class="placeholder-box placeholder-box--tall" aria-hidden="true">
       {{ page.why_us.image_note | default: "Photo placeholder — add a real image at assets/images/ when available" }}
     </div>
+    {% endif %}
   </div>
 </section>
 {% endif %}
@@ -155,5 +155,6 @@ layout: default
    primary_text=page.cta.primary_text
    primary_url=page.cta.primary_url
    secondary_text=page.cta.secondary_text
-   secondary_url=page.cta.secondary_url %}
+   secondary_url=page.cta.secondary_url
+   background="section--cta--white" %}
 {% endif %}

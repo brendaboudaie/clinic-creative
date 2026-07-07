@@ -26,7 +26,8 @@ benefits:
 services_title: "Services"
 why_us:
   title: "Why Medical Practices Choose The Clinic Creative"
-  image_note: "Photo placeholder — add a real workspace/product image at assets/images/ when available"
+  image: /assets/images/why-clinic-creative.jpg
+  image_alt: "Why Clinic Creative"
   cards:
     - title: Built Exclusively for Healthcare
       text: "We understand physician workflows, patient expectations, and healthcare marketing."

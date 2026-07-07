@@ -7,7 +7,8 @@
     {% include icon.html name="calendar" %}
 
   Parameters:
-    name - one of: calendar, rocket, people, edit, monitor, search, settings
+    name - one of: calendar, rocket, people, edit, monitor, search, settings,
+           cross, user, mobile, speed
 {% endcomment %}
 {%- case include.name -%}
 {%- when "calendar" -%}
@@ -53,6 +54,24 @@
 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
   <circle cx="10.5" cy="10.5" r="6.5"/>
   <line x1="15.3" y1="15.3" x2="20.5" y2="20.5"/>
+</svg>
+{%- when "cross" -%}
+<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+  <path d="M9 3h6v6h6v6h-6v6h-6v-6h-6v-6h6z"/>
+</svg>
+{%- when "user" -%}
+<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+  <circle cx="12" cy="7.5" r="4"/>
+  <path d="M4.5 20.5v-1a4 4 0 014-4h7a4 4 0 014 4v1"/>
+</svg>
+{%- when "mobile" -%}
+<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+  <rect x="6.5" y="2.5" width="11" height="19" rx="2"/>
+  <line x1="10.5" y1="18" x2="13.5" y2="18"/>
+</svg>
+{%- when "speed" -%}
+<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+  <path d="M13 2.5L4 14h6l-1 7.5L20 10h-6l-1-7.5z"/>
 </svg>
 {%- when "settings" -%}
 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">

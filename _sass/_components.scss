@@ -61,6 +61,24 @@
   max-width: none;
 }
 
+// Centered, narrower hero used only on the What We Do / Dental / Medical
+// landing (hub) pages  -  not the individual specialty subpages, which keep
+// the default left-aligned, full-width hero--audience style.
+.hero--landing .hero__inner {
+  @media (min-width: $breakpoint-md) {
+    max-width: 60%;
+  }
+}
+
+// Full-viewport-height hero (homepage only)  -  centers its content
+// vertically since the section is now taller than its content.
+.hero--full {
+  min-height: 100vh;
+  padding-top: 0;
+  display: flex;
+  align-items: center;
+}
+
 .hero__grid {
   display: grid;
   gap: var(--space-lg);
@@ -110,6 +128,13 @@
 
 .placeholder-box--tall {
   min-height: 320px;
+}
+
+.why-us-image {
+  width: 100%;
+  aspect-ratio: 3 / 2;
+  object-fit: cover;
+  border-radius: var(--radius-md);
 }
 
 .placeholder-box--avatar {
@@ -215,6 +240,23 @@ a.card:focus-visible {
   display: flex;
   flex-direction: column;
   gap: var(--space-md);
+}
+
+.who-we-help__subtitle {
+  max-width: 100%;
+
+  @media (min-width: $breakpoint-md) {
+    max-width: 45%;
+  }
+}
+
+.why-matters {
+  text-align: center;
+
+  @media (min-width: $breakpoint-md) {
+    max-width: 55%;
+    margin-inline: auto;
+  }
 }
 
 .checklist__item {
@@ -342,6 +384,17 @@ a.card:focus-visible {
   text-transform: uppercase;
 }
 
+// Used when the label is a full sentence (e.g. the homepage's value
+// props) rather than a short caption  -  no small-caps treatment, and a
+// narrower measure so it reads as a short paragraph, not a stretched line.
+.stat__label--sentence {
+  max-width: 280px;
+  margin-inline: auto;
+  text-transform: none;
+  letter-spacing: normal;
+  font-size: 1rem;
+}
+
 // Process steps ------------------------------------------------------------
 
 .process-header {
@@ -461,6 +514,10 @@ a.card:focus-visible {
   text-align: center;
   border-top: 1px solid var(--color-border);
   border-bottom: 1px solid var(--color-border);
+}
+
+.section--cta--white {
+  background-color: var(--color-background);
 }
 
 .section--cta__inner {

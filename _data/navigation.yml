@@ -6,9 +6,9 @@
 # dropdown of direct links to sub-pages. _includes/navigation.html loops
 # over this, so add/remove/reorder entries here without touching HTML.
 #
-# Only specialties with a real page are listed here (Phase 1). Once a
-# Phase 2 specialty gets its own file, add it here and it appears in the
-# dropdown automatically.
+# Only specialties with a real page are listed here. Add a new specialty
+# to _data/dental_specialties.yml or _data/medical_specialties.yml, give
+# it a page, then add it here to appear in the dropdown.
 
 - title: What We Do
   url: /services/
@@ -31,16 +31,38 @@
       url: /dental/orthodontic/
     - title: Cosmetic Dentistry
       url: /dental/cosmetic-dentistry/
+    - title: Pediatric Dentistry
+      url: /dental/pediatric-dentistry/
+    - title: Oral Surgery
+      url: /dental/oral-surgery/
+    - title: Periodontal
+      url: /dental/periodontal/
+    - title: Endodontic
+      url: /dental/endodontic/
 
 - title: For Medical
   url: /medical/
   children:
     - title: Family Medicine
       url: /medical/family-medicine/
+    - title: Internal Medicine
+      url: /medical/internal-medicine/
+    - title: Concierge Medicine
+      url: /medical/concierge-medicine/
     - title: Dermatology
       url: /medical/dermatology/
     - title: Med Spa
       url: /medical/med-spa/
+    - title: Pediatric Medicine
+      url: /medical/pediatric-medicine/
+    - title: Plastic Surgery
+      url: /medical/plastic-surgery/
+    - title: Chiropractic
+      url: /medical/chiropractic/
+    - title: Physical Therapy
+      url: /medical/physical-therapy/
+    - title: Optometry
+      url: /medical/optometry/
 
 - title: About
   url: /about/

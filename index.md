@@ -4,7 +4,7 @@ title: Medical and Dental Website Design in Los Angeles
 description: "Clinic Creative designs websites, branding, and SEO exclusively for medical and dental practices in Los Angeles — a boutique studio that understands healthcare."
 hero:
   title: "Growing Your Practice With Exceptional Digital Experiences"
-  subtitle: "Custom websites, branding, and local SEO for medical and dental practices—helping you build credibility, attract more patients, and stand out online."
+  subtitle: "Custom websites, logos, and SEO for medical and dental practices—helping you build credibility, attract more patients, and stand out online."
   image: /assets/images/hero-mockup.jpg
   image_alt: "Clinic Creative website and branding mockup shown on a desktop monitor and phone"
   primary_cta_text: "Free Consultation"
@@ -12,35 +12,36 @@ hero:
   secondary_cta_text: "Our Services"
   secondary_cta_url: /services/
 stats:
-  - number: "Since 2019"
-    label: "Years in Industry"
-    icon: calendar
-  - number: "45+"
-    label: "Websites Launched"
-    icon: rocket
-  - number: "30+"
-    label: "Clients Supported"
-    icon: people
+  - number: "Healthcare Expertise"
+    label: "We understand healthcare marketing, patient expectations, and what builds trust online."
+    icon: cross
+  - number: "Boutique Service"
+    label: "A collaborative, one-on-one process focused on your practice, your goals, and your patients."
+    icon: user
+  - number: "100% Custom"
+    label: "No templates. A website as unique and exceptional as the practice you've built."
+    icon: edit
 who_we_help:
   title: "Built for Healthcare Practices"
   subtitle: "Your patients' first impression often happens online. Explore solutions tailored to your specialty, designed to showcase your expertise, strengthen patient trust, and help your practice continue to grow."
   cards:
     - title: Medical Practices
-      text: "Purpose-built digital experiences for physicians and medical practices—from branding and websites to SEO and long-term digital support."
+      text: "Purpose-built digital experiences for physicians and medical practices—from logos and websites to SEO and long-term digital support."
       image: /assets/images/medical-office-sample.jpg
       image_alt: "A bright, modern medical office reception area"
       url: /medical/
       cta_text: "Learn More"
     - title: Dental Practices
-      text: "Custom websites, branding, and local SEO for dental practices focused on attracting new patients, showcasing their expertise, and creating exceptional first impressions."
-      image: /assets/images/dental-office-sample.jpg
+      text: "Custom websites, logos, and local SEO for dental practices focused on attracting new patients, and creating exceptional first impressions."
+      image: /assets/images/dental-office-op.jpg
       image_alt: "A clean, modern dental treatment room"
       url: /dental/
       cta_text: "Learn More"
 services_title: "Services"
 why_us:
-  title: "Why The Clinic Creative"
-  image_note: "Photo placeholder — add a real workspace/product image at assets/images/ when available"
+  title: "Why Clinic Creative"
+  image: /assets/images/why-clinic-creative.jpg
+  image_alt: "Why Clinic Creative"
   cards:
     - title: Built Exclusively for Healthcare
       text: "We understand physician and dental workflows, patient expectations, and healthcare marketing."

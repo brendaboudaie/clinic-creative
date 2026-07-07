@@ -15,9 +15,14 @@
         icon: rocket
 
   Parameters:
-    stats - array of { number, label, icon }, required (icon optional).
-            icon is one of _includes/icon.html's names (calendar, rocket,
-            people) or, for backward compatibility, a raw text/emoji glyph
+    stats    - array of { number, label, icon }, required (icon optional).
+               icon is one of _includes/icon.html's names (calendar,
+               rocket, people) or, for backward compatibility, a raw
+               text/emoji glyph
+    describe - set true when `label` is a full sentence (e.g. the
+               homepage's value props) rather than a short caption like
+               "Websites Launched" — swaps the small-caps caption styling
+               for normal descriptive-text styling
 {% endcomment %}
 <div class="stats fade-in-up">
   {% for stat in include.stats %}
@@ -28,7 +33,7 @@
     </span>
     {% endif %}
     <p class="stat__number">{{ stat.number }}</p>
-    <p class="stat__label">{{ stat.label }}</p>
+    <p class="stat__label{% if include.describe %} stat__label--sentence{% endif %}">{{ stat.label }}</p>
   </div>
   {% endfor %}
 </div>

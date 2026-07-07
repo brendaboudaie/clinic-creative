@@ -8,22 +8,22 @@
   slug: website-design
   url: /services/website-design/
   icon: monitor
-  text: "Beautiful, fast websites designed to convert visitors into patients."
+  text: "100% custom, patient-focused websites designed to build trust, improve conversions, and help your practice grow."
 
 - title: Logo & Branding
   slug: logo-branding
   url: /services/logo-branding/
   icon: edit
-  text: "Create a professional identity that reflects your practice and builds patient confidence."
+  text: "Create a memorable brand identity that reflects your expertise, builds patient confidence, and sets your practice apart."
 
-- title: SEO
+- title: Local SEO
   slug: seo
   url: /services/seo/
   icon: search
-  text: "Improve your visibility in search results, including local SEO and Google Business Profile management, so patients find your practice first."
+  text: "Increase your visibility with local SEO, Google Business Profile optimization, and search strategies that attract new patients."
 
 - title: Website Maintenance
   slug: website-maintenance
   url: /services/website-maintenance/
   icon: settings
-  text: "Keep your website secure, updated, and performing at its best."
+  text: "Keep your website secure, up to date, and performing at its best with reliable ongoing support and maintenance."

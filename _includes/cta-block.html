@@ -13,10 +13,11 @@
     secondary_text  - secondary button label (optional)
     secondary_url   - secondary button destination
     secondary_style - button style for the secondary CTA (default "secondary")
+    background       - optional extra class, e.g. "section--cta--white"
 {% endcomment %}
 {%- assign cta_primary_style = include.primary_style | default: "primary" -%}
 {%- assign cta_secondary_style = include.secondary_style | default: "secondary" -%}
-<section class="section section--cta fade-in-up">
+<section class="section section--cta {% if include.background %}{{ include.background }}{% endif %} fade-in-up">
   <div class="container section--cta__inner">
     {% if include.title %}<h2>{{ include.title }}</h2>{% endif %}
     {% if include.text %}<p>{{ include.text }}</p>{% endif %}

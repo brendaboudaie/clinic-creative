@@ -7,7 +7,8 @@ data_source: services
 grid_title: "Our Services"
 why_us:
   title: "Why Work With The Clinic Creative"
-  image_note: "Photo placeholder — add a real workspace/product image at assets/images/ when available"
+  image: /assets/images/why-clinic-creative.jpg
+  image_alt: "Why Clinic Creative"
   cards:
     - title: Built Exclusively for Healthcare
       text: "We understand physician and dental workflows, patient expectations, and healthcare marketing."
@@ -44,14 +45,14 @@ who_we_help:
   subtitle: "Whether you run a medical practice or a dental office, we build websites tailored to your specialty."
   cards:
     - title: Medical Practices
-      text: "Designed for primary care, concierge medicine, specialists, and private practices."
+      text: "Purpose-built digital experiences for physicians and medical practices—from logos and websites to SEO and long-term digital support."
       image: /assets/images/medical-office-sample.jpg
       image_alt: "A bright, modern medical office reception area"
       url: /medical/
       cta_text: "Learn More"
     - title: Dental Practices
-      text: "Designed for general dentists, pediatric dentists, orthodontists, cosmetic dentists, and specialists."
-      image: /assets/images/dental-office-sample.jpg
+      text: "Custom websites, logos, and local SEO for dental practices focused on attracting new patients, and creating exceptional first impressions."
+      image: /assets/images/dental-office-op.jpg
       image_alt: "A clean, modern dental treatment room"
       url: /dental/
       cta_text: "Learn More"

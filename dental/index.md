@@ -25,7 +25,8 @@ data_source: dental_specialties
 grid_title: "Who We Work With"
 why_us:
   title: "Why Dental Practices Choose The Clinic Creative"
-  image_note: "Photo placeholder — add a real workspace/product image at assets/images/ when available"
+  image: /assets/images/why-clinic-creative.jpg
+  image_alt: "Why Clinic Creative"
   cards:
     - title: Built Exclusively for Healthcare
       text: "We understand dental workflows, patient expectations, and healthcare marketing."

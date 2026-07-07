@@ -1,20 +1,25 @@
 {% comment %}
   _includes/footer.html
-  Site footer. Content (tagline, link columns) comes from
-  _data/footer.yml — edit that file rather than this one for copy changes.
+  Site footer. Content (logo, tagline, company links, "What We Do" column)
+  comes from _data/footer.yml. The Dental and Medical columns are pulled
+  directly from _data/dental_specialties.yml and _data/medical_specialties.yml
+  (only entries with page: true) so they always match the live pages.
 {% endcomment %}
 <footer class="site-footer">
   <div class="container site-footer__inner">
     <div class="site-footer__about">
-      <p class="site-footer__logo">{{ site.title }}</p>
+      {% if site.data.footer.logo %}
+      <img class="site-footer__logo" src="{{ site.data.footer.logo | relative_url }}" alt="{{ site.title }}">
+      {% endif %}
       {% if site.data.footer.tagline %}
       <p class="site-footer__tagline">{{ site.data.footer.tagline }}</p>
       {% endif %}
-      {% if site.email %}
-      <p><a href="mailto:{{ site.email }}">{{ site.email }}</a></p>
-      {% endif %}
-      {% if site.address %}
-      <p>{{ site.address }}</p>
+      {% if site.data.footer.company_links %}
+      <ul class="site-footer__links site-footer__links--strong">
+        {% for link in site.data.footer.company_links %}
+        <li><a href="{{ link.url | relative_url }}">{{ link.title }}</a></li>
+        {% endfor %}
+      </ul>
       {% endif %}
     </div>
 
@@ -28,6 +33,28 @@
       </ul>
     </div>
     {% endfor %}
+
+    <div class="site-footer__column">
+      <p class="site-footer__column-title">Dental</p>
+      <ul class="site-footer__links">
+        {% for item in site.data.dental_specialties %}
+        {% if item.page %}
+        <li><a href="{{ item.url | relative_url }}">{{ item.title }}</a></li>
+        {% endif %}
+        {% endfor %}
+      </ul>
+    </div>
+
+    <div class="site-footer__column">
+      <p class="site-footer__column-title">Medical</p>
+      <ul class="site-footer__links">
+        {% for item in site.data.medical_specialties %}
+        {% if item.page %}
+        <li><a href="{{ item.url | relative_url }}">{{ item.title }}</a></li>
+        {% endif %}
+        {% endfor %}
+      </ul>
+    </div>
   </div>
 
   <div class="container site-footer__bottom">

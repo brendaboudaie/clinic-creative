@@ -17,7 +17,7 @@
 
 - title: Pediatric Dentistry
   url: /dental/pediatric-dentistry/
-  page: false
+  page: true
   text: "Websites for pediatric dental practices in Los Angeles."
 
 - title: Cosmetic Dentistry
@@ -27,15 +27,15 @@
 
 - title: Oral Surgery
   url: /dental/oral-surgery/
-  page: false
+  page: true
   text: "Websites for oral and maxillofacial surgery practices."
 
 - title: Periodontal
   url: /dental/periodontal/
-  page: false
+  page: true
   text: "Websites for periodontal practices in Los Angeles."
 
 - title: Endodontic
   url: /dental/endodontic/
-  page: false
+  page: true
   text: "Websites for endodontic practices in Los Angeles."

@@ -1,24 +1,31 @@
 # _data/footer.yml
 #
 # Content for the site footer (_includes/footer.html). Edit the tagline
-# and link columns here — no HTML editing needed.
+# and link columns here — no HTML editing needed. The Dental and Medical
+# columns aren't listed here; they're pulled directly from
+# _data/dental_specialties.yml and _data/medical_specialties.yml so the
+# footer always matches the live specialty pages.
 
-tagline: "A boutique studio building websites and branding exclusively for medical and dental practices in Los Angeles."
+logo: /assets/images/cc-logo-mark.png
+
+tagline: "A boutique studio building websites and logos exclusively for medical and dental practices."
+
+company_links:
+  - title: About
+    url: /about/
+  - title: Contact
+    url: /contact/
+  - title: Free Consultation
+    url: /contact/
 
 columns:
-  - title: Company
-    links:
-      - title: About
-        url: /about/
-      - title: Contact
-        url: /contact/
-      - title: Free Consultation
-        url: /contact/
   - title: What We Do
     links:
-      - title: All Services
-        url: /services/
-      - title: For Dental
-        url: /dental/
-      - title: For Medical
-        url: /medical/
+      - title: Web Design
+        url: /services/website-design/
+      - title: Logo & Branding
+        url: /services/logo-branding/
+      - title: SEO
+        url: /services/seo/
+      - title: Web Maintenance
+        url: /services/website-maintenance/
