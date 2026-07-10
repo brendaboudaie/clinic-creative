@@ -5,47 +5,47 @@
 # dropdown; the rest render as "coming soon" (Phase 2) — add the file,
 # flip this to true, and add it to _data/navigation.yml to go live.
 #
-# `image` is a temporary placeholder (assets/images/carousel-temp.jpg)
-# shared by every card — swap in a real per-specialty photo when available.
+# `image` files live in assets/images/dental/, named to match each
+# specialty's slug.
 
 - title: General Dentistry
   url: /dental/general-dentistry/
   page: true
   text: "Websites for general and family dental practices in Los Angeles."
-  image: /assets/images/carousel-temp.jpg
+  image: /assets/images/dental/general-dentistry.jpg
 
 - title: Orthodontic
   url: /dental/orthodontic/
   page: true
   text: "Websites for orthodontists that win over parents before the first call."
-  image: /assets/images/carousel-temp.jpg
+  image: /assets/images/dental/orthodontic.jpg
 
 - title: Pediatric Dentistry
   url: /dental/pediatric-dentistry/
   page: true
   text: "Websites for pediatric dental practices in Los Angeles."
-  image: /assets/images/carousel-temp.jpg
+  image: /assets/images/dental/pediatric-dentistry.jpg
 
 - title: Cosmetic Dentistry
   url: /dental/cosmetic-dentistry/
   page: true
   text: "Websites that showcase your cosmetic dentistry results and expertise."
-  image: /assets/images/carousel-temp.jpg
+  image: /assets/images/dental/cosmetic-dentistry.jpg
 
 - title: Oral Surgery
   url: /dental/oral-surgery/
   page: true
   text: "Websites for oral and maxillofacial surgery practices."
-  image: /assets/images/carousel-temp.jpg
+  image: /assets/images/dental/oral-surgery.jpg
 
 - title: Periodontal
   url: /dental/periodontal/
   page: true
   text: "Websites for periodontal practices in Los Angeles."
-  image: /assets/images/carousel-temp.jpg
+  image: /assets/images/dental/periodontal.jpg
 
 - title: Endodontic
   url: /dental/endodontic/
   page: true
   text: "Websites for endodontic practices in Los Angeles."
-  image: /assets/images/carousel-temp.jpg
+  image: /assets/images/dental/endodontic.jpg
