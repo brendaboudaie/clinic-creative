@@ -1,0 +1,39 @@
+{% comment %}
+  _includes/specialty-carousel.html
+  Horizontally-scrolling, snap-to card carousel for a "Who We Work With"
+  style grid of specialties. Used by _layouts/vertical-landing.html for
+  the dental/medical hub pages (not the services hub, which keeps the
+  plain card-grid).
+
+    {% include specialty-carousel.html items=live_items %}
+
+  Parameters:
+    items - array of { title, url, image (optional), image_alt (optional) }
+{% endcomment %}
+<div class="carousel">
+  <button type="button" class="carousel__arrow carousel__arrow--prev" data-carousel-prev aria-label="Scroll left">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+      <path d="M15 5l-7 7 7 7"/>
+    </svg>
+  </button>
+
+  <div class="carousel__track" data-carousel-track>
+    {% for item in include.items %}
+    <a href="{{ item.url | relative_url }}" class="carousel__card">
+      {% if item.image %}
+      <img class="carousel__image" src="{{ item.image | relative_url }}" alt="{{ item.image_alt | default: '' }}">
+      {% else %}
+      <div class="carousel__image carousel__image--placeholder" aria-hidden="true"></div>
+      {% endif %}
+      <span class="carousel__overlay" aria-hidden="true"></span>
+      <span class="carousel__label">{{ item.title }}</span>
+    </a>
+    {% endfor %}
+  </div>
+
+  <button type="button" class="carousel__arrow carousel__arrow--next" data-carousel-next aria-label="Scroll right">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+      <path d="M9 5l7 7-7 7"/>
+    </svg>
+  </button>
+</div>

@@ -17,7 +17,8 @@ layout: default
                             a real image (or a placeholder box) on the right
     why_matters:           { title, paragraphs: [...] } — a short editorial
                             section explaining why this service matters
-    whats_included:        { title, items: [{ title, text, icon }] }
+    whats_included:        { title, items: [{ title, text, icon }],
+                            columns } — columns defaults to 3
     perfect_for:           { title, cards: [...] } — usually the shared
                             Medical Practices / Dental Practices cards
     process:               { title, subtitle, steps: [{ title, text, icon }] }
@@ -64,10 +65,11 @@ layout: default
 {% endif %}
 
 {% if page.whats_included %}
+{%- assign whats_included_columns = page.whats_included.columns | default: 3 -%}
 <section class="section section--alt fade-in-up">
   <div class="container">
     <h2 class="section__title">{{ page.whats_included.title | default: "What's Included" }}</h2>
-    {% include card-grid.html cards=page.whats_included.items columns=3 %}
+    {% include card-grid.html cards=page.whats_included.items columns=whats_included_columns %}
   </div>
 </section>
 {% endif %}

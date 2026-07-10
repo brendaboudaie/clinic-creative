@@ -4,53 +4,66 @@
 # real page and are linked from the /medical/ hub grid and the mega-menu
 # dropdown; the rest render as "coming soon" (Phase 2) — add the file,
 # flip this to true, and add it to _data/navigation.yml to go live.
+#
+# `image` is a temporary placeholder (assets/images/carousel-temp.jpg)
+# shared by every card — swap in a real per-specialty photo when available.
 
 - title: Family Medicine
   url: /medical/family-medicine/
   page: true
   text: "Websites for family medicine and primary care practices in Los Angeles."
+  image: /assets/images/carousel-temp.jpg
 
 - title: Internal Medicine
   url: /medical/internal-medicine/
   page: true
   text: "Websites for internal medicine practices in Los Angeles."
+  image: /assets/images/carousel-temp.jpg
 
 - title: Concierge Medicine
   url: /medical/concierge-medicine/
   page: true
   text: "Websites for concierge medicine practices that reflect a premium, personalized experience."
+  image: /assets/images/carousel-temp.jpg
 
 - title: Dermatology
   url: /medical/dermatology/
   page: true
   text: "Websites for dermatology practices that build patient trust at first glance."
+  image: /assets/images/carousel-temp.jpg
 
 - title: Med Spa
   url: /medical/med-spa/
   page: true
   text: "Websites for med spas that reflect a premium, patient-first experience."
+  image: /assets/images/carousel-temp.jpg
 
 - title: Pediatric Medicine
   url: /medical/pediatric-medicine/
   page: true
   text: "Websites for pediatric medical practices in Los Angeles."
+  image: /assets/images/carousel-temp.jpg
 
 - title: Plastic Surgery
   url: /medical/plastic-surgery/
   page: true
   text: "Websites for plastic surgery practices in Los Angeles."
+  image: /assets/images/carousel-temp.jpg
 
 - title: Chiropractic
   url: /medical/chiropractic/
   page: true
   text: "Websites for chiropractic practices in Los Angeles."
+  image: /assets/images/carousel-temp.jpg
 
 - title: Physical Therapy
   url: /medical/physical-therapy/
   page: true
   text: "Websites for physical therapy practices in Los Angeles."
+  image: /assets/images/carousel-temp.jpg
 
 - title: Optometry
   url: /medical/optometry/
   page: true
   text: "Websites for optometry practices in Los Angeles."
+  image: /assets/images/carousel-temp.jpg

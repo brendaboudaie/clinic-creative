@@ -57,6 +57,26 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   });
 
+  // Carousel arrows: scroll the track by roughly one card width per click.
+  // Native CSS scroll-snap handles settling on a card; this just moves the
+  // scroll position, so no state tracking or index math is needed.
+  document.querySelectorAll('.carousel').forEach(function (carousel) {
+    var track = carousel.querySelector('[data-carousel-track]');
+    var prevBtn = carousel.querySelector('[data-carousel-prev]');
+    var nextBtn = carousel.querySelector('[data-carousel-next]');
+    if (!track) return;
+
+    var scrollByCard = function (direction) {
+      var card = track.querySelector('.carousel__card');
+      var gap = parseFloat(getComputedStyle(track).columnGap) || 0;
+      var amount = card ? card.getBoundingClientRect().width + gap : track.clientWidth * 0.75;
+      track.scrollBy({ left: direction * amount, behavior: 'smooth' });
+    };
+
+    if (prevBtn) prevBtn.addEventListener('click', function () { scrollByCard(-1); });
+    if (nextBtn) nextBtn.addEventListener('click', function () { scrollByCard(1); });
+  });
+
   // Subtle fade-in-up as sections enter the viewport.
   var fadeTargets = document.querySelectorAll('.fade-in-up');
   if ('IntersectionObserver' in window && fadeTargets.length) {

@@ -4,25 +4,29 @@ description: "Website design, branding, and SEO built exclusively for dental pra
 headline: "Digital Marketing, Websites, and Branding Built Exclusively for Dental Practices"
 subheadline: "Whether you're opening a new practice, refreshing your brand, or looking to attract more patients, we help dentists create modern digital experiences that build trust and grow their practice."
 benefits:
-  title: "How We Help Dental Practices"
+  title: "Helping Your Practice Grow"
   cards:
     - title: Launch a New Practice
-      text: "Branding, website, Google Business Profile, online presence."
+      text: "From branding and website design to your Google Business Profile, we help new dental practices establish a professional online presence from day one."
       icon: "◈"
     - title: Attract More Local Patients
-      text: "SEO, local search, Google Maps optimization."
+      text: "Increase your visibility with local SEO, Google Maps optimization, and a website designed to turn searches into scheduled appointments."
       icon: "⌕"
     - title: Build Patient Trust
-      text: "Professional branding, practice photography, patient-first design."
+      text: "Create a polished first impression with professional branding, practice photography, and a patient-first website experience."
       icon: "⚕"
     - title: Modernize Your Existing Website
-      text: "Improve speed, accessibility, mobile experience, conversions."
+      text: "Transform an outdated website with improved performance, accessibility, mobile responsiveness, and a better patient experience."
       icon: "▣"
-    - title: Support Your Team
-      text: "Website maintenance, content updates, provider changes, new locations."
+    - title: Ongoing Website Support
+      text: "Keep your website current with maintenance, content updates, provider changes, new locations, and long-term digital support."
       icon: "↻"
+    - title: Strengthen Your Online Presence
+      text: "Create a consistent digital presence across your website, search results, Google Business Profile, and online listings—making it easier for new patients to find and choose your practice."
+      icon: "★"
 data_source: dental_specialties
 grid_title: "Who We Work With"
+services_title: "Services"
 why_us:
   title: "Why Dental Practices Choose The Clinic Creative"
   image: /assets/images/why-clinic-creative.jpg

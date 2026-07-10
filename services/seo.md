@@ -22,9 +22,6 @@ whats_included:
     - title: On-Page Optimization
       text: "Titles, headings, and page content structured to rank and to read well."
       icon: "✎"
-    - title: Monthly Reporting
-      text: "Clear reporting on rankings and traffic, in plain language."
-      icon: "↻"
 perfect_for:
   title: "Perfect For"
   cards:

@@ -12,6 +12,7 @@ why_matters:
     - "A website isn't a one-time project — it needs upkeep to stay secure, accurate, and effective. We handle ongoing maintenance so your practice's site keeps working for you long after launch, whether that means routine security updates, content changes, or simply keeping an eye on things so small issues don't become big ones."
 whats_included:
   title: "What's Included"
+  columns: 4
   items:
     - title: Software & Security Updates
       text: "Routine updates so your site stays fast and secure."

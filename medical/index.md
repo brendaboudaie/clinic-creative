@@ -6,23 +6,26 @@ subheadline: "Whether you're opening a new practice, refreshing your brand, or l
 data_source: medical_specialties
 grid_title: "Who We Work With"
 benefits:
-  title: "How We Help Medical Practices"
+  title: "Helping Your Practice Grow"
   cards:
     - title: Launch a New Practice
-      text: "Branding, website, Google Business Profile, online presence."
+      text: "From branding and website design to your Google Business Profile, we help new medical practices establish a professional online presence from day one."
       icon: "◈"
     - title: Attract More Local Patients
-      text: "SEO, local search, Google Maps optimization."
+      text: "Increase your visibility with local SEO, Google Maps optimization, and a website designed to turn searches into new patient appointments."
       icon: "⌕"
     - title: Build Patient Trust
-      text: "Professional branding, physician photography, patient-first design."
+      text: "Create a polished first impression with professional branding, physician photography, and a patient-first website experience."
       icon: "⚕"
     - title: Modernize Your Existing Website
-      text: "Improve speed, accessibility, mobile experience, conversions."
+      text: "Refresh an outdated website with faster performance, improved accessibility, mobile responsiveness, and a better patient experience."
       icon: "▣"
-    - title: Support Your Team
-      text: "Website maintenance, content updates, provider changes, new locations."
+    - title: Ongoing Website Support
+      text: "Keep your website current with maintenance, content updates, provider changes, new locations, and long-term digital support."
       icon: "↻"
+    - title: Strengthen Your Online Presence
+      text: "Build a consistent digital presence across your website, Google Business Profile, and local search—making it easier for patients to find, trust, and choose your practice."
+      icon: "★"
 services_title: "Services"
 why_us:
   title: "Why Medical Practices Choose The Clinic Creative"

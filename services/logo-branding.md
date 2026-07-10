@@ -22,9 +22,6 @@ whats_included:
     - title: Typography System
       text: "Consistent fonts across your website, print materials, and signage."
       icon: "▣"
-    - title: Brand Guidelines
-      text: "A simple reference so your brand stays consistent as your practice grows."
-      icon: "↻"
 perfect_for:
   title: "Perfect For"
   cards:
