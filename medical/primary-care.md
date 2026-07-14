@@ -1,17 +1,17 @@
 ---
-title: Chiropractic Website Design in Los Angeles
-description: "Professional website design for chiropractic practices in Los Angeles. Logo, branding, SEO and maintenance for chiropractic practices."
-specialty: "Chiropractic"
+title: Primary Care Website Design in Los Angeles
+description: "Professional website design for primary care practices in Los Angeles — family medicine and internal medicine. Logo, branding, SEO and maintenance for primary care practices."
+specialty: "Primary Care"
 hide_breadcrumb: true
 hero:
-  title: "Website Design, Branding & SEO for Chiropractors"
-  text: "Patients searching for pain relief choose a chiropractor online long before they call your office. We help chiropractors attract more patients through strategic branding, custom website design, local SEO, logo design, Google Business Profile optimization, and ongoing website maintenance—creating a professional presence that builds trust from the very first search."
+  title: "Website Design, Branding & SEO for Primary Care Providers"
+  text: "Patients choose a primary care provider online long before that first appointment. We help primary care providers attract more patients through strategic branding, custom website design, local SEO, logo design, Google Business Profile optimization, and ongoing website maintenance—creating a professional presence that builds trust from the very first search."
   primary_cta_text: "Get a Free Consultation"
   primary_cta_url: /contact/
   secondary_cta_text: "View Our Services"
   secondary_cta_url: /services/
-  image: /assets/images/medical/chiropractic-hero.png
-  image_alt: "Modern chiropractic office and treatment room"
+  image: /assets/images/medical/primary-care-hero.png
+  image_alt: "Modern primary care office and treatment room"
 services_intro_title: "Services"
 value_prop:
   title: "Why Your Online Presence Matters"
@@ -48,7 +48,7 @@ faq:
       answer: "Absolutely. We frequently redesign outdated medical websites while improving performance, SEO, and the overall patient experience."
     - question: "Do you design logos for medical practices?"
       answer: "Yes. We create custom logos and complete brand identities that help practices establish a professional, recognizable image."
-    - question: "Do you offer SEO for chiropractors?"
+    - question: "Do you offer SEO for primary care providers?"
       answer: "Yes. We specialize in local SEO for medical practices, including on-page optimization, technical SEO, Google Business Profile optimization, and content strategy."
     - question: "Can you maintain my website after launch?"
       answer: "Yes. We offer ongoing maintenance plans that include updates, security monitoring, backups, performance optimization, and content changes."

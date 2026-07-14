@@ -91,6 +91,15 @@ ol {
   text-align: center;
 }
 
+.section__eyebrow {
+  color: var(--color-primary);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  font-size: 0.85rem;
+  margin-bottom: var(--space-xs);
+}
+
 // Subtle scroll-in animation ---------------------------------------------
 // assets/js/main.js adds .is-visible via IntersectionObserver. Kept very
 // small per the brand's "subtle only" animation rule  -  a short fade + a

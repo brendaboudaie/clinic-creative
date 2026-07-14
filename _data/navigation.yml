@@ -43,10 +43,8 @@
 - title: For Medical
   url: /medical/
   children:
-    - title: Family Medicine
-      url: /medical/family-medicine/
-    - title: Internal Medicine
-      url: /medical/internal-medicine/
+    - title: Primary Care
+      url: /medical/primary-care/
     - title: Concierge Medicine
       url: /medical/concierge-medicine/
     - title: Dermatology
@@ -55,7 +53,7 @@
       url: /medical/med-spa/
     - title: Pediatric Medicine
       url: /medical/pediatric-medicine/
-    - title: Plastic Surgery
+    - title: Surgery
       url: /medical/plastic-surgery/
     - title: Chiropractic
       url: /medical/chiropractic/

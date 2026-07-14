@@ -108,6 +108,10 @@
   margin-inline: auto;
 }
 
+.hero-mockup--full {
+  width: 100%;
+}
+
 // Placeholder boxes ------------------------------------------------------
 // Used anywhere a real photo/mockup/headshot isn't available yet. Dashed
 // border keeps it visibly a placeholder rather than looking like a bug.
@@ -240,6 +244,18 @@ a.card:focus-visible {
   display: flex;
   flex-direction: column;
   gap: var(--space-md);
+}
+
+// Single-line items (no bold title + separate description, just one
+// line per item) read better with a tighter gap.
+.checklist--compact {
+  gap: var(--space-sm);
+  margin-bottom: var(--space-md);
+}
+
+.checklist--compact .checklist__text {
+  margin-bottom: 0;
+  color: var(--color-text);
 }
 
 .who-we-help__subtitle {
@@ -393,6 +409,20 @@ a.card:focus-visible {
   text-transform: none;
   letter-spacing: normal;
   font-size: 1rem;
+}
+
+// Stat cards with an added explanatory paragraph (e.g. specialty pages'
+// "Three Statistics" section)  -  same .stats/.stat/.stat__number markup,
+// just with a bit more room for the extra line of text.
+.stats--with-text .stat__label--sentence {
+  margin-bottom: var(--space-xs);
+}
+
+.stat__text {
+  max-width: 320px;
+  margin-inline: auto;
+  color: var(--color-text-muted);
+  font-size: 0.95rem;
 }
 
 // Process steps ------------------------------------------------------------

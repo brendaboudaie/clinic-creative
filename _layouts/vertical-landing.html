@@ -11,8 +11,8 @@ layout: default
   the dental/medical hubs (specialty grid + benefit outcomes + services +
   why-us + process + FAQ). Section order:
 
-  hero -> grid (data_source) -> benefits -> services_title -> who_we_help
-  -> why_us -> process -> faq -> trust_text -> cta
+  hero -> grid (data_source) -> services_title -> who_we_help -> why_us
+  -> benefits -> process -> faq -> trust_text -> cta
 
     title / description:  SEO fields
     headline / subheadline: hero copy
@@ -74,17 +74,8 @@ layout: default
   </div>
 </section>
 
-{% if page.benefits %}
-<section class="section fade-in-up">
-  <div class="container">
-    {% if page.benefits.title %}<h2 class="section__title">{{ page.benefits.title }}</h2>{% endif %}
-    {% include card-grid.html cards=page.benefits.cards columns=3 %}
-  </div>
-</section>
-{% endif %}
-
 {% if page.services_title %}
-<section class="section section--alt fade-in-up">
+<section class="section fade-in-up">
   <div class="container">
     <h2 class="section__title">{{ page.services_title }}</h2>
     {% include card-grid.html cards=site.data.services columns=4 %}
@@ -103,7 +94,7 @@ layout: default
 {% endif %}
 
 {% if page.why_us %}
-<section class="section {% unless page.services_title %}section--alt{% endunless %} fade-in-up">
+<section class="section section--alt fade-in-up">
   <div class="container why-us-grid">
     <div>
       {% if page.why_us.title %}<h2 class="section__title">{{ page.why_us.title }}</h2>{% endif %}
@@ -130,8 +121,17 @@ layout: default
 </section>
 {% endif %}
 
-{% if page.process %}
+{% if page.benefits %}
 <section class="section fade-in-up">
+  <div class="container">
+    {% if page.benefits.title %}<h2 class="section__title">{{ page.benefits.title }}</h2>{% endif %}
+    {% include card-grid.html cards=page.benefits.cards columns=3 %}
+  </div>
+</section>
+{% endif %}
+
+{% if page.process %}
+<section class="section {% if page.benefits %}section--alt{% endif %} fade-in-up">
   <div class="container">
     <div class="process-header">
       {% if page.process.title %}<h2 class="section__title section__title--center">{{ page.process.title }}</h2>{% endif %}
@@ -154,7 +154,7 @@ layout: default
 {% endif %}
 
 {% if page.faq %}
-<section class="section section--alt fade-in-up">
+<section class="section {% unless page.benefits %}section--alt{% endunless %} fade-in-up">
   <div class="container content-width">
     {% if page.faq.title %}<h2 class="section__title">{{ page.faq.title }}</h2>{% endif %}
     <div class="faq">
