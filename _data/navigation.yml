@@ -12,6 +12,7 @@
 
 - title: What We Do
   url: /services/
+  all_label: "All services"
   children:
     - title: Website Design
       url: /services/website-design/
@@ -24,6 +25,7 @@
 
 - title: For Dental
   url: /dental/
+  all_label: "All Dental"
   children:
     - title: General Dentistry
       url: /dental/general-dentistry/
@@ -42,6 +44,7 @@
 
 - title: For Medical
   url: /medical/
+  all_label: "All Medical"
   children:
     - title: Primary Care
       url: /medical/primary-care/

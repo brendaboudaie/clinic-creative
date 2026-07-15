@@ -234,6 +234,16 @@ body.nav-open {
   }
 }
 
+// Links straight to the section's own hub page (e.g. "All Dental"),
+// always the first item in the dropdown.
+.site-nav__dropdown a.site-nav__dropdown-all {
+  font-weight: 700;
+  color: var(--color-primary);
+  border-bottom: 1px solid var(--color-border);
+  border-radius: 0;
+  margin-bottom: 0.2rem;
+}
+
 // Footer -------------------------------------------------------------------
 
 .site-footer {

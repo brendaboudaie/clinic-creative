@@ -47,13 +47,34 @@ document.addEventListener('DOMContentLoaded', function () {
   // This click handler only covers touch/keyboard on devices without a
   // hover state — clicking the little caret toggles the dropdown without
   // following the parent link.
+  var toggleDropdown = function (item, btn) {
+    var isOpen = item.classList.toggle('is-open');
+    if (btn) btn.setAttribute('aria-expanded', isOpen);
+    return isOpen;
+  };
+
   document.querySelectorAll('[data-dropdown-toggle]').forEach(function (btn) {
     btn.addEventListener('click', function (event) {
       event.preventDefault();
       var item = btn.closest('.site-nav__item');
       if (!item) return;
-      var isOpen = item.classList.toggle('is-open');
-      btn.setAttribute('aria-expanded', isOpen);
+      toggleDropdown(item, btn);
+    });
+  });
+
+  // On mobile, tapping a top-level item that has a dropdown opens the
+  // dropdown instead of navigating straight to its landing page — the
+  // dropdown's own "All X" link (see _includes/navigation.html) is how
+  // mobile users reach that page. Desktop keeps the normal click-to-navigate
+  // behavior, since the dropdown already opens there via hover.
+  document.querySelectorAll('.site-nav__item.has-dropdown > .site-nav__item-row > .site-nav__link').forEach(function (link) {
+    link.addEventListener('click', function (event) {
+      if (window.innerWidth >= 768) return;
+      event.preventDefault();
+      var item = link.closest('.site-nav__item');
+      if (!item) return;
+      var btn = item.querySelector('[data-dropdown-toggle]');
+      toggleDropdown(item, btn);
     });
   });
 

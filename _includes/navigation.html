@@ -1,17 +1,19 @@
 {% comment %}
   _includes/navigation.html
   Site header + mega-menu nav. Menu items come from _data/navigation.yml —
-  edit that file to add/remove/reorder links or dropdown children. Every
-  top-level item is a real link (clicking it navigates); items with
-  `children` also have an arrow that opens an accordion (mobile) / dropdown
-  (desktop, also openable via hover) of sub-page links — collapsed by
-  default so only the top-level items show at first. On mobile the whole
-  menu opens as a full-screen panel below the logo/toggle bar, and the
-  hamburger animates into an "X" (see main.js + _sass/_layout.scss). There
-  is no "Home" nav item — the logo itself links back to "/". The
-  "Free Consultation" button below is a good example of using the button
-  include from within another include; change its text/url/style here if
-  you want a different header CTA.
+  edit that file to add/remove/reorder links or dropdown children. On
+  desktop, a top-level item with `children` is still a real link (clicking
+  navigates) and the dropdown also opens via hover. On mobile, tapping a
+  top-level item with `children` opens its dropdown instead of navigating
+  (see main.js) — the dropdown's first entry is `all_label` (e.g. "All
+  Dental"), a real link to the item's own `url`, since that's now the only
+  way to reach the hub page on mobile. On mobile the whole menu opens as a
+  full-screen panel below the logo/toggle bar, and the hamburger animates
+  into an "X" (see main.js + _sass/_layout.scss). There is no "Home" nav
+  item — the logo itself links back to "/". The "Free Consultation" button
+  below is a good example of using the button include from within another
+  include; change its text/url/style here if you want a different header
+  CTA.
 {% endcomment %}
 <header class="site-header">
   <div class="container site-header__inner">
@@ -54,6 +56,11 @@
           </div>
           {% if item.children %}
           <ul class="site-nav__dropdown">
+            {% if item.all_label %}
+            <li>
+              <a href="{{ item.url | relative_url }}" class="site-nav__dropdown-all">{{ item.all_label }}</a>
+            </li>
+            {% endif %}
             {% for child in item.children %}
             <li>
               <a href="{{ child.url | relative_url }}">{{ child.title }}</a>

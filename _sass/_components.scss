@@ -83,6 +83,14 @@
   align-items: center;
 }
 
+// On mobile, every hero (including .hero--full, which otherwise zeroes
+// its own top padding) should start a fixed 35px below the sticky nav.
+@media (max-width: #{$breakpoint-md - 1px}) {
+  .hero {
+    padding-top: 35px;
+  }
+}
+
 .hero__grid {
   display: grid;
   gap: var(--space-lg);
