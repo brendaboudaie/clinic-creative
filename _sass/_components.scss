@@ -834,23 +834,17 @@ a.card:focus-visible {
   align-items: stretch;
 }
 
+// Grey fill (rather than a hairline border) marks off each card  -  a
+// 1px border at a fractional-pixel card width (common with vw-based
+// sizing) can get anti-aliased down to invisible on real phones, but a
+// solid background color has no such edge case.
 .pricing-card {
   display: flex;
   flex-direction: column;
-  background-color: var(--color-background);
-  border: 1px solid var(--color-border);
+  background-color: var(--color-background-alt);
   border-radius: var(--radius-md);
   padding: var(--space-lg);
   text-align: center;
-
-  // A hairline border at a fractional-pixel width (common on mobile,
-  // where the card's vw-based width rarely lands on a whole device
-  // pixel) can get anti-aliased down to invisible on some phones. A
-  // box-shadow outline doesn't get rounded away the same way, so it
-  // stays visible as a backup to the border above.
-  @media (max-width: #{$breakpoint-md - 1px}) {
-    box-shadow: 0 0 0 1px var(--color-border);
-  }
 }
 
 .pricing-card__title {
