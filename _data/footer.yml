@@ -21,6 +21,8 @@ company_links:
 columns:
   - title: What We Do
     links:
+      - title: Pricing & All Services
+        url: /pricing/
       - title: Web Design
         url: /services/website-design/
       - title: Logo & Branding

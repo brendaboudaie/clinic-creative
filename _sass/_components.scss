@@ -792,3 +792,106 @@ a.card:focus-visible {
   max-width: 900px;
   margin-inline: auto;
 }
+
+// Pricing page ---------------------------------------------------------
+
+// Links from a service detail page's own "Pricing" section to the full
+// /pricing/ page  -  sits left-aligned right under the "Pricing" title.
+.pricing-section-cta {
+  margin-bottom: var(--space-lg);
+}
+
+.pricing-section-header {
+  text-align: center;
+  margin-bottom: var(--space-lg);
+}
+
+.pricing-section-title-row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-md);
+}
+
+.pricing-section-title {
+  margin-bottom: 0;
+  white-space: nowrap;
+}
+
+.pricing-section-title-line {
+  flex: 1;
+  height: 1px;
+  max-width: 260px;
+  background-color: var(--color-border);
+}
+
+.pricing-section-subtitle {
+  color: var(--color-text-muted);
+  margin-top: var(--space-xs);
+}
+
+.pricing-grid {
+  align-items: stretch;
+}
+
+.pricing-card {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--color-background);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  padding: var(--space-lg);
+  text-align: center;
+}
+
+.pricing-card__title {
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  font-size: 1rem;
+}
+
+.pricing-card__price {
+  margin-block: var(--space-xs) 0;
+}
+
+.pricing-card__prefix {
+  display: block;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  font-size: 0.75rem;
+  color: var(--color-text-muted);
+}
+
+.pricing-card__amount {
+  font-size: 2.5rem;
+  font-weight: 700;
+}
+
+.pricing-card__suffix {
+  color: var(--color-text-muted);
+  font-size: 1rem;
+}
+
+.pricing-card__text {
+  color: var(--color-text-muted);
+  padding-bottom: var(--space-md);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.pricing-card__checklist {
+  text-align: left;
+  flex-grow: 1;
+  margin-bottom: var(--space-lg);
+}
+
+.pricing-card__actions {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-xs);
+  margin-top: auto;
+}
+
+.pricing-card__actions .btn {
+  width: 100%;
+  text-align: center;
+}

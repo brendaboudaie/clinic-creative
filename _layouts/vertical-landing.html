@@ -16,6 +16,10 @@ layout: default
 
     title / description:  SEO fields
     headline / subheadline: hero copy
+    hero_cta_text / hero_cta_url: optional single CTA button at the end
+                             of the hero (e.g. services/index.md's "Pricing"
+                             link to /pricing/) — omitted on pages that
+                             don't set both
     data_source:            "services", "dental_specialties", or
                              "medical_specialties" — which _data/*.yml
                              file powers the grid below
@@ -48,7 +52,9 @@ layout: default
    title=page.headline
    subtitle=page.subheadline
    style="hero--audience hero--landing"
-   align="center" %}
+   align="center"
+   cta_text=page.hero_cta_text
+   cta_url=page.hero_cta_url %}
 
 <section class="section section--alt fade-in-up">
   <div class="container">

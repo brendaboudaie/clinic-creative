@@ -1,0 +1,68 @@
+---
+layout: default
+---
+{% comment %}
+  _layouts/pricing.html
+  The Pricing page (pricing.md). Front matter it reads:
+
+    title / description: SEO fields
+    headline:              hero title — this hero is title-only, centered,
+                            with no subtitle/image/CTA
+    sections:               [{ title, subtitle, cards: [{ title, prefix,
+                            price, price_suffix, text, checklist: [{ title,
+                            text }], learn_more_url }] }]
+
+  Every card's primary button always reads "Free Consultation" and links
+  to /free-consultation/; the secondary "Learn More" button links to the
+  card's own learn_more_url (its service detail page). A full list of
+  services (from _data/services.yml) closes out the page.
+{% endcomment %}
+{% include hero.html title=page.headline align="center" %}
+
+{% for section in page.sections %}
+<section class="section fade-in-up">
+  <div class="container">
+    <div class="pricing-section-header">
+      <div class="pricing-section-title-row">
+        <span class="pricing-section-title-line" aria-hidden="true"></span>
+        <h2 class="section__title section__title--center pricing-section-title">{{ section.title }}</h2>
+        <span class="pricing-section-title-line" aria-hidden="true"></span>
+      </div>
+      {% if section.subtitle %}<p class="pricing-section-subtitle">{{ section.subtitle }}</p>{% endif %}
+    </div>
+    <div class="card-grid card-grid--2 pricing-grid">
+      {% for card in section.cards %}
+      <div class="pricing-card">
+        <h3 class="pricing-card__title">{{ card.title }}</h3>
+        <p class="pricing-card__price">
+          {% if card.prefix %}<span class="pricing-card__prefix">{{ card.prefix }}</span>{% endif %}
+          <span class="pricing-card__amount">{{ card.price }}</span>{% if card.price_suffix %}<span class="pricing-card__suffix">{{ card.price_suffix }}</span>{% endif %}
+        </p>
+        {% if card.text %}<p class="pricing-card__text">{{ card.text }}</p>{% endif %}
+        {% if card.checklist %}
+        <ul class="checklist checklist--compact pricing-card__checklist">
+          {% for item in card.checklist %}
+          <li class="checklist__item">
+            <span class="checklist__icon" aria-hidden="true">&#10003;</span>
+            <p class="checklist__text">{% if item.text %}<strong>{{ item.title }}:</strong> {{ item.text }}{% else %}{{ item.title }}{% endif %}</p>
+          </li>
+          {% endfor %}
+        </ul>
+        {% endif %}
+        <div class="pricing-card__actions">
+          {% include button.html text="Free Consultation" url="/free-consultation/" style="primary" %}
+          {% if card.learn_more_url %}{% include button.html text="Learn More" url=card.learn_more_url style="secondary" %}{% endif %}
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+{% endfor %}
+
+<section class="section fade-in-up">
+  <div class="container">
+    <h2 class="section__title section__title--center">Our Services</h2>
+    {% include card-grid.html cards=site.data.services columns=4 %}
+  </div>
+</section>

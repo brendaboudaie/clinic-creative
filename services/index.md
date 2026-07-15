@@ -3,6 +3,8 @@ title: Website Design, Branding & SEO for Medical and Dental Practices in Los An
 description: "Website design, logo and branding, SEO, and ongoing maintenance for medical and dental practices in Los Angeles — everything your practice needs to grow online."
 headline: "Everything Your Practice Needs to Grow Online"
 subheadline: "From branding and websites to SEO and ongoing support, we help medical and dental practices build a professional digital presence that attracts new patients and earns trust."
+hero_cta_text: "Pricing"
+hero_cta_url: /pricing/
 data_source: services
 grid_title: "Our Services"
 why_us:
