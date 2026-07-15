@@ -80,11 +80,19 @@ document.addEventListener('DOMContentLoaded', function () {
 
   // Carousel: infinite loop. We clone the full card set once before the
   // real cards and once after, so there's always more track to scroll into
-  // in either direction. After scrolling settles (arrow click, swipe, or
-  // manual drag), if the user has landed in a cloned set we silently jump
+  // in either direction. After scrolling settles (arrow click or manual
+  // drag), if the user has landed in a cloned set we silently jump
   // (scroll-behavior: auto, no animation) to the matching position in the
   // real set one card-set-width away — since the clone is an exact copy in
   // the same order, the jump is visually seamless.
+  //
+  // Desktop only: the arrows that drive this are CSS-hidden below the
+  // $breakpoint-md, and on mobile a landing position that's a fraction of
+  // a pixel off a scroll-snap point can make the browser's own snap-settle
+  // fire more scroll events, which triggers another correction, which
+  // triggers another snap-settle — a self-sustaining flash loop with no
+  // user input. Skipping this setup on mobile means native swipe just
+  // scrolls to the real edge and stops, like an ordinary carousel.
   document.querySelectorAll('.carousel').forEach(function (carousel) {
     var track = carousel.querySelector('[data-carousel-track]');
     var prevBtn = carousel.querySelector('[data-carousel-prev]');
@@ -94,7 +102,7 @@ document.addEventListener('DOMContentLoaded', function () {
     var originalCards = Array.prototype.slice.call(track.children);
     var setWidth = 0;
 
-    if (originalCards.length > 1) {
+    if (originalCards.length > 1 && window.innerWidth >= 768) {
       var cloneSet = function () {
         return originalCards.map(function (card) {
           var clone = card.cloneNode(true);
