@@ -842,6 +842,15 @@ a.card:focus-visible {
   border-radius: var(--radius-md);
   padding: var(--space-lg);
   text-align: center;
+
+  // A hairline border at a fractional-pixel width (common on mobile,
+  // where the card's vw-based width rarely lands on a whole device
+  // pixel) can get anti-aliased down to invisible on some phones. A
+  // box-shadow outline doesn't get rounded away the same way, so it
+  // stays visible as a backup to the border above.
+  @media (max-width: #{$breakpoint-md - 1px}) {
+    box-shadow: 0 0 0 1px var(--color-border);
+  }
 }
 
 .pricing-card__title {
