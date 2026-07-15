@@ -719,6 +719,18 @@ a.card:focus-visible {
 
 // Contact form -------------------------------------------------------------
 
+// Scoped to the contact page's form section only  -  other pages keep the
+// site-wide .container max-width of 97vw.
+.section--contact-form .container {
+  max-width: 75vw;
+}
+
+.contact-form {
+  background-color: #fff;
+  border-radius: 35px;
+  padding: 40px;
+}
+
 .form-field {
   display: flex;
   flex-direction: column;
@@ -751,4 +763,19 @@ a.card:focus-visible {
 .form-note {
   color: var(--color-text-muted);
   font-size: 0.9rem;
+}
+
+.form-success {
+  font-weight: 600;
+  font-size: 1.1rem;
+}
+
+// Free consultation page - centers the Calendly embed under the hero
+.calendly-section {
+  text-align: center;
+}
+
+.calendly-inline-widget {
+  max-width: 900px;
+  margin-inline: auto;
 }

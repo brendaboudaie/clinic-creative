@@ -5,7 +5,7 @@ hero:
   title: "Logo & Branding for Medical & Dental Practices"
   subtitle: "A professional identity that reflects your practice and builds patient confidence."
   cta_text: "Get a Free Consultation"
-  cta_url: /contact/
+  cta_url: /free-consultation/
   image: /assets/images/logo-branding-hero.png
   image_alt: "Logo and branding mockup for a medical or dental practice"
 why_matters:
@@ -97,7 +97,7 @@ cta:
   title: "Ready for a Brand Patients Trust?"
   text: "Schedule a free consultation to talk through your practice's needs."
   primary_text: "Get a Free Consultation"
-  primary_url: /contact/
+  primary_url: /free-consultation/
   secondary_text: "View All Services"
   secondary_url: /services/
 ---

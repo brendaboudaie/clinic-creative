@@ -5,7 +5,7 @@ hero:
   title: "Website Design for Medical & Dental Practices"
   subtitle: "Fully custom websites designed to build patient trust, increase appointment requests, and help your practice grow."
   cta_text: "Get a Free Consultation"
-  cta_url: /contact/
+  cta_url: /free-consultation/
   image: /assets/images/website-design-hero.png
   image_alt: "Website design mockup for a medical or dental practice"
 why_matters:
@@ -108,5 +108,5 @@ cta:
   title: "Your Website Should Reflect the Quality of Care You Provide"
   text: "Whether you're launching a new practice or refreshing an existing website, we'll create a custom website that helps patients feel confident before they ever walk through your doors."
   primary_text: "Get a Free Consultation"
-  primary_url: /contact/
+  primary_url: /free-consultation/
 ---

@@ -29,7 +29,7 @@ cta:
   title: "Let's See If We're a Good Fit"
   text: "Tell me about your practice, your goals, and what's not working today. I'll let you know how I can help."
   primary_text: "Get a Free Consultation"
-  primary_url: /contact/
+  primary_url: /free-consultation/
 ---
 
 <!-- DRAFT COPY — replace with Brenda's real bio before launch. -->

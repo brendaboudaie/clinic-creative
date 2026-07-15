@@ -9,9 +9,10 @@ layout: default
     headline / subheadline: hero copy
     response_note:           e.g. "I respond within 24 hours."
 
-  The form has no backend wired up yet — see the comment above the <form>
-  tag for where to plug in a service like Formspree or Getform. The
-  Calendly embed is a placeholder div until a real booking link exists.
+  The form posts to Formspree (bboudaie@gmail.com) via AJAX — see the
+  comment above the <form> tag. The Calendly embed lives on its own
+  /free-consultation/ page (_layouts/free-consultation.html), linked from
+  the subheadline above and from every "Free Consultation" CTA site-wide.
 {% endcomment %}
 {% include hero.html
    title=page.headline
@@ -19,41 +20,36 @@ layout: default
    style="hero--audience"
    align="center" %}
 
-<section class="section fade-in-up">
-  <div class="container contact-grid">
-    <div>
-      {%- comment -%}
-        Form backend not wired up yet. Replace action="#" with a
-        Formspree/Getform/etc. endpoint (or a Jekyll-compatible serverless
-        function) before launch.
-      {%- endcomment -%}
-      <form class="contact-form" action="#" method="POST">
-        <div class="form-field">
-          <label for="name">Name</label>
-          <input type="text" id="name" name="name" required>
-        </div>
-        <div class="form-field">
-          <label for="email">Email</label>
-          <input type="email" id="email" name="email" required>
-        </div>
-        <div class="form-field">
-          <label for="practice">Practice Name</label>
-          <input type="text" id="practice" name="practice">
-        </div>
-        <div class="form-field">
-          <label for="message">How can we help?</label>
-          <textarea id="message" name="message" rows="5" required></textarea>
-        </div>
-        <button type="submit" class="btn btn--primary">Send Message</button>
-      </form>
-      {% if page.response_note %}<p class="form-note">{{ page.response_note }}</p>{% endif %}
-    </div>
-
-    <div>
-      <!-- Calendly inline widget begin -->
-      <div class="calendly-inline-widget" data-url="https://calendly.com/bboudaie/clinic-creative-consultation-with-brenda" style="min-width:320px;height:700px;"></div>
-      <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
-      <!-- Calendly inline widget end -->
-    </div>
+<section class="section section--alt section--contact-form fade-in-up">
+  <div class="container">
+    {%- comment -%}
+      Formspree's email-based endpoint auto-creates a form tied to this
+      address on first submission — Formspree emails bboudaie@gmail.com a
+      one-time confirmation link that must be clicked before submissions
+      start arriving. main.js intercepts the submit event to show the
+      custom thank-you message below instead of redirecting.
+    {%- endcomment -%}
+    <form class="contact-form" id="contact-form" action="https://formspree.io/f/bboudaie@gmail.com" method="POST">
+      <input type="hidden" name="_subject" value="Clinic Creative | Website Contact Form">
+      <div class="form-field">
+        <label for="name">Name</label>
+        <input type="text" id="name" name="name" required>
+      </div>
+      <div class="form-field">
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" required>
+      </div>
+      <div class="form-field">
+        <label for="practice">Practice Name</label>
+        <input type="text" id="practice" name="practice">
+      </div>
+      <div class="form-field">
+        <label for="message">How can we help?</label>
+        <textarea id="message" name="message" rows="5" required></textarea>
+      </div>
+      <button type="submit" class="btn btn--primary">Send Message</button>
+    </form>
+    {% if page.response_note %}<p class="form-note" data-form-note>{{ page.response_note }}</p>{% endif %}
+    <p class="form-success" id="contact-form-success" hidden>Received! I'm excited to chat soon.</p>
   </div>
 </section>

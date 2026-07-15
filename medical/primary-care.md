@@ -7,7 +7,7 @@ hero:
   title: "Website Design, Branding & SEO for Primary Care Providers"
   text: "Patients choose a primary care provider online long before that first appointment. We help primary care providers attract more patients through strategic branding, custom website design, local SEO, logo design, Google Business Profile optimization, and ongoing website maintenance—creating a professional presence that builds trust from the very first search."
   primary_cta_text: "Get a Free Consultation"
-  primary_cta_url: /contact/
+  primary_cta_url: /free-consultation/
   secondary_cta_text: "View Our Services"
   secondary_cta_url: /services/
   image: "/assets/images/hero/NEW Primary Care Hero.png"

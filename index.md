@@ -8,7 +8,7 @@ hero:
   image: /assets/images/hero-mockup.jpg
   image_alt: "Clinic Creative website and branding mockup shown on a desktop monitor and phone"
   primary_cta_text: "Free Consultation"
-  primary_cta_url: /contact/
+  primary_cta_url: /free-consultation/
   secondary_cta_text: "Our Services"
   secondary_cta_url: /services/
 stats:
@@ -77,7 +77,7 @@ cta:
   title: "Ready to Elevate Your Practice Online?"
   text: "Let's build a digital presence that reflects the quality of care you provide."
   primary_text: "Book a Free Consultation"
-  primary_url: /contact/
+  primary_url: /free-consultation/
   secondary_text: "View Our Services"
   secondary_url: /services/
 ---

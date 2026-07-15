@@ -60,7 +60,7 @@ cta:
   title: "Ready to Elevate Your Practice Online?"
   text: "Let's build a digital presence that reflects the quality of care you provide."
   primary_text: "Book a Free Consultation"
-  primary_url: /contact/
+  primary_url: /free-consultation/
   secondary_text: "Meet The Team"
   secondary_url: /about/
 ---

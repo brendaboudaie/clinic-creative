@@ -124,4 +124,37 @@ document.addEventListener('DOMContentLoaded', function () {
       el.classList.add('is-visible');
     });
   }
+
+  // Contact form: submit to Formspree via AJAX so we can swap in a custom
+  // thank-you message instead of redirecting to Formspree's default page.
+  var contactForm = document.getElementById('contact-form');
+  if (contactForm) {
+    contactForm.addEventListener('submit', function (event) {
+      event.preventDefault();
+      var submitBtn = contactForm.querySelector('button[type="submit"]');
+      if (submitBtn) submitBtn.disabled = true;
+
+      fetch(contactForm.action, {
+        method: 'POST',
+        body: new FormData(contactForm),
+        headers: { Accept: 'application/json' }
+      })
+        .then(function (response) {
+          if (response.ok) {
+            var note = document.querySelector('[data-form-note]');
+            var success = document.getElementById('contact-form-success');
+            contactForm.hidden = true;
+            if (note) note.hidden = true;
+            if (success) success.hidden = false;
+          } else {
+            if (submitBtn) submitBtn.disabled = false;
+            alert('Something went wrong sending your message. Please try again or email me directly.');
+          }
+        })
+        .catch(function () {
+          if (submitBtn) submitBtn.disabled = false;
+          alert('Something went wrong sending your message. Please try again or email me directly.');
+        });
+    });
+  }
 });

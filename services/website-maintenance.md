@@ -5,7 +5,7 @@ hero:
   title: "Website Maintenance for Medical & Dental Practices"
   subtitle: "Keep your website secure, updated, and performing at its best."
   cta_text: "Get a Free Consultation"
-  cta_url: /contact/
+  cta_url: /free-consultation/
   image: /assets/images/website-maintenance-hero.png
   image_alt: "Website maintenance mockup for a medical or dental practice"
 why_matters:
@@ -101,7 +101,7 @@ cta:
   title: "Ready for Peace of Mind After Launch?"
   text: "Schedule a free consultation to talk through your practice's needs."
   primary_text: "Get a Free Consultation"
-  primary_url: /contact/
+  primary_url: /free-consultation/
   secondary_text: "View All Services"
   secondary_url: /services/
 ---

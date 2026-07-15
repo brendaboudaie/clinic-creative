@@ -5,7 +5,7 @@ hero:
   title: "Local SEO for Medical & Dental Practices"
   subtitle: "Improve your visibility in search results and help local patients find your practice."
   cta_text: "Get a Free Consultation"
-  cta_url: /contact/
+  cta_url: /free-consultation/
   image: /assets/images/seo-hero.png
   image_alt: "SEO and search visibility mockup for a medical or dental practice"
 why_matters:
@@ -97,7 +97,7 @@ cta:
   title: "Ready to Show Up When Patients Search?"
   text: "Schedule a free consultation to talk through your practice's needs."
   primary_text: "Get a Free Consultation"
-  primary_url: /contact/
+  primary_url: /free-consultation/
   secondary_text: "View All Services"
   secondary_url: /services/
 ---

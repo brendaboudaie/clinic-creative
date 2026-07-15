@@ -1,0 +1,25 @@
+---
+layout: default
+---
+{% comment %}
+  _layouts/free-consultation.html
+  Dedicated booking page (free-consultation.md) linked from every
+  "Free Consultation" CTA site-wide. Front matter it reads:
+
+    title / description: SEO fields
+    headline / subheadline: hero copy
+{% endcomment %}
+{% include hero.html
+   title=page.headline
+   subtitle=page.subheadline
+   style="hero--audience"
+   align="center" %}
+
+<section class="section fade-in-up">
+  <div class="container content-width calendly-section">
+    <!-- Calendly inline widget begin -->
+    <div class="calendly-inline-widget" data-url="https://calendly.com/bboudaie/clinic-creative-consultation-with-brenda" style="min-width:320px;height:700px;"></div>
+    <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
+    <!-- Calendly inline widget end -->
+  </div>
+</section>

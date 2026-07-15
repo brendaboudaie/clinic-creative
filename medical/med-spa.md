@@ -7,7 +7,7 @@ hero:
   title: "Website Design, Branding & SEO for Med Spas"
   text: "Clients research a med spa online long before booking their first treatment. We help med spas attract more clients through strategic branding, custom website design, local SEO, logo design, Google Business Profile optimization, and ongoing website maintenance—creating a professional presence that builds trust from the very first search."
   primary_cta_text: "Get a Free Consultation"
-  primary_cta_url: /contact/
+  primary_cta_url: /free-consultation/
   secondary_cta_text: "View Our Services"
   secondary_cta_url: /services/
   image: "/assets/images/hero/NEW Medical Spa Hero.png"
