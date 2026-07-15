@@ -731,6 +731,10 @@ a.card:focus-visible {
 // site-wide .container max-width of 97vw.
 .section--contact-form .container {
   max-width: 75vw;
+
+  @media (max-width: #{$breakpoint-md - 1px}) {
+    max-width: 97vw;
+  }
 }
 
 .contact-form {
@@ -775,7 +779,8 @@ a.card:focus-visible {
 
 .form-success {
   font-weight: 600;
-  font-size: 1.1rem;
+  font-size: 1.5rem;
+  text-align: center;
 }
 
 // Free consultation page - centers the Calendly embed under the hero

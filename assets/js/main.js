@@ -78,14 +78,78 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   });
 
-  // Carousel arrows: scroll the track by roughly one card width per click.
-  // Native CSS scroll-snap handles settling on a card; this just moves the
-  // scroll position, so no state tracking or index math is needed.
+  // Carousel: infinite loop. We clone the full card set once before the
+  // real cards and once after, so there's always more track to scroll into
+  // in either direction. After scrolling settles (arrow click, swipe, or
+  // manual drag), if the user has landed in a cloned set we silently jump
+  // (scroll-behavior: auto, no animation) to the matching position in the
+  // real set one card-set-width away — since the clone is an exact copy in
+  // the same order, the jump is visually seamless.
   document.querySelectorAll('.carousel').forEach(function (carousel) {
     var track = carousel.querySelector('[data-carousel-track]');
     var prevBtn = carousel.querySelector('[data-carousel-prev]');
     var nextBtn = carousel.querySelector('[data-carousel-next]');
     if (!track) return;
+
+    var originalCards = Array.prototype.slice.call(track.children);
+    var setWidth = 0;
+
+    if (originalCards.length > 1) {
+      var cloneSet = function () {
+        return originalCards.map(function (card) {
+          var clone = card.cloneNode(true);
+          clone.setAttribute('aria-hidden', 'true');
+          clone.setAttribute('tabindex', '-1');
+          return clone;
+        });
+      };
+
+      var leadingClones = cloneSet();
+      var leadingFragment = document.createDocumentFragment();
+      leadingClones.forEach(function (clone) { leadingFragment.appendChild(clone); });
+      track.insertBefore(leadingFragment, track.firstChild);
+
+      var trailingFragment = document.createDocumentFragment();
+      cloneSet().forEach(function (clone) { trailingFragment.appendChild(clone); });
+      track.appendChild(trailingFragment);
+
+      // Measure the real gap between one set and the next directly from
+      // rendered offsets (first leading-clone card -> first real card),
+      // rather than scrollWidth / 3 — the two can differ by a sub-pixel
+      // rounding amount that's enough to throw off scroll-snap's own
+      // correction and make a "jump one set over" overshoot by a whole
+      // extra set. scrollBy (not direct scrollLeft assignment) is what
+      // actually sticks once CSS scroll-snap has taken over the track's
+      // scroll position — a plain "track.scrollLeft = x" gets silently
+      // reverted back to wherever scroll-snap last settled.
+      setWidth = originalCards[0].offsetLeft - leadingClones[0].offsetLeft;
+      // Jump to the absolute target (setWidth) rather than assuming we're
+      // starting from 0 — some browsers restore a track's scroll position
+      // on navigation, so scrollLeft may already be nonzero here.
+      track.scrollBy({ left: setWidth - track.scrollLeft, behavior: 'instant' });
+
+      var isJumping = false;
+      var settleTimer;
+      track.addEventListener(
+        'scroll',
+        function () {
+          if (isJumping) return;
+          clearTimeout(settleTimer);
+          settleTimer = setTimeout(function () {
+            if (track.scrollLeft < setWidth - track.clientWidth / 2) {
+              isJumping = true;
+              track.scrollBy({ left: setWidth, behavior: 'instant' });
+              requestAnimationFrame(function () { isJumping = false; });
+            } else if (track.scrollLeft > setWidth * 2 - track.clientWidth / 2) {
+              isJumping = true;
+              track.scrollBy({ left: -setWidth, behavior: 'instant' });
+              requestAnimationFrame(function () { isJumping = false; });
+            }
+          }, 120);
+        },
+        { passive: true }
+      );
+    }
 
     var scrollByCard = function (direction) {
       var card = track.querySelector('.carousel__card');

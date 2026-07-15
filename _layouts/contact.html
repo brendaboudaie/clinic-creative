@@ -9,10 +9,11 @@ layout: default
     headline / subheadline: hero copy
     response_note:           e.g. "I respond within 24 hours."
 
-  The form posts to Formspree (bboudaie@gmail.com) via AJAX — see the
-  comment above the <form> tag. The Calendly embed lives on its own
-  /free-consultation/ page (_layouts/free-consultation.html), linked from
-  the subheadline above and from every "Free Consultation" CTA site-wide.
+  The form posts to Formspree (form ID tied to bboudaie@gmail.com's
+  Formspree account) via AJAX — see the comment above the <form> tag.
+  The Calendly embed lives on its own /free-consultation/ page
+  (_layouts/free-consultation.html), linked from the subheadline above
+  and from every "Free Consultation" CTA site-wide.
 {% endcomment %}
 {% include hero.html
    title=page.headline
@@ -23,13 +24,11 @@ layout: default
 <section class="section section--alt section--contact-form fade-in-up">
   <div class="container">
     {%- comment -%}
-      Formspree's email-based endpoint auto-creates a form tied to this
-      address on first submission — Formspree emails bboudaie@gmail.com a
-      one-time confirmation link that must be clicked before submissions
-      start arriving. main.js intercepts the submit event to show the
-      custom thank-you message below instead of redirecting.
+      Formspree form ID from bboudaie@gmail.com's Formspree account.
+      main.js intercepts the submit event to show the custom thank-you
+      message below instead of redirecting.
     {%- endcomment -%}
-    <form class="contact-form" id="contact-form" action="https://formspree.io/f/bboudaie@gmail.com" method="POST">
+    <form class="contact-form" id="contact-form" action="https://formspree.io/f/mvzegldl" method="POST">
       <input type="hidden" name="_subject" value="Clinic Creative | Website Contact Form">
       <div class="form-field">
         <label for="name">Name</label>
