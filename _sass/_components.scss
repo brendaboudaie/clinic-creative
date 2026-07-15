@@ -38,6 +38,10 @@
   margin-bottom: var(--space-sm);
 }
 
+.hero__title-highlight {
+  color: var(--color-primary);
+}
+
 .hero__subtitle {
   font-size: 1.125rem;
   color: var(--color-text-muted);
@@ -98,6 +102,22 @@
   object-fit: cover;
   object-position: center top;
   border-radius: var(--radius-md);
+}
+
+.hero-photo-wrap {
+  position: relative;
+}
+
+// A seal/badge graphic overlapping the bottom-left corner of the photo
+// (e.g. the About page's "Boutique Design for Healthcare" badge).
+.hero-photo__badge {
+  position: absolute;
+  bottom: -5px;
+  left: 0px;
+  width: 22%;
+  min-width: 90px;
+  max-width: 140px;
+  height: auto;
 }
 
 // A device/branding mockup (e.g. the homepage hero) - these are usually
@@ -591,6 +611,72 @@ a.card:focus-visible {
 .testimonial-grid {
   display: grid;
   gap: var(--space-lg);
+}
+
+// Featured single-quote card (e.g. the About page's mission statement) -
+// a bigger, bespoke treatment distinct from the plain .testimonial used
+// in a grid of client quotes.
+.testimonial--feature {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-lg);
+  max-width: 97vw;
+  margin: 0 auto;
+  padding: var(--space-lg) var(--space-xl);
+  background-color: var(--color-background-alt);
+  border-radius: 24px;
+  text-align: left;
+  font-style: normal;
+  font-size: 1.15rem;
+  box-shadow: 0 20px 40px rgba(21, 62, 117, 0.06);
+
+  @media (max-width: 700px) {
+    flex-direction: column;
+    gap: var(--space-sm);
+    padding: var(--space-lg);
+  }
+}
+
+.testimonial__mark {
+  flex-shrink: 0;
+  align-self: stretch;
+  display: flex;
+  align-items: flex-start;
+  padding-right: var(--space-lg);
+  border-right: 1px solid var(--color-border);
+  font-family: var(--font-heading);
+  font-size: 10.5rem;
+  line-height: 0.6;
+  color: var(--color-primary);
+
+  @media (max-width: 700px) {
+    padding-right: 0;
+    border-right: none;
+    padding-bottom: var(--space-xs);
+  }
+}
+
+.testimonial--feature .testimonial__body p {
+  margin: 0 0 var(--space-md);
+  font-size: 25px;
+}
+
+.testimonial__name {
+  display: block;
+  font-family: 'Mrs Saint Delafield', cursive;
+  font-size: 2.25rem;
+  line-height: 1;
+  color: var(--color-primary);
+  margin-bottom: 0.3em;
+}
+
+.testimonial__role {
+  display: block;
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--color-text-muted);
 }
 
 // FAQ ------------------------------------------------------------------

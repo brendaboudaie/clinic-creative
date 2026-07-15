@@ -6,6 +6,8 @@ hero:
   subtitle: "A professional identity that reflects your practice and builds patient confidence."
   cta_text: "Get a Free Consultation"
   cta_url: /contact/
+  image: /assets/images/logo-branding-hero.png
+  image_alt: "Logo and branding mockup for a medical or dental practice"
 why_matters:
   title: "Why Your Brand Matters"
   paragraphs:
@@ -15,13 +17,13 @@ whats_included:
   items:
     - title: Logo Design
       text: "A clean, professional mark that works everywhere from your website to your office signage."
-      icon: "✒"
+      icon: pencil
     - title: Color Palette
       text: "A cohesive palette that reads as trustworthy and calm, not clinical or cold."
-      icon: "◈"
+      icon: palette
     - title: Typography System
       text: "Consistent fonts across your website, print materials, and signage."
-      icon: "▣"
+      icon: typography
 perfect_for:
   title: "Perfect For"
   cards:
@@ -42,22 +44,22 @@ process:
   subtitle: "A simple, clear process that respects your time."
   steps:
     - title: "Discovery"
-      text: "We learn about your practice, patients, and goals."
-      icon: "⌕"
-    - title: "Strategy"
-      text: "We map out the site structure and messaging that will work hardest for you."
-      icon: "⌖"
-    - title: "Design"
-      text: "A custom look and feel built around your brand and specialty."
+      text: "We get to know your practice, your patients, your values, and what makes you different."
+      icon: "♡"
+    - title: "Brand Strategy"
+      text: "We define your positioning, personality, and visual direction before a single logo is designed."
+      icon: "✦"
+    - title: "Identity Design"
+      text: "Your custom logo, color palette, typography, and supporting brand elements come to life."
       icon: "✎"
-    - title: "Build"
-      text: "Your site comes to life on a fast, reliable, easy-to-manage platform."
-      icon: "</>"
-    - title: "Launch"
-      text: "We handle the technical details so your launch is smooth and stress-free."
-      icon: "➤"
-    - title: "Support & Growth"
-      text: "Ongoing maintenance, updates, and SEO to keep your practice growing."
+    - title: "Refinement"
+      text: "Together, we fine-tune every detail until your brand feels exactly right."
+      icon: "◈"
+    - title: "Brand Toolkit"
+      text: "You'll receive organized logo files, color codes, fonts, and guidelines for consistent use everywhere."
+      icon: "✓"
+    - title: "Launch Your Brand"
+      text: "You're ready to update your website, social media, signage, business cards, and marketing with confidence."
       icon: "↗"
 why_us:
   title: "Why Choose The Clinic Creative"
@@ -76,21 +78,21 @@ faq:
   title: "Frequently Asked Questions"
   items:
     - question: "How long does a branding project take?"
-      answer: "Most branding projects are completed in 2-3 weeks, depending on how many rounds of revisions are needed."
+      answer: "Most branding projects take 2–4 weeks, depending on the scope of the project and how quickly feedback is provided. I'll guide you through each step—from strategy and concepts to revisions and final files—so the process feels clear and collaborative."
     - question: "What do I receive when the project is done?"
-      answer: "You'll get your final logo files, a color palette, a typography system, and a simple brand guidelines reference document."
+      answer: "You'll receive a complete set of professional brand assets, including your primary logo, alternate logo variations, color palette, typography recommendations, and all the file formats you'll need for print and digital use. Everything is organized and ready for your website, social media, signage, business cards, and more."
     - question: "Can you rebrand a practice that already has a logo?"
-      answer: "Yes — many of our clients come to us with an outdated or inconsistent brand and we refresh it while keeping what already works."
+      answer: "Absolutely. Whether your current brand simply needs a refresh or you're ready for a complete transformation, I can modernize your visual identity while preserving the trust and recognition you've already built with your patients."
     - question: "Do you also design the website?"
-      answer: "Yes. Branding pairs naturally with our website design service, and many clients bundle both together."
+      answer: "Yes. Branding and website design often go hand in hand. I can create a cohesive brand identity and carry it through your website, ensuring every touchpoint feels consistent, professional, and built to inspire patient confidence."
     - question: "Will my branding work for print materials too?"
-      answer: "Yes. Everything we design is built to work consistently across your website, signage, and print materials."
+      answer: "Yes. Your branding is designed to work across both digital and print applications, including business cards, stationery, brochures, signage, apparel, vehicle graphics, and marketing materials. The goal is a brand that looks polished and consistent wherever patients encounter your practice."
 pricing:
   title: "Pricing"
   timeline_title: "Typical Timeline"
-  timeline_text: "Most branding projects are completed in 2-3 weeks."
+  timeline_text: "Most branding projects are completed in 2-4 weeks."
   investment_title: "Investment"
-  investment_text: "Starting at $899."
+  investment_text: "Logo design options starting at $2,499."
 cta:
   title: "Ready for a Brand Patients Trust?"
   text: "Schedule a free consultation to talk through your practice's needs."

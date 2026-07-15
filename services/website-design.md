@@ -6,6 +6,8 @@ hero:
   subtitle: "Fully custom websites designed to build patient trust, increase appointment requests, and help your practice grow."
   cta_text: "Get a Free Consultation"
   cta_url: /contact/
+  image: /assets/images/website-design-hero.png
+  image_alt: "Website design mockup for a medical or dental practice"
 why_matters:
   title: "Why Your Website Matters"
   paragraphs:
@@ -85,15 +87,17 @@ faq:
   title: "Frequently Asked Questions"
   items:
     - question: "How long does a website take?"
-      answer: "Most projects launch within 2–4 weeks, depending on the size of the website and how quickly content is finalized."
-    - question: "Do you write website copy?"
-      answer: "Yes. We can refine existing content or help create new copy that's clear, patient-friendly, and optimized for search engines."
+      answer: "Most websites are launched within 2-4 weeks, depending on the size of the project and how quickly content, photos, and feedback are provided. I'll keep you informed throughout the process so you always know what's next."
+    - question: "Do you write the website copy?"
+      answer: "Yes. I help write and refine your website copy so it sounds professional, builds patient trust, and is optimized for search engines. If you already have content, I'll edit and improve it rather than starting from scratch."
     - question: "Can you redesign my existing website?"
-      answer: "Absolutely. Whether your current website is outdated or no longer reflects your practice, we can redesign it while preserving important content and SEO where appropriate."
-    - question: "Will my website work on mobile?"
-      answer: "Yes. Every website is fully responsive and designed to look great on desktops, tablets, and smartphones."
+      answer: "Absolutely. Whether your current website feels outdated, isn't bringing in new patients, or no longer reflects your practice, I can redesign it while preserving the content and functionality that still works."
+    - question: "Will my website work on mobile devices?"
+      answer: "Yes. Every website is designed to look and perform beautifully on desktops, tablets, and smartphones. Since many patients search for healthcare providers on their phones, mobile optimization is a priority from day one."
     - question: "Can you help with SEO?"
-      answer: "Yes. Every website is built with SEO best practices, and we also offer ongoing Local SEO and Google Business Profile optimization."
+      answer: "Yes. Every website includes SEO best practices such as keyword research, optimized page structure, fast performance, metadata, and technical optimization. I also offer ongoing Local SEO services to help your practice improve its visibility in search results over time."
+    - question: "Can you maintain my website after it launches?"
+      answer: "Absolutely. I offer ongoing website maintenance to keep your site secure, updated, and running smoothly. Whether you need software updates, content changes, performance monitoring, or technical support, I'll handle the website so you can focus on your patients."
 pricing:
   title: "Pricing"
   timeline_title: "Typical Timeline"

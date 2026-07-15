@@ -3,25 +3,27 @@ layout: default
 ---
 {% comment %}
   _layouts/about.html
-  The About page (about.md), in four sections:
+  The About page (about.md), in three sections:
 
     1. Split hero  - title/subtitle left, headshot right (same
        hero--split pattern as the homepage)
-    2. A centered mission-statement quote
-    3. The same "By the Numbers" stats strip used on the homepage
-    4. A two-column close: the page's Markdown bio on the left (with a
+    2. A featured mission-statement quote card: large quote mark + divider
+       on the left, quote text and a script-style attribution on the right
+    3. A two-column close: the page's Markdown bio on the left (with a
        faded vertical divider), three stacked value cards on the right
 
   Front matter it reads:
     title / description:  SEO fields
-    hero:                 { title, subtitle, image, image_alt, image_note }
+    hero:                 { title, subtitle, image, image_alt, image_note,
+                            badge_image, badge_image_alt }
                           - image is a real photo path (e.g.
                           /assets/images/brenda-headshot.jpg); if unset,
                           falls back to a placeholder box showing
-                          image_note
-    quote / quote_author:  centered quote section (quote_author optional)
-    stats:                array of { number, label, icon } - same shape as
-                          home.html's "By the Numbers"
+                          image_note. badge_image (optional) overlays a
+                          seal/badge graphic on the bottom-left corner of
+                          the photo.
+    quote / quote_author / quote_author_role:
+                          featured quote card (quote_author/role optional)
     values:               { title, cards: [{ icon, title, text }] } - cards
                           render in the right-hand column; the left column
                           is the page's Markdown body
@@ -40,7 +42,12 @@ layout: default
     </div>
     {% if page.hero.image %}
     {%- assign hero_image_alt = page.hero.image_alt | default: "Headshot" -%}
-    <img class="hero-photo" src="{{ page.hero.image | relative_url }}" alt="{{ hero_image_alt }}">
+    <div class="hero-photo-wrap">
+      <img class="hero-photo" src="{{ page.hero.image | relative_url }}" alt="{{ hero_image_alt }}">
+      {% if page.hero.badge_image %}
+      <img class="hero-photo__badge" src="{{ page.hero.badge_image | relative_url }}" alt="{{ page.hero.badge_image_alt | default: '' }}">
+      {% endif %}
+    </div>
     {% else %}
     <div class="placeholder-box placeholder-box--tall" aria-hidden="true">
       {{ page.hero.image_note | default: "Headshot placeholder — add a real photo at assets/images/ when available" }}
@@ -53,18 +60,18 @@ layout: default
 {% if page.quote %}
 <section class="section fade-in-up">
   <div class="container">
-    <blockquote class="testimonial">
-      <p>&ldquo;{{ page.quote }}&rdquo;</p>
-      {% if page.quote_author %}<cite>{{ page.quote_author }}</cite>{% endif %}
+    <blockquote class="testimonial testimonial--feature">
+      <span class="testimonial__mark" aria-hidden="true">&ldquo;</span>
+      <div class="testimonial__body">
+        <p>{{ page.quote }}</p>
+        {% if page.quote_author %}
+        <cite>
+          <span class="testimonial__name">{{ page.quote_author }}</span>
+          {% if page.quote_author_role %}<span class="testimonial__role">{{ page.quote_author_role }}</span>{% endif %}
+        </cite>
+        {% endif %}
+      </div>
     </blockquote>
-  </div>
-</section>
-{% endif %}
-
-{% if page.stats %}
-<section class="section section--alt fade-in-up">
-  <div class="container">
-    {% include stats.html stats=page.stats %}
   </div>
 </section>
 {% endif %}

@@ -3,51 +3,47 @@ layout: about
 title: About
 description: "Meet Brenda, the founder of Clinic Creative — a boutique studio in Los Angeles building websites and branding exclusively for medical and dental practices."
 hero:
-  title: "A Design Partner Who Understands Healthcare"
+  title: 'A Design Partner Who Understands <span class="hero__title-highlight">Healthcare</span>'
   subtitle: "I'm Brenda, the founder and only designer at Clinic Creative — a boutique studio built for one kind of client: medical and dental practices."
   image: /assets/images/brenda-headshot.jpg
   image_alt: "Brenda Boudaie Zarrinkhoo, founder of Clinic Creative"
-quote: "I started Clinic Creative because healthcare deserves a design partner who actually understands the industry — not just another template."
-quote_author: "Brenda Boudaie Zarrinkhoo, Founder"
-stats:
-  - number: "Since 2019"
-    label: "Years in Industry"
-    icon: calendar
-  - number: "45+"
-    label: "Websites Launched"
-    icon: rocket
-  - number: "30+"
-    label: "Clients Supported"
-    icon: people
+  badge_image: /assets/images/clinic-creative-badge.png
+  badge_image_alt: "Boutique Design for Healthcare badge"
+quote: "Growing up in a family of healthcare professionals taught me that trust matters—and thoughtful design is often where that trust begins."
+quote_author: "Brenda Boudaie Zarrinkhoo"
+quote_author_role: "Founder, Clinic Creative"
 values:
-  title: "My Values"
+  title: "Why I Chose Healthcare"
   cards:
     - icon: "♡"
-      title: "Empathy First"
-      text: "I take the time to understand your patients before I ever open a design file."
-    - icon: "⌖"
-      title: "Honest Communication"
-      text: "No jargon, no upsells you don't need — just straight answers about what your practice actually needs."
-    - icon: "✎"
-      title: "Obsessed with the Details"
-      text: "From load times to line spacing, I sweat the small stuff so your site feels as polished as your practice."
+      title: "Boutique by Design"
+      text: "Working directly with me is intentional. Every project is personal, collaborative, and handled by the person designing and building your website—from our first call through launch."
+    - icon: "⏱︎"
+      title: "Respecting your time"
+      text: "I see every day how busy healthcare professionals are. I keep the process organized, efficient, and straightforward so you can stay focused on your patients while I handle the details."
+    - icon: "✦"
+      title: "Quality Over Quantity"
+      text: "I take on a limited number of projects so every client gets the attention, strategy, and craftsmanship they deserve."
 badge_text: "Squarespace Circle Gold Partner"
 cta:
-  title: "Let's Work Together"
-  text: "Tell us about your practice and we'll take it from there."
+  title: "Let's See If We're a Good Fit"
+  text: "Tell me about your practice, your goals, and what's not working today. I'll let you know how I can help."
   primary_text: "Get a Free Consultation"
   primary_url: /contact/
 ---
 
 <!-- DRAFT COPY — replace with Brenda's real bio before launch. -->
 
-Most agencies try to be everything to everyone. I chose the opposite:
-work with one kind of client, and understand that client's world better
-than anyone else.
+Healthcare has always been part of my life.
 
-Since 2019, I've partnered with independent physicians, specialists, and
-dental practices at every stage of growth. Every project is hands-on —
-you work directly with me, not an account manager, from our first call
-through launch and beyond.
+I grew up in a family of dentists, married an internal medicine
+physician, and studied Computer Science before building websites and
+brands professionally in 2019.
 
-These are the principles that guide how I show up for every client:
+Being surrounded by healthcare has given me a unique perspective on the
+trust patients place in their providers and the importance of a strong
+first impression.
+
+Today, I combine technical expertise, thoughtful design, and an
+understanding of healthcare to create modern digital experiences that
+help practices grow with confidence.

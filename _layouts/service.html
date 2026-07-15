@@ -43,7 +43,7 @@ layout: default
       {% endif %}
     </div>
     {% if page.hero.image %}
-    <img class="hero-mockup" src="{{ page.hero.image | relative_url }}" alt="{{ page.hero.image_alt | default: '' }}">
+    <img class="hero-mockup hero-mockup--full" src="{{ page.hero.image | relative_url }}" alt="{{ page.hero.image_alt | default: '' }}">
     {% else %}
     <div class="placeholder-box placeholder-box--tall" aria-hidden="true">
       {{ page.hero.image_note | default: "Photo placeholder — add a real image at assets/images/ when available" }}

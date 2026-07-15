@@ -16,13 +16,12 @@ layout: default
 {% include hero.html
    title=page.headline
    subtitle=page.subheadline
-   style="hero--audience" %}
+   style="hero--audience"
+   align="center" %}
 
 <section class="section fade-in-up">
   <div class="container contact-grid">
     <div>
-      {{ content }}
-
       {%- comment -%}
         Form backend not wired up yet. Replace action="#" with a
         Formspree/Getform/etc. endpoint (or a Jekyll-compatible serverless
@@ -51,18 +50,10 @@ layout: default
     </div>
 
     <div>
-      {%- comment -%}
-        Calendly placeholder — replace with the real embed snippet
-        (<div class="calendly-inline-widget" data-url="...">) once a
-        booking link exists.
-      {%- endcomment -%}
-      <div class="placeholder-box placeholder-box--tall" aria-hidden="true">
-        Calendly booking embed — add once a scheduling link is set up
-      </div>
-      <p>
-        {% if site.email %}<a href="mailto:{{ site.email }}">{{ site.email }}</a><br>{% endif %}
-        {% if site.phone %}<a href="tel:{{ site.phone | remove: ' ' | remove: '(' | remove: ')' | remove: '-' }}">{{ site.phone }}</a>{% endif %}
-      </p>
+      <!-- Calendly inline widget begin -->
+      <div class="calendly-inline-widget" data-url="https://calendly.com/bboudaie/clinic-creative-consultation-with-brenda" style="min-width:320px;height:700px;"></div>
+      <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
+      <!-- Calendly inline widget end -->
     </div>
   </div>
 </section>

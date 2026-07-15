@@ -10,7 +10,7 @@ hero:
   primary_cta_url: /contact/
   secondary_cta_text: "View Our Services"
   secondary_cta_url: /services/
-  image: /assets/images/medical/optometry-hero.png
+  image: "/assets/images/hero/NEW Optometrist Hero.png"
   image_alt: "Modern optometry office and treatment room"
 services_intro_title: "Services"
 value_prop:
@@ -29,6 +29,7 @@ stat_cards:
       text: "Professional branding, thoughtful design, and quality photography create confidence before patients ever visit your office."
 feature:
   title: "Designed to Grow Your Practice"
+  image: "/assets/images/Grow Your Practice.png"
   paragraphs:
     - "Whether you're opening a new office, rebranding an established practice, or simply trying to generate more new patient appointments, we create digital experiences that support long-term growth—not just launch day. From your first logo to ongoing SEO and maintenance, we're a long-term creative partner for your practice."
   checklist:
