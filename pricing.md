@@ -2,6 +2,10 @@
 layout: pricing
 title: Services & Pricing for Medical and Dental Practices
 description: "Clear, upfront pricing for website design, logo and branding, SEO, and ongoing website maintenance for medical and dental practices in Los Angeles."
+# Disabled for now — set to true (or remove this line) to re-enable and
+# make /pricing/ routable again. Nothing else needs to change: the page,
+# layout (_layouts/pricing.html), and styling are all left fully intact.
+published: false
 headline: "Services & Pricing"
 sections:
   - title: "One-Time Investment"
