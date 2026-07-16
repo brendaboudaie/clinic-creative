@@ -22,13 +22,6 @@
 
     {% include footer.html %}
 
-    {%- comment -%}
-      TEMPORARY: diagnostic script for the iOS Chrome hamburger-menu bug.
-      Inert unless the URL has ?debug=nav. Safe to delete this tag along
-      with assets/js/nav-debug.js and the window.__navDebugLog(...) calls
-      in main.js once the bug is understood/fixed.
-    {%- endcomment -%}
-    <script src="{{ '/assets/js/nav-debug.js' | relative_url }}" defer></script>
     <script src="{{ '/assets/js/main.js' | relative_url }}" defer></script>
   </body>
 </html>

@@ -15,6 +15,15 @@ $breakpoint-lg: 1024px;
   z-index: 50;
   border-bottom: 1px solid var(--color-border);
   background-color: var(--color-background);
+
+  // The mobile nav panel positions itself with `top: var(--header-height)`
+  // (see .site-nav below) so it starts right where this bar ends. This is
+  // computed here in pure CSS, from the exact tokens that build the bar's
+  // own height (nav-toggle: 3 bars * 2px + 2 gaps * 4px, plus its padding;
+  // .site-header__inner's padding-block; this border) - not measured by
+  // JS on load, which used to race against the stylesheet on a cold cache
+  // and could briefly capture the wrong value.
+  --header-height: calc(14px + (2 * var(--space-xs)) + (2 * var(--space-sm)) + 1px);
 }
 
 .site-header__inner {
@@ -70,7 +79,7 @@ $breakpoint-lg: 1024px;
 
 // Mobile: the menu is a full-screen panel that starts right below the
 // persistent logo/toggle bar (so the logo and the close "X" stay visible
-// the whole time)  -  see main.js for the --header-height custom property.
+// the whole time) - see --header-height on .site-header above.
 // Desktop: back to a normal inline row next to the logo.
 .site-nav {
   display: none;
