@@ -43,17 +43,6 @@ $breakpoint-lg: 1024px;
   padding: var(--space-xs);
   cursor: pointer;
 
-  // iOS WebKit (Safari and Chrome, which is WebKit-based on iOS) can fail
-  // to composite a tap target inside a position: sticky ancestor (like
-  // .site-header) until a scroll event forces a relayout - until then,
-  // taps on the button silently miss. Forcing this button specifically
-  // onto its own GPU layer fixes taps from the very first paint. This is
-  // deliberately on the button itself and not on .site-header: .site-nav
-  // is also inside .site-header, and a transform on that ancestor would
-  // make it the containing block for .site-nav's fixed positioning,
-  // breaking the mobile menu panel.
-  transform: translateZ(0);
-
   @media (min-width: $breakpoint-md) {
     display: none;
   }
