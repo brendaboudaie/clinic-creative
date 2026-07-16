@@ -3,7 +3,14 @@
 // small scroll-triggered fade-in. If you add new interactivity later,
 // prefer a new, small, focused file over growing this one.
 
+// TEMPORARY: see assets/js/nav-debug.js. Safe to remove this line once
+// the iOS Chrome hamburger-menu bug is understood/fixed.
+if (window.__navDebugLog) window.__navDebugLog('main.js script evaluated');
+
 document.addEventListener('DOMContentLoaded', function () {
+  // TEMPORARY debug hook - remove with the rest of the nav-debug work.
+  if (window.__navDebugLog) window.__navDebugLog('DOMContentLoaded start');
+
   var toggle = document.querySelector('[data-nav-toggle]');
   var nav = document.querySelector('[data-nav]');
   var header = document.querySelector('.site-header');
@@ -15,18 +22,29 @@ document.addEventListener('DOMContentLoaded', function () {
   if (header) {
     var setHeaderHeight = function () {
       document.documentElement.style.setProperty('--header-height', header.offsetHeight + 'px');
+      // TEMPORARY debug hook - remove with the rest of the nav-debug work.
+      if (window.__navDebugLog) window.__navDebugLog('setHeaderHeight ran');
     };
     setHeaderHeight();
     window.addEventListener('resize', setHeaderHeight);
   }
 
+  // TEMPORARY debug hook - remove with the rest of the nav-debug work.
+  window.addEventListener('load', function () {
+    if (window.__navDebugLog) window.__navDebugLog('window load');
+  });
+
   if (toggle && nav) {
     toggle.addEventListener('click', function () {
+      // TEMPORARY debug hook - remove with the rest of the nav-debug work.
+      if (window.__navDebugLog) window.__navDebugLog('toggle clicked (before)');
       var isOpen = nav.classList.toggle('is-open');
       toggle.classList.toggle('is-open', isOpen);
       toggle.setAttribute('aria-expanded', isOpen);
       toggle.setAttribute('aria-label', isOpen ? 'Close menu' : 'Open menu');
       document.body.classList.toggle('nav-open', isOpen);
+      // TEMPORARY debug hook - remove with the rest of the nav-debug work.
+      if (window.__navDebugLog) window.__navDebugLog('toggle clicked (after), isOpen=' + isOpen);
     });
 
     // If the viewport crosses into the desktop layout while the mobile
