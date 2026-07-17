@@ -1,5 +1,5 @@
 ---
-title: Dermatology Website Design in Los Angeles
+title: Dermatology Website Design, Branding & SEO
 description: "Professional website design for dermatologists in Los Angeles. Logo, branding, SEO and maintenance for dermatology practices."
 specialty: "Dermatology"
 hide_breadcrumb: true

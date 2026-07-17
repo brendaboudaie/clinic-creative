@@ -1,5 +1,5 @@
 ---
-title: Cosmetic Dentistry Website Design in Los Angeles
+title: Cosmetic Dentistry Website Design, Branding & SEO
 description: "Professional website design for cosmetic dentists in Los Angeles. Logo, branding, SEO and maintenance for cosmetic dentistry practices."
 specialty: "Cosmetic Dentistry"
 hide_breadcrumb: true

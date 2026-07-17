@@ -1,5 +1,5 @@
 ---
-title: Periodontal Website Design in Los Angeles
+title: Periodontal Website Design, Branding & SEO
 description: "Professional website design for periodontal practices in Los Angeles. Logo, branding, SEO and maintenance for periodontal practices."
 specialty: "Periodontics"
 hide_breadcrumb: true

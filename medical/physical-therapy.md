@@ -1,5 +1,5 @@
 ---
-title: Physical Therapy Website Design in Los Angeles
+title: Physical Therapy Website Design, Branding & SEO
 description: "Professional website design for physical therapy practices in Los Angeles. Logo, branding, SEO and maintenance for physical therapy practices."
 specialty: "Physical Therapy"
 hide_breadcrumb: true

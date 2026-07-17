@@ -1,5 +1,5 @@
 ---
-title: General Dentistry Website Design in Los Angeles
+title: General Dentistry Website Design, Branding & SEO
 description: "Professional website design for general dentists in Los Angeles. Logo, branding, SEO, and maintenance for general dental practices."
 specialty: "General Dentistry"
 hide_breadcrumb: true

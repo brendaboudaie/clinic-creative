@@ -1,5 +1,5 @@
 ---
-title: Logo & Branding for Medical and Dental Practices in Los Angeles
+title: Logo & Branding for Medical and Dental Practices
 description: "Logo design and brand identity for medical and dental practices in Los Angeles — a professional look that builds patient confidence."
 hero:
   title: "Logo & Branding for Medical & Dental Practices"

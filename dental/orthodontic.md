@@ -1,5 +1,5 @@
 ---
-title: Orthodontic Website Design in Los Angeles
+title: Orthodontic Website Design, Branding & SEO
 description: "Professional website design for orthodontists in Los Angeles. Logo, branding, SEO and maintenance for orthodontic practices."
 specialty: "Orthodontics"
 hide_breadcrumb: true

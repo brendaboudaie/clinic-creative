@@ -1,5 +1,5 @@
 ---
-title: Optometry Website Design in Los Angeles
+title: Optometry Website Design, Branding & SEO
 description: "Professional website design for optometry practices in Los Angeles. Logo, branding, SEO and maintenance for optometry practices."
 specialty: "Optometry"
 hide_breadcrumb: true

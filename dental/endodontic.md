@@ -1,5 +1,5 @@
 ---
-title: Endodontic Website Design in Los Angeles
+title: Endodontic Website Design, Branding & SEO
 description: "Professional website design for endodontic practices in Los Angeles. Logo, branding, SEO and maintenance for endodontic practices."
 specialty: "Endodontics"
 hide_breadcrumb: true

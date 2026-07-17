@@ -1,5 +1,5 @@
 ---
-title: Med Spa Website Design in Los Angeles
+title: Med Spa Website Design, Branding & SEO
 description: "Professional website design for med spas in Los Angeles. Logo, branding, SEO and maintenance for med spa practices."
 specialty: "Med Spa"
 hide_breadcrumb: true

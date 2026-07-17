@@ -1,6 +1,6 @@
 ---
 layout: home
-title: "A boutique studio designing custom websites, logos, and SEO for healthcare practices."
+title: "Custom websites, logos, and SEO for healthcare practices | Clinic Creative"
 description: "Clinic Creative designs websites, branding, and SEO exclusively for medical and dental practices in Los Angeles — a boutique studio that understands healthcare."
 hero:
   title: "Growing Your Practice With Exceptional Digital Experiences"

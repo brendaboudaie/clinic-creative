@@ -1,5 +1,5 @@
 ---
-title: Concierge Medicine Website Design in Los Angeles
+title: Concierge Medicine Website Design, Branding & SEO
 description: "Professional website design for concierge medicine practices in Los Angeles. Logo, branding, SEO and maintenance for concierge medicine practices."
 specialty: "Concierge Medicine"
 hide_breadcrumb: true

@@ -1,5 +1,5 @@
 ---
-title: Pediatric Medicine Website Design in Los Angeles
+title: Pediatric Medicine Website Design, Branding & SEO
 description: "Professional website design for pediatric medicine practices in Los Angeles. Logo, branding, SEO and maintenance for pediatric medical practices."
 specialty: "Pediatric Medicine"
 hide_breadcrumb: true

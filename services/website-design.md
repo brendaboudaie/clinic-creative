@@ -1,5 +1,5 @@
 ---
-title: Website Design for Medical and Dental Practices in Los Angeles
+title: Website Design for Medical and Dental Practices
 description: "Custom website design for medical and dental practices in Los Angeles — fast, mobile-first sites built to convert visitors into patients."
 hero:
   title: "Website Design for Medical & Dental Practices"

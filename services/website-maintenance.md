@@ -1,5 +1,5 @@
 ---
-title: Website Maintenance for Medical and Dental Practices in Los Angeles
+title: Website Maintenance for Medical and Dental Practices
 description: "Ongoing website maintenance, updates, and analytics reporting for medical and dental practices in Los Angeles."
 hero:
   title: "Website Maintenance for Medical & Dental Practices"

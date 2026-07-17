@@ -7,7 +7,7 @@ layout: default
   services/website-design.md). Section order:
 
   hero (split + image) -> why_matters -> whats_included -> perfect_for
-  -> process -> why_us -> faq -> pricing -> cta
+  -> process -> why_us -> faq -> cta
 
   Front matter it reads:
 
@@ -24,10 +24,12 @@ layout: default
     process:               { title, subtitle, steps: [{ title, text, icon }] }
     why_us:                { title, image, image_alt, cards: [{ title, text }] }
     faq:                   { title, items: [{ question, answer }] }
-    pricing:                { title, timeline_title, timeline_text,
-                            investment_title, investment_text }
     cta:                   { title, text, primary_text, primary_url,
                             secondary_text, secondary_url }
+
+  A page's `pricing:` front matter (timeline/investment) is no longer
+  rendered here — that content now lives only on the standalone
+  /pricing/ page (currently disabled, see pricing.md).
 {% endcomment %}
 
 {% if page.hero %}
@@ -145,32 +147,6 @@ layout: default
         <p class="faq__answer">{{ item.answer }}</p>
       </details>
       {% endfor %}
-    </div>
-  </div>
-</section>
-{% endif %}
-
-{% if page.pricing %}
-<section class="section fade-in-up">
-  <div class="container">
-    {% if page.pricing.title %}<h2 class="section__title">{{ page.pricing.title }}</h2>{% endif %}
-    <div class="card-grid card-grid--2">
-      {% if page.pricing.timeline_text %}
-      <div class="card">
-        <div class="card__body">
-          <h3 class="card__title">{{ page.pricing.timeline_title | default: "Typical Timeline" }}</h3>
-          <p class="card__text">{{ page.pricing.timeline_text }}</p>
-        </div>
-      </div>
-      {% endif %}
-      {% if page.pricing.investment_text %}
-      <div class="card">
-        <div class="card__body">
-          <h3 class="card__title">{{ page.pricing.investment_title | default: "Investment" }}</h3>
-          <p class="card__text">{{ page.pricing.investment_text }}</p>
-        </div>
-      </div>
-      {% endif %}
     </div>
   </div>
 </section>

@@ -1,5 +1,5 @@
 ---
-title: Dental Website Design and Branding in Los Angeles
+title: Dental Website Design, Branding & SEO
 description: "Website design, branding, and SEO built exclusively for dental practices in Los Angeles — general dentists, orthodontists, cosmetic dentists, and specialists."
 headline: "Digital Marketing, Websites, and Branding Built Exclusively for Dental Practices"
 subheadline: "Whether you're opening a new practice, refreshing your brand, or looking to attract more patients, we help dentists create modern digital experiences that build trust and grow their practice."

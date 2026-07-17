@@ -1,5 +1,5 @@
 ---
-title: Chiropractic Website Design in Los Angeles
+title: Chiropractic Website Design, Branding & SEO
 description: "Professional website design for chiropractic practices in Los Angeles. Logo, branding, SEO and maintenance for chiropractic practices."
 specialty: "Chiropractic"
 hide_breadcrumb: true

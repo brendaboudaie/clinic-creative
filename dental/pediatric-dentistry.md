@@ -1,5 +1,5 @@
 ---
-title: Pediatric Dentistry Website Design in Los Angeles
+title: Pediatric Dentistry Website Design, Branding & SEO
 description: "Professional website design for pediatric dentists in Los Angeles. Logo, branding, SEO and maintenance for pediatric dental practices."
 specialty: "Pediatric Dentistry"
 hide_breadcrumb: true

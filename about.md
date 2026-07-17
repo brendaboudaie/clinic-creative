@@ -1,7 +1,7 @@
 ---
 layout: about
-title: About
-description: "Meet Brenda, the founder of Clinic Creative — a boutique studio in Los Angeles building websites and branding exclusively for medical and dental practices."
+title: A Design Studio For Dentists and Doctors
+description: "I'm Brenda, the founder of Clinic Creative — a boutique studio built for one kind of client: medical and dental practices."
 hero:
   title: 'A Design Partner Who Understands <span class="hero__title-highlight">Healthcare</span>'
   subtitle: "I'm Brenda, the founder and only designer at Clinic Creative — a boutique studio built for one kind of client: medical and dental practices."

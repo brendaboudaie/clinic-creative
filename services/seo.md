@@ -1,5 +1,5 @@
 ---
-title: SEO for Medical and Dental Practices in Los Angeles
+title: SEO for Medical and Dental Practices
 description: "Local SEO and Google Business Profile management for medical and dental practices in Los Angeles — help patients find your practice first."
 hero:
   title: "Local SEO for Medical & Dental Practices"
