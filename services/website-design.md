@@ -2,7 +2,7 @@
 title: Website Design for Medical and Dental Practices
 description: "Custom website design for medical and dental practices in Los Angeles — fast, mobile-first sites built to convert visitors into patients."
 hero:
-  title: "Website Design for Medical & Dental Practices"
+  title: "Website Design for Medical and Dental Practices"
   subtitle: "Fully custom websites designed to build patient trust, increase appointment requests, and help your practice grow."
   cta_text: "Get a Free Consultation"
   cta_url: /free-consultation/
@@ -30,7 +30,7 @@ whats_included:
     - title: Copywriting Guidance
       text: "Need help with the words? We'll help organize and refine your content so it's clear, professional, and easy for patients to understand."
       icon: edit
-    - title: Speed & Performance
+    - title: Speed and Performance
       text: "Fast-loading websites improve user experience, search rankings, and conversion rates."
       icon: speed
 perfect_for:

@@ -4,7 +4,7 @@ description: "Professional website design for concierge medicine practices in Lo
 specialty: "Concierge Medicine"
 hide_breadcrumb: true
 hero:
-  title: "Website Design, Branding & SEO for Concierge Medicine Practices"
+  title: "Website Design, Branding and SEO for Concierge Medicine Practices"
   text: "Concierge medicine patients expect a premium experience online long before their first appointment. We help concierge medicine practices attract more patients through strategic branding, custom website design, local SEO, logo design, Google Business Profile optimization, and ongoing website maintenance—creating a professional presence that builds trust from the very first search."
   primary_cta_text: "Get a Free Consultation"
   primary_cta_url: /free-consultation/

@@ -4,7 +4,7 @@ description: "Professional website design for orthodontists in Los Angeles. Logo
 specialty: "Orthodontics"
 hide_breadcrumb: true
 hero:
-  title: "Website Design, Branding & SEO for Orthodontists"
+  title: "Website Design, Branding and SEO for Orthodontists"
   text: "Parents often choose an orthodontist online long before they ever call your office. We help orthodontists attract more patients through strategic branding, custom website design, local SEO, logo design, Google Business Profile optimization, and ongoing website maintenance—creating a professional presence that builds trust from the very first search."
   primary_cta_text: "Get a Free Consultation"
   primary_cta_url: /free-consultation/

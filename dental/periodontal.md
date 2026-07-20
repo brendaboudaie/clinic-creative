@@ -4,7 +4,7 @@ description: "Professional website design for periodontal practices in Los Angel
 specialty: "Periodontics"
 hide_breadcrumb: true
 hero:
-  title: "Website Design, Branding & SEO for Periodontists"
+  title: "Website Design, Branding and SEO for Periodontists"
   text: "Most periodontal patients arrive by referral, but they still research your practice online before booking. We help periodontists attract more patients through strategic branding, custom website design, local SEO, logo design, Google Business Profile optimization, and ongoing website maintenance—creating a professional presence that builds trust from the very first search."
   primary_cta_text: "Get a Free Consultation"
   primary_cta_url: /free-consultation/

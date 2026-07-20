@@ -2,7 +2,7 @@
 title: Website Maintenance for Medical and Dental Practices
 description: "Ongoing website maintenance, updates, and analytics reporting for medical and dental practices in Los Angeles."
 hero:
-  title: "Website Maintenance for Medical & Dental Practices"
+  title: "Website Maintenance for Medical and Dental Practices"
   subtitle: "Keep your website secure, updated, and performing at its best."
   cta_text: "Get a Free Consultation"
   cta_url: /free-consultation/
@@ -16,10 +16,10 @@ whats_included:
   title: "What's Included"
   columns: 4
   items:
-    - title: Software & Security Updates
+    - title: Software and Security Updates
       text: "Routine updates so your site stays fast and secure."
       icon: "↻"
-    - title: Content & Provider Changes
+    - title: Content and Provider Changes
       text: "Updates for new providers, services, hours, or locations."
       icon: "✎"
     - title: Uptime Monitoring

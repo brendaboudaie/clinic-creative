@@ -4,7 +4,7 @@ description: "Professional website design for optometry practices in Los Angeles
 specialty: "Optometry"
 hide_breadcrumb: true
 hero:
-  title: "Website Design, Branding & SEO for Optometrists"
+  title: "Website Design, Branding and SEO for Optometrists"
   text: "Patients choose an optometrist online long before they book an eye exam. We help optometrists attract more patients through strategic branding, custom website design, local SEO, logo design, Google Business Profile optimization, and ongoing website maintenance—creating a professional presence that builds trust from the very first search."
   primary_cta_text: "Get a Free Consultation"
   primary_cta_url: /free-consultation/

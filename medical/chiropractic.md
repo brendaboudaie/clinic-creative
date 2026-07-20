@@ -4,7 +4,7 @@ description: "Professional website design for chiropractic practices in Los Ange
 specialty: "Chiropractic"
 hide_breadcrumb: true
 hero:
-  title: "Website Design, Branding & SEO for Chiropractors"
+  title: "Website Design, Branding and SEO for Chiropractors"
   text: "Patients searching for pain relief choose a chiropractor online long before they call your office. We help chiropractors attract more patients through strategic branding, custom website design, local SEO, logo design, Google Business Profile optimization, and ongoing website maintenance—creating a professional presence that builds trust from the very first search."
   primary_cta_text: "Get a Free Consultation"
   primary_cta_url: /free-consultation/

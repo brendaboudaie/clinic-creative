@@ -6,7 +6,7 @@ description: "Clear, upfront pricing for website design, logo and branding, SEO,
 # make /pricing/ routable again. Nothing else needs to change: the page,
 # layout (_layouts/pricing.html), and styling are all left fully intact.
 published: false
-headline: "Services & Pricing"
+headline: "Services and Pricing"
 sections:
   - title: "One-Time Investment"
     subtitle: "Strategic design that sets your practice apart."
@@ -23,7 +23,7 @@ sections:
           - title: "Copywriting Guidance"
           - title: "Speed & Performance"
         learn_more_url: /services/website-design/
-      - title: "Logo & Branding"
+      - title: "Logo and Branding"
         prefix: "Starting at"
         price: "$2,499"
         text: "A professional identity that reflects your practice and builds patient confidence."

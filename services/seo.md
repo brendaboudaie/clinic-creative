@@ -2,7 +2,7 @@
 title: SEO for Medical and Dental Practices
 description: "Local SEO and Google Business Profile management for medical and dental practices in Los Angeles — help patients find your practice first."
 hero:
-  title: "Local SEO for Medical & Dental Practices"
+  title: "Local SEO for Medical and Dental Practices"
   subtitle: "Improve your visibility in search results and help local patients find your practice."
   cta_text: "Get a Free Consultation"
   cta_url: /free-consultation/
